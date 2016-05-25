@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-05-25T15:22:17.000Z</updated>
+  <updated>2016-05-25T15:26:08.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,28 +20,15 @@
     <link href="http://stevechoris.github.io/2016/05/25/ooo/"/>
     <id>http://stevechoris.github.io/2016/05/25/ooo/</id>
     <published>2016-05-25T15:19:55.000Z</published>
-    <updated>2016-05-25T15:22:17.000Z</updated>
+    <updated>2016-05-25T15:26:08.000Z</updated>
     
-    <content type="html">&lt;p&gt;keywords:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;javascript&lt;/li&gt;
-&lt;li&gt;hexo&lt;br&gt;clearReading: true&lt;br&gt;thumbnailImage: image-1.png&lt;br&gt;thumbnailImagePosition: bottom&lt;br&gt;autoThumbnailImage: yes&lt;br&gt;metaAlignment: center&lt;br&gt;coverImage: image-2.png&lt;br&gt;coverCaption: “A beautiful sunrise”&lt;br&gt;coverMeta: out&lt;br&gt;coverImage: image-2.png&lt;br&gt;gallery:&lt;ul&gt;
-&lt;li&gt;image-3.jpg “New York”&lt;/li&gt;
-&lt;li&gt;image-4.png “Paris”&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://i.imgur.com/o9r19kD.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://i.imgur.com/o9r19kD.jpg&lt;/a&gt; “Dubai”&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://example.com/orignal.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://example.com/orignal.jpg&lt;/a&gt; &lt;a href=&quot;https://example.com/thumbnail.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://example.com/thumbnail.jpg&lt;/a&gt; “Sidney”&lt;br&gt;comments: false&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;123&lt;br&gt;456&lt;br&gt;789&lt;/p&gt;
+    <content type="html">&lt;p&gt;123&lt;br&gt;456&lt;br&gt;789&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;keywords:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;javascript&lt;/li&gt;
-&lt;li&gt;hexo&lt;br&gt;clearReading: true&lt;br&gt;thumbnailImage: image-1.png&lt;br&gt;thumbnailImagePosition: bottom&lt;br
+      &lt;p&gt;123&lt;br&gt;456&lt;br&gt;789&lt;/p&gt;
+
     
     </summary>
     
