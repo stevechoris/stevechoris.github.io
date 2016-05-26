@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-05-26T01:08:01.000Z</updated>
+  <updated>2016-05-26T01:15:52.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://stevechoris.github.io/2016/05/25/template/"/>
     <id>http://stevechoris.github.io/2016/05/25/template/</id>
     <published>2016-05-25T15:26:46.000Z</published>
-    <updated>2016-05-26T01:08:01.000Z</updated>
+    <updated>2016-05-26T01:15:52.000Z</updated>
     
     <content type="html">&lt;p&gt;This is a test template&lt;/p&gt;
 </content>
@@ -36,46 +36,6 @@
       <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
     
       <category term="中文" scheme="http://stevechoris.github.io/tags/%E4%B8%AD%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ooo</title>
-    <link href="http://stevechoris.github.io/2016/05/25/ooo/"/>
-    <id>http://stevechoris.github.io/2016/05/25/ooo/</id>
-    <published>2016-05-25T15:19:55.000Z</published>
-    <updated>2016-05-25T15:26:08.000Z</updated>
-    
-    <content type="html">&lt;p&gt;123&lt;br&gt;456&lt;br&gt;789&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;123&lt;br&gt;456&lt;br&gt;789&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>女神镇楼</title>
-    <link href="http://stevechoris.github.io/2016/05/25/%E5%A5%B3%E7%A5%9E%E9%95%87%E6%A5%BC/"/>
-    <id>http://stevechoris.github.io/2016/05/25/女神镇楼/</id>
-    <published>2016-05-25T13:51:59.000Z</published>
-    <updated>2016-05-25T15:28:37.000Z</updated>
-    
-    <content type="html">&lt;p&gt;女神赞&lt;br&gt;&lt;img src=&quot;../../../../images/11674334,2560,1600.jpg&quot; alt=&quot;11674334,2560,1600&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;女神赞&lt;br&gt;&lt;img src=&quot;../../../../images/11674334,2560,1600.jpg&quot; alt=&quot;11674334,2560,1600&quot;&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
     
   </entry>
   
