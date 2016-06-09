@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-05-29T08:05:14.000Z</updated>
+  <updated>2016-06-09T05:36:24.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -16,11 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图片博客模板</title>
+    <link href="http://stevechoris.github.io/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://stevechoris.github.io/2016/06/09/图片博客模板/</id>
+    <published>2016-06-09T05:33:36.000Z</published>
+    <updated>2016-06-09T05:36:24.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;../../../../images/13393427,2560,1600.jpg&quot; alt=&quot;13393427,2560,1600-w800&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../../../../images/13393427,2560,1600.jpg&quot; alt=&quot;13393427,2560,1600-w800&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
+    
+      <category term="中文" scheme="http://stevechoris.github.io/tags/%E4%B8%AD%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jupyter Notebook 安装扩展插件</title>
     <link href="http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
     <id>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-安装扩展插件/</id>
     <published>2016-05-29T07:54:37.000Z</published>
-    <updated>2016-05-29T08:05:14.000Z</updated>
+    <updated>2016-06-03T14:22:35.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1-更新pip&quot;&gt;&lt;a href=&quot;#1-更新pip&quot; class=&quot;headerlink&quot; title=&quot;1. 更新pip&quot;&gt;&lt;/a&gt;1. 更新pip&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;最简单的安装方法是使用pip，首先将pip更新到最新版&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install --upgrade pip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -44,11 +68,11 @@
   </entry>
   
   <entry>
-    <title>博客模板</title>
-    <link href="http://stevechoris.github.io/2016/05/25/template/"/>
-    <id>http://stevechoris.github.io/2016/05/25/template/</id>
+    <title>文字博客模板</title>
+    <link href="http://stevechoris.github.io/2016/05/25/%E6%96%87%E5%AD%97%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://stevechoris.github.io/2016/05/25/文字博客模板/</id>
     <published>2016-05-25T15:26:46.000Z</published>
-    <updated>2016-06-09T05:30:57.000Z</updated>
+    <updated>2016-06-09T05:33:09.000Z</updated>
     
     <content type="html">&lt;p&gt;This is a test template&lt;/p&gt;
 </content>
