@@ -251,13 +251,13 @@
 <p>Therefore the output is 7.</p>
 <h2 id="Follow-up"><a href="#Follow-up" class="headerlink" title="Follow up:"></a>Follow up:</h2><p>What if negative numbers are allowed in the given array?<br>How does it change the problem?<br>What limitation we need to add to the question to allow negative numbers?</p>
 </blockquote>
-<p>##题目大意：<br>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
 <p>测试用例见题目描述。</p>
 <p>注意不同的序列顺序应当视为不同的组合。</p>
-<p>##进一步思考：<br>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
+<h2 id="进一步思考："><a href="#进一步思考：" class="headerlink" title="进一步思考："></a>进一步思考：</h2><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
 <p>测试用例见题目描述。</p>
 <p>注意不同的序列顺序应当视为不同的组合。</p>
-<p>##解题思路：<br>动态规划（Dynamic Programming）</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>动态规划（Dynamic Programming）</p>
 <p>状态转移方程：dp[x + y] += dp[x]</p>
 <p>其中dp[x]表示生成数字x的所有可能的组合方式的个数。</p>
 <h1 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><p>class Solution(object):<br>    def combinationSum4(self, nums, target):<br>        “””<br>        :type nums: List[int]<br>        :type target: int<br>        :rtype: int<br>        “””<br>        dp = [0] * (target + 1)<br>        dp[0] = 1<br>        for x in range(target + 1):<br>            for y in nums:<br>                if x + y &lt;= target:<br>                    dp[x + y] += dp[x]<br>        return dp[target]</p>
