@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-10T13:01:33.000Z</updated>
+  <updated>2016-09-10T13:35:24.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Post with cover image</title>
+    <link href="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/"/>
+    <id>http://stevechoris.github.io/2016/09/10/Post-with-cover-image/</id>
+    <published>2016-09-10T13:29:21.000Z</published>
+    <updated>2016-09-10T13:35:24.000Z</updated>
+    
+    <content type="html">&lt;p&gt;测试&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;测试&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="模板" scheme="http://stevechoris.github.io/categories/Template/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[LeetCode] 377. Combination Sum</title>
