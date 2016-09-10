@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-10T08:58:47.000Z</updated>
+  <updated>2016-09-10T08:59:38.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/"/>
     <id>http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/</id>
     <published>2016-09-10T08:33:28.000Z</published>
-    <updated>2016-09-10T08:58:47.000Z</updated>
+    <updated>2016-09-10T08:59:38.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combination-sum-iv/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;377. Combination Sum IV&lt;/a&gt;&lt;br&gt;Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.&lt;/p&gt;
 &lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;blockquote&gt;
@@ -39,7 +39,7 @@
 &lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;动态规划（Dynamic Programming）&lt;/p&gt;
 &lt;p&gt;状态转移方程：dp[x + y] += dp[x]&lt;/p&gt;
 &lt;p&gt;其中dp[x]表示生成数字x的所有可能的组合方式的个数。&lt;/p&gt;
-&lt;h1 id=&quot;Python代码：&quot;&gt;&lt;a href=&quot;#Python代码：&quot; class=&quot;headerlink&quot; title=&quot;Python代码：&quot;&gt;&lt;/a&gt;Python代码：&lt;/h1&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Solution(object):&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;def combinationSum4(self, nums, target):&amp;#10;    &amp;#34;&amp;#34;&amp;#34;&amp;#10;    :type nums: List[int]&amp;#10;    :type target: int&amp;#10;    :rtype: int&amp;#10;    &amp;#34;&amp;#34;&amp;#34;&amp;#10;    dp = [0] * (target + 1)&amp;#10;    dp[0] = 1&amp;#10;    for x in range(target + 1):&amp;#10;        for y in nums:&amp;#10;            if x + y &amp;#60;= target:&amp;#10;                dp[x + y] += dp[x]&amp;#10;    return dp[target]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;Python代码：&quot;&gt;&lt;a href=&quot;#Python代码：&quot; class=&quot;headerlink&quot; title=&quot;Python代码：&quot;&gt;&lt;/a&gt;Python代码：&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class Solution(object):&amp;#10;    def combinationSum4(self, nums, target):&amp;#10;        &amp;#34;&amp;#34;&amp;#34;&amp;#10;        :type nums: List[int]&amp;#10;        :type target: int&amp;#10;        :rtype: int&amp;#10;        &amp;#34;&amp;#34;&amp;#34;&amp;#10;        dp = [0] * (target + 1)&amp;#10;        dp[0] = 1&amp;#10;        for x in range(target + 1):&amp;#10;            for y in nums:&amp;#10;                if x + y &amp;#60;= target:&amp;#10;                    dp[x + y] += dp[x]&amp;#10;        return dp[target]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
