@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="逆风飞翔的博客">
-    <title>all-categories - 逆风飞翔的博客</title>
+    <title>分类: LeetCode - 逆风飞翔的博客</title>
     <meta name="author" content="steve choris">
     
         <meta name="keywords" content="hexo,blog,SteveChoris,">
@@ -19,13 +19,12 @@
     
     <meta name="description">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="all-categories">
-<meta property="og:url" content="http://stevechoris.github.io/all-categories/index.html">
+<meta property="og:title" content="逆风飞翔的博客">
+<meta property="og:url" content="http://stevechoris.github.io/categories/LeetCode/index.html">
 <meta property="og:site_name" content="逆风飞翔的博客">
 <meta property="og:description">
-<meta property="og:updated_time" content="2016-05-25T14:37:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="all-categories">
+<meta name="twitter:title" content="逆风飞翔的博客">
 <meta name="twitter:description">
     
     
@@ -227,31 +226,86 @@
                         hasCoverMetaIn
                         ">
                 
-<div id="categories-archives" class="main-content-wrap">
-    <form id="filter-form" action="##">
-        <input name="category" type="text" class="form-control input--xlarge"
-               placeholder="搜索分类" autofocus="autofocus">
-    </form>
-    <h5 class="archive-result text-color-base text-xlarge"
-        data-message-zero="没有找到分类"
-        data-message-one="找到 1 个分类"
-        data-message-other="找到 {n} 个分类"></h5>
+    
 
-        <section class="boxes">
-        
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
             
-                <div><a href="#posts-list-LeetCode" class="category-anchor" data-category="leetcode" data-parent-categories="">LeetCode</a></div>
-            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/09/10/LeetCode-377-Combination-Sum/">
+                            [LeetCode] 377. Combination Sum
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-09-10T16:33:28+08:00">
+	
+		    9月 10, 2016
+    	
+    </time>
+    
+        <span>发布在 </span>
         
-    </section>
-    <section class="boxes">
-        
-            
-                    <div id="posts-list-LeetCode" class="archive box" data-category="leetcode" data-parent-categories=""><h4 class="archive-title text-xlarge"><a class="link-unstyled" href="/categories/LeetCode/">LeetCode (1)</a></h4><ul class="archive-posts"><li class="archive-post"><a class="archive-post-title" href="/2016/09/10/LeetCode-377-Combination-Sum/">[LeetCode] 377. Combination Sum</a><span class="archive-post-date"> - 9月 10, 2016</span></li></ul></div>
-            
-        
-    </section>
+    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
+
+
+    
 </div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/combination-sum-iv/" target="_blank" rel="external">377. Combination Sum IV</a><br>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><blockquote>
+<p>nums = [1, 2, 3]<br>target = 4</p>
+<p>The possible combination ways are:<br>(1, 1, 1, 1)<br>(1, 1, 2)<br>(1, 2, 1)<br>(1, 3)<br>(2, 1, 1)<br>(2, 2)<br>(3, 1)</p>
+<p>Note that different sequences are counted as different combinations.</p>
+<p>Therefore the output is 7.</p>
+<h2 id="Follow-up"><a href="#Follow-up" class="headerlink" title="Follow up:"></a>Follow up:</h2><p>What if negative numbers are allowed in the given array?<br>How does it change the problem?<br>What limitation we need to add to the question to allow negative numbers?</p>
+</blockquote>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
+<p>测试用例见题目描述。</p>
+<p>注意不同的序列顺序应当视为不同的组合。</p>
+<h2 id="进一步思考："><a href="#进一步思考：" class="headerlink" title="进一步思考："></a>进一步思考：</h2><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
+<p>测试用例见题目描述。</p>
+<p>注意不同的序列顺序应当视为不同的组合。</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>动态规划（Dynamic Programming）</p>
+<p>状态转移方程：dp[x + y] += dp[x]</p>
+<p>其中dp[x]表示生成数字x的所有可能的组合方式的个数。</p>
+<h1 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):&#10;    def combinationSum4(self, nums, target):&#10;        &#34;&#34;&#34;&#10;        :type nums: List[int]&#10;        :type target: int&#10;        :rtype: int&#10;        &#34;&#34;&#34;&#10;        dp = [0] * (target + 1)&#10;        dp[0] = 1&#10;        for x in range(target + 1):&#10;            for y in nums:&#10;                if x + y &#60;= target:&#10;                    dp[x + y] += dp[x]&#10;        return dp[target]</span><br></pre></td></tr></table></figure>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/09/10/LeetCode-377-Combination-Sum/#post-footer" class="postShorten-excerpt_link link">
+                                注释和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">第 1 页 共 1 页</li>
+    </ul>
+</div>
+
+</section>
+
+
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
