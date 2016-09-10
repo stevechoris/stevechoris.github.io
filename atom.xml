@@ -73,7 +73,7 @@
     
     </summary>
     
-      <category term="模板" scheme="http://stevechoris.github.io/categories/template/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/Template/"/>
     
     
       <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
@@ -87,7 +87,7 @@
     <link href="http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
     <id>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-安装扩展插件/</id>
     <published>2016-05-29T07:54:37.000Z</published>
-    <updated>2016-09-10T13:04:25.000Z</updated>
+    <updated>2016-09-10T13:08:33.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1-更新pip&quot;&gt;&lt;a href=&quot;#1-更新pip&quot; class=&quot;headerlink&quot; title=&quot;1. 更新pip&quot;&gt;&lt;/a&gt;1. 更新pip&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;最简单的安装方法是使用pip，首先将pip更新到最新版&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install --upgrade pip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -129,7 +129,7 @@
     
     </summary>
     
-      <category term="模板" scheme="http://stevechoris.github.io/categories/template/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/Template/"/>
     
     
       <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
