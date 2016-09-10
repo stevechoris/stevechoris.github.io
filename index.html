@@ -260,7 +260,7 @@
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>动态规划（Dynamic Programming）</p>
 <p>状态转移方程：dp[x + y] += dp[x]</p>
 <p>其中dp[x]表示生成数字x的所有可能的组合方式的个数。</p>
-<h1 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><p>class Solution(object):<br>    def combinationSum4(self, nums, target):<br>        “””<br>        :type nums: List[int]<br>        :type target: int<br>        :rtype: int<br>        “””<br>        dp = [0] * (target + 1)<br>        dp[0] = 1<br>        for x in range(target + 1):<br>            for y in nums:<br>                if x + y &lt;= target:<br>                    dp[x + y] += dp[x]<br>        return dp[target]</p>
+<h1 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><figure class="highlight"><figcaption><span>Solution(object):</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def combinationSum4(self, nums, target):&#10;    &#34;&#34;&#34;&#10;    :type nums: List[int]&#10;    :type target: int&#10;    :rtype: int&#10;    &#34;&#34;&#34;&#10;    dp = [0] * (target + 1)&#10;    dp[0] = 1&#10;    for x in range(target + 1):&#10;        for y in nums:&#10;            if x + y &#60;= target:&#10;                dp[x + y] += dp[x]&#10;    return dp[target]</span><br></pre></td></tr></table></figure>
 
                     
                         
