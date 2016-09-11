@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-11T13:49:23.000Z</updated>
+  <updated>2016-09-11T14:46:11.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[LeetCode] 312. Burst Balloons</title>
+    <link href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/"/>
+    <id>http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/</id>
+    <published>2016-09-11T14:16:07.000Z</published>
+    <updated>2016-09-11T14:46:11.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/burst-balloons/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;312. Burst Balloons&lt;/a&gt;&lt;br&gt;Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] &lt;em&gt; nums[i] &lt;/em&gt; nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.&lt;/p&gt;
+&lt;p&gt;Find the maximum coins you can collect by bursting the balloons wisely.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot; title=&quot;Note:&quot;&gt;&lt;/a&gt;Note:&lt;/h2&gt;&lt;p&gt;(1) You may imagine nums[-1] = nums[n] = 1. They are not real therefore you can not burst them.&lt;br&gt;(2) 0 ≤ n ≤ 500, 0 ≤ nums[i] ≤ 100&lt;/p&gt;
+&lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;p&gt;Given [3, 1, 5, 8]&lt;/p&gt;
+&lt;p&gt;Return 167&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nums = [3,1,5,8] –&amp;gt; [3,5,8] –&amp;gt;   [3,8]   –&amp;gt;  [8]  –&amp;gt; []&lt;br&gt;   coins =  3 &lt;em&gt; 1 &lt;/em&gt; 5 + 3 &lt;em&gt; 5 &lt;/em&gt; 8 + 1 &lt;em&gt; 3 &lt;/em&gt; 8 + 1 &lt;em&gt; 8 &lt;/em&gt; 1 = 167&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;给定n个气球，下标从0到-1。每个气球都涂有一个数字，用数组nums表示。要求你炸掉所有的气球。如果你炸掉气球i可以得到nums[left]*nums[i]*nums[right]枚硬币。这里left、right为i左右相邻的气球。 爆炸后，left和right相邻。计算可以获得的最大硬币数量。&lt;/p&gt;
+&lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;一开始看觉得没有头绪，参考&lt;a href=&quot;http://mp.weixin.qq.com/s?src=3&amp;amp;timestamp=1473603642&amp;amp;ver=1&amp;amp;signature=FjA7yVpEGqFGtSgxwobBBt3rKzs4TlAd6VhHAhJB1*QbgTw8QDcmtrXTs6PDW5L1nDHJuh5cY7ZTjIfxkqdmIWf6NXtiESwQmFT-jBLfgsnU91gq25MHAzFOtsOKHTrbDIt2uJiJU1ebh0*UygeLtg==&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;克林[leetcode] 312. Burst Balloons&lt;/a&gt;的思路&lt;/p&gt;
+&lt;p&gt;动态规划（Dynamic Programming）&lt;br&gt;时间复杂度O(n^3)&lt;br&gt;主要考虑最后一个爆炸的气球, 用dp[l][r]表示炸掉l到r直接的气球可以获得的硬币数，状态转移方程为：&lt;br&gt;dp[l][r] = max(dp[l][r], dp[l,m]+dp[m][r]+nums[l]*nums[m]*nums[r])&lt;/p&gt;
+&lt;p&gt;m依次遍历l到r直接所有气球，把它当做最后一个爆炸的气球，将问题转换为炸掉[l, m)和(m, r]之间所有气球可得最大金币这两个子问题，最后再加上炸掉气球m所得金币，来更新dp[l][r]。&lt;/p&gt;
+&lt;h2 id=&quot;进一步优化&quot;&gt;&lt;a href=&quot;#进一步优化&quot; class=&quot;headerlink&quot; title=&quot;进一步优化&quot;&gt;&lt;/a&gt;进一步优化&lt;/h2&gt;&lt;p&gt;由于采用递归分治法的思想，dp[l][r]会有很多重复性计算，因此可以建立一个数组，在每一个区间[l,r]计算完成后，将dp[l][r]保存到二维数组中，避免后续的重复计算。&lt;/p&gt;
+&lt;h1 id=&quot;C-和Java代码：&quot;&gt;&lt;a href=&quot;#C-和Java代码：&quot; class=&quot;headerlink&quot; title=&quot;C++和Java代码：&quot;&gt;&lt;/a&gt;C++和Java代码：&lt;/h1&gt; &lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;a href=&quot;http://example.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;example&lt;/a&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;maxCoins&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] iNums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[iNums.length + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x : iNums) &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (x &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) nums[n++] = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] = nums[n++] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[][] dp = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[n][n];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; k &amp;lt; n; ++k)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; l = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; l &amp;lt; n - k; ++l) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; r = l + k;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; m = l + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; m &amp;lt; r; ++m)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    dp[l][r] = Math.max(dp[l][r], &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                        nums[l] * nums[m] * nums[r] + dp[l][m] + dp[m][r]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; dp[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;][n - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/burst-balloons/&quot;&gt;312. Burst Balloons&lt;/a&gt;&lt;br&gt;Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] &lt;em&gt; nums[i] &lt;/em&gt; nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.&lt;/p&gt;
+&lt;p&gt;Find the maximum coins you can collect by bursting the balloons wisely.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
+    
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>[LeetCode] 354. Russian Doll Envelopes</title>
@@ -56,7 +95,7 @@
     <link href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/"/>
     <id>http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/</id>
     <published>2016-09-11T10:00:53.000Z</published>
-    <updated>2016-09-11T13:43:24.000Z</updated>
+    <updated>2016-09-11T13:44:11.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;174. Dungeon Game&lt;/a&gt;&lt;br&gt;The demons had captured the princess (&lt;em&gt;P&lt;/em&gt;) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (&lt;em&gt;K&lt;/em&gt;) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.&lt;/p&gt;
 &lt;p&gt;The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.&lt;/p&gt;
@@ -103,7 +142,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     <id>http://stevechoris.github.io/2016/09/10/LeetCode-解题报告/</id>
     <published>2016-09-10T15:20:55.000Z</published>
-    <updated>2016-09-11T13:43:35.000Z</updated>
+    <updated>2016-09-11T13:44:03.000Z</updated>
     
     <content type="html">&lt;table&gt;
 &lt;thead&gt;
@@ -185,7 +224,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/"/>
     <id>http://stevechoris.github.io/2016/09/10/Post-with-cover-image/</id>
     <published>2016-09-10T13:29:21.000Z</published>
-    <updated>2016-09-11T13:43:46.000Z</updated>
+    <updated>2016-09-11T13:44:05.000Z</updated>
     
     <content type="html">&lt;p&gt;女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。&lt;br&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no&quot; alt=&quot;天使&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;海莉为流浪汉们做公益已经有四年的时间了。那还是四年前，她她与妈妈米兰达逛完杂货铺出来，遇到了在当地丢失工作的流浪汉爱德华，他坐在路边，目光呆滞，已经很多天没吃饱饭了，饿得奄奄一息，五岁的海莉动了恻隐之心，跟妈妈商量着给爱德华买了个三明治。爱德华高兴得当场落泪，多年的流浪生涯让他看透了人情冷暖，世态的炎凉，而这个小女孩给了他温暖的一天。&lt;/p&gt;
 &lt;p&gt;在街上，海莉又遇到了另一个流浪汉比利·雷，一个退伍军人，在战争中失去了双腿，无家可归的他再次激起了海莉的爱心。帮完了一个又一个流浪汉后，母亲告诉她：“我们并不是多么富裕，没有能力帮助所有的人。”小女孩的眼角挂着泪水，倔强地看着母亲，她没有绝望，任性地说：“不！我要试试看！”买不起食物，她就自己去种。&lt;/p&gt;

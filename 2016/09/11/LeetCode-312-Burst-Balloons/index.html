@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="逆风飞翔的博客">
-    <title>天使的模样 - 逆风飞翔的博客</title>
+    <title>[LeetCode] 312. Burst Balloons - 逆风飞翔的博客</title>
     <meta name="author" content="steve choris">
     
         <meta name="keywords" content="hexo,blog,SteveChoris,">
@@ -17,17 +17,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。">
+    <meta name="description" content="题目描述:312. Burst BalloonsGiven n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloo">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="天使的模样">
-<meta property="og:url" content="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/index.html">
+<meta property="og:title" content="[LeetCode] 312. Burst Balloons">
+<meta property="og:url" content="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/index.html">
 <meta property="og:site_name" content="逆风飞翔的博客">
-<meta property="og:description" content="女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。">
-<meta property="og:image" content="https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no">
-<meta property="og:updated_time" content="2016-09-11T13:44:05.000Z">
+<meta property="og:description" content="题目描述:312. Burst BalloonsGiven n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloo">
+<meta property="og:updated_time" content="2016-09-11T14:46:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天使的模样">
-<meta name="twitter:description" content="女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。">
+<meta name="twitter:title" content="[LeetCode] 312. Burst Balloons">
+<meta name="twitter:description" content="题目描述:312. Burst BalloonsGiven n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloo">
     
     
         
@@ -37,17 +36,6 @@
     
     
     
-        <meta property="og:image" content="https://cdn.happy-science.jp/media/happy-science.jp/2016/04/12114207/aclx7bds.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://cdn.happy-science.jp/media/happy-science.jp/2016/04/12114207/aclx7bds.jpg" />
-    
-    
-        
-            <meta property="og:image" content="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg" />
-            <meta class="swiftype" name="image" data-type="enum" content="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg" />
-        
-            <meta property="og:image" content="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg" />
-            <meta class="swiftype" name="image" data-type="enum" content="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg" />
-        
     
     <!--STYLES-->
     <link rel="stylesheet" href="/assets/css/style-nuvue6sithwirecbhvw3dkaobiojqvtadsnhguwi7k04xklybw5djl1smadp.min.css" type="text/css">
@@ -234,40 +222,30 @@
 </nav>
 
             
-        <div class="post-header-cover
-                    text-left
-                    post-header-cover--full"
-             style="background-image:url('https://cdn.happy-science.jp/media/happy-science.jp/2016/04/12114207/aclx7bds.jpg');"
-             data-behavior="4">
-            
-        </div>
-
             <div id="main" data-behavior="4"
-                 class="hasCover
-                        hasCoverMetaOut
-                        hasCoverCaption">
+                 class="
+                        hasCoverMetaIn
+                        ">
                 
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-        <span class="post-header-cover-caption caption">天使的模样</span>
     
     
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            天使的模样
+            [LeetCode] 312. Burst Balloons
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-09-10T21:29:21+08:00">
+    <time itemprop="datePublished" datetime="2016-09-11T22:16:07+08:00">
 	
-		    9月 10, 2016
+		    9月 11, 2016
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/Template/">模板</a>
+    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
 
 
     
@@ -277,51 +255,39 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。<br><img src="https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no" alt="天使"><br><a id="more"></a><br>海莉为流浪汉们做公益已经有四年的时间了。那还是四年前，她她与妈妈米兰达逛完杂货铺出来，遇到了在当地丢失工作的流浪汉爱德华，他坐在路边，目光呆滞，已经很多天没吃饱饭了，饿得奄奄一息，五岁的海莉动了恻隐之心，跟妈妈商量着给爱德华买了个三明治。爱德华高兴得当场落泪，多年的流浪生涯让他看透了人情冷暖，世态的炎凉，而这个小女孩给了他温暖的一天。</p>
-<p>在街上，海莉又遇到了另一个流浪汉比利·雷，一个退伍军人，在战争中失去了双腿，无家可归的他再次激起了海莉的爱心。帮完了一个又一个流浪汉后，母亲告诉她：“我们并不是多么富裕，没有能力帮助所有的人。”小女孩的眼角挂着泪水，倔强地看着母亲，她没有绝望，任性地说：“不！我要试试看！”买不起食物，她就自己去种。</p>
-<p>就这样，这个善良的小女孩开始挖地，播种，除草，建栅栏，她要自己培育果蔬，为更多无家可归的人提供食物。没有种植经验，她就在晚上一个人抱着厚厚的书本学习，功夫不负有心人，她终于收获55磅的果蔬，悉数捐出，这可以满足流浪者一年的食量。如今，她的目标是收获250磅的食物，并通过自己动手，为流浪者建造庇护所，她拿起刀子，扛起电钻她要为流浪者建一个遮风避雨的小屋，带着口罩认真的粉刷墙壁。</p>
-<p>为了资助海莉的项目，妈妈米兰达向一家非营利性组织申请了一笔补助，海莉收到了3000美元的赠款。当地的一家建材商店劳氏商店承诺，海莉来采购建屋的材料能最低打五折。</p>
-<p>海莉的行动触动了一大批志愿者加入。一些爱心人士也纷纷伸出援助之手，给予海莉力所能及的帮助。一位女士，为那些女流浪者捐赠了女性用品，她将物品交给了海莉，并且告诉她“不够再来拿”。一家慈善机构知道海莉的故事后，给她捐了3000美元。她将这些钱用来购买一些生活用品，在一个圣诞节送给了流浪汉的孩子，“我看到了他们每个人都特别高兴，他们告诉我说我就是他们的圣诞老人。”</p>
-<p>海莉的善举，成为了一股推动改善流浪汉生活的力量。在海莉的影响下，有人开始捐钱，有人开始捐种子，更多的人开始关注身边的流浪者，他们和这些无家可归的人聊天，尽可能的帮助他们。“不应该有人在街头流浪，流浪者们需要更多人的帮助！”海莉的故事正在改变世界流浪汉的现状。</p>
-<p>尽自己最大的努力，怀揣一颗善良的心，去帮助那些需要帮助的人，这个世界就会因为你的小小善举而在慢慢发生改变。如果世界上真的有天使，那么天使应该就是这个女孩的模样。</p>
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="external">312. Burst Balloons</a><br>Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] <em> nums[i] </em> nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.</p>
+<p>Find the maximum coins you can collect by bursting the balloons wisely.<br><a id="more"></a></p>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>(1) You may imagine nums[-1] = nums[n] = 1. They are not real therefore you can not burst them.<br>(2) 0 ≤ n ≤ 500, 0 ≤ nums[i] ≤ 100</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><p>Given [3, 1, 5, 8]</p>
+<p>Return 167</p>
+<blockquote>
+<p>nums = [3,1,5,8] –&gt; [3,5,8] –&gt;   [3,8]   –&gt;  [8]  –&gt; []<br>   coins =  3 <em> 1 </em> 5 + 3 <em> 5 </em> 8 + 1 <em> 3 </em> 8 + 1 <em> 8 </em> 1 = 167</p>
+</blockquote>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>给定n个气球，下标从0到-1。每个气球都涂有一个数字，用数组nums表示。要求你炸掉所有的气球。如果你炸掉气球i可以得到nums[left]*nums[i]*nums[right]枚硬币。这里left、right为i左右相邻的气球。 爆炸后，left和right相邻。计算可以获得的最大硬币数量。</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>一开始看觉得没有头绪，参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1473603642&amp;ver=1&amp;signature=FjA7yVpEGqFGtSgxwobBBt3rKzs4TlAd6VhHAhJB1*QbgTw8QDcmtrXTs6PDW5L1nDHJuh5cY7ZTjIfxkqdmIWf6NXtiESwQmFT-jBLfgsnU91gq25MHAzFOtsOKHTrbDIt2uJiJU1ebh0*UygeLtg==" target="_blank" rel="external">克林[leetcode] 312. Burst Balloons</a>的思路</p>
+<p>动态规划（Dynamic Programming）<br>时间复杂度O(n^3)<br>主要考虑最后一个爆炸的气球, 用dp[l][r]表示炸掉l到r直接的气球可以获得的硬币数，状态转移方程为：<br>dp[l][r] = max(dp[l][r], dp[l,m]+dp[m][r]+nums[l]*nums[m]*nums[r])</p>
+<p>m依次遍历l到r直接所有气球，把它当做最后一个爆炸的气球，将问题转换为炸掉[l, m)和(m, r]之间所有气球可得最大金币这两个子问题，最后再加上炸掉气球m所得金币，来更新dp[l][r]。</p>
+<h2 id="进一步优化"><a href="#进一步优化" class="headerlink" title="进一步优化"></a>进一步优化</h2><p>由于采用递归分治法的思想，dp[l][r]会有很多重复性计算，因此可以建立一个数组，在每一个区间[l,r]计算完成后，将dp[l][r]保存到二维数组中，避免后续的重复计算。</p>
+<h1 id="C-和Java代码："><a href="#C-和Java代码：" class="headerlink" title="C++和Java代码："></a>C++和Java代码：</h1> <figure class="codeblock codeblock--tabbed"><figcaption><a href="http://example.com" target="_blank" rel="external">example</a><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxCoins</span><span class="params">(<span class="keyword">int</span>[] iNums)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[iNums.length + <span class="number">2</span>];</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : iNums) <span class="keyword">if</span> (x &gt; <span class="number">0</span>) nums[n++] = x;</span><br><span class="line">        nums[<span class="number">0</span>] = nums[n++] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">2</span>; k &lt; n; ++k)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt; n - k; ++l) {</span><br><span class="line">                <span class="keyword">int</span> r = l + k;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> m = l + <span class="number">1</span>; m &lt; r; ++m)</span><br><span class="line">                    dp[l][r] = Math.max(dp[l][r], </span><br><span class="line">                        nums[l] * nums[m] * nums[r] + dp[l][m] + dp[m][r]);</span><br><span class="line">            }</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>][n - <span class="number">1</span>];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
 
             
-    
-    <div class="image-gallery">
-        <div class="image-gallery-metabar">
-            <span>Gallery : 2 images</span>
-        </div>
-        <div class="image-gallery-photos undefined">
-            
-            
-            <div class="photo-box">
-                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyqh7hm000jfyn5k6guj5br"
-                   title="天使1" href="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg">
-                    <img class="photo" src="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg" itemprop="image">
-                </a>
-            </div>
-            
-            
-            <div class="photo-box">
-                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyqh7hm000jfyn5k6guj5br"
-                   title="天使2" href="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg">
-                    <img class="photo" src="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg" itemprop="image">
-                </a>
-            </div>
-            
-        </div>
-    </div>
-
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a> <a class="tag tag--primary tag--small t-link" href="/tags/LeetCode/">LeetCode</a>
+
+            </div>
         
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-解题报告/"  data-tooltip="LeetCode 解题报告">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -329,7 +295,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-377-Combination-Sum/" data-tooltip="[LeetCode] 377. Combination Sum">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/" data-tooltip="[LeetCode] 354. Russian Doll Envelopes">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -344,17 +310,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -378,8 +344,8 @@
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/09/10/Post-with-cover-image/"
-     data-title="天使的模样" data-url="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/09/11/LeetCode-312-Burst-Balloons/"
+     data-title="[LeetCode] 312. Burst Balloons" data-url="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
 </div>
 
             
@@ -403,7 +369,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-解题报告/"  data-tooltip="LeetCode 解题报告">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -411,7 +377,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-377-Combination-Sum/" data-tooltip="[LeetCode] 377. Combination Sum">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/" data-tooltip="[LeetCode] 354. Russian Doll Envelopes">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -426,17 +392,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -462,17 +428,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/10/Post-with-cover-image/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
