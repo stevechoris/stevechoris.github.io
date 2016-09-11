@@ -25,7 +25,7 @@ You have a number of envelopes with widths and heights given as a pair of intege
 <meta property="og:site_name" content="逆风飞翔的博客">
 <meta property="og:description" content="题目描述:354. Russian Doll Envelopes
 You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height o">
-<meta property="og:updated_time" content="2016-09-11T12:37:36.000Z">
+<meta property="og:updated_time" content="2016-09-11T12:40:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 354. Russian Doll Envelopes">
 <meta name="twitter:description" content="题目描述:354. Russian Doll Envelopes
@@ -265,7 +265,7 @@ You have a number of envelopes with widths and heights given as a pair of intege
 <h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。</p>
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>首先将信封(w,h)按照按照宽度排序，宽度小的在宽度大的后面，若相等，则长度小的在前，这样排在后面的信封不可能包含在前面的信封之中。</p>
 <p>动态规划的思想也从中而来，状态DP[i]表示第i个信封所包含的信封的数量。从上面可知，若一个信封包含其他的信封(DP[i]&gt;1)则，它包含的一定是排在它之前的某个信封，即状态转移方程为</p>
-<p>对每个信封i，初始化： $DP[i] = 1$ (1)<br>对于i&gt;=2，<br>{&#37; math<em>block %}<br>DP[i]=max(DP[i],\quad DP[j]),\quad { for\quad all\quad j&lt;i\quad and\quad { w }</em>{ i }&gt;{ w }<em>{ j }\quad and\quad { h }</em>{ i }&gt;{ h }_{ j }}<br>{&#37; endmath_block %} (2)</p>
+<p>对每个信封i，初始化： $DP[i] = 1$ (1)<br>对于i&gt;=2，<br>{&#37; math<em>block %}<br>DP[i]=max(DP[i],\quad DP[j]),\quad { for\quad all\quad j&lt;i\quad and\quad { w }</em>{ i }&gt;{ w }<em>{ j }\quad and\quad { h }</em>{ i }&gt;{ h }_{ j }}<br>{&#37; endmath_block %} (2)<br>{&#37; math_block %}<br>\begin{aligned}<br>\dot{x} &amp; = \sigma(y-x) \<br>\dot{y} &amp; = \rho x - y - xz \<br>\dot{z} &amp; = -\beta z + xy<br>\end{aligned}<br>{&#37; endmath_block %}</p>
 <h1 id="C-代码："><a href="#C-代码：" class="headerlink" title="C++代码："></a>C++代码：</h1><p>‘’’<br>struct cmp {<br>  bool operator()(pair<int,int>&amp; a, pair<int,int>&amp; b) {<br>      return b.first &lt; a.first || (b.first==a.first &amp;&amp; b.second <a.second); }="" };="" class="" solution="" {="" public:="" int="" maxenvelopes(vector<pair<int,="">&gt;&amp; envelopes) {<br>        sort(envelopes.begin(), envelopes.end());<br>        int n = envelopes.size();<br>        if (n &lt;= 1) return n;</a.second);></int,int></int,int></p>
 <pre><code>    int ans = INT_MIN;
     vector&lt;int&gt; dp(n, 1);
