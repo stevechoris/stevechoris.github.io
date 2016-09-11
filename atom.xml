@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-10T15:39:08.000Z</updated>
+  <updated>2016-09-11T10:38:59.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[LeetCode] 174. Dungeon Game</title>
+    <link href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/"/>
+    <id>http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/</id>
+    <published>2016-09-11T10:00:53.000Z</published>
+    <updated>2016-09-11T10:38:59.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;174. Dungeon Game&lt;/a&gt;&lt;br&gt;The demons had captured the princess (&lt;em&gt;P&lt;/em&gt;) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (&lt;em&gt;K&lt;/em&gt;) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.&lt;/p&gt;
+&lt;p&gt;The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.&lt;/p&gt;
+&lt;p&gt;Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0’s) or contain magic orbs that increase the knight’s health (positive integers).&lt;/p&gt;
+&lt;p&gt;In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For example, given the dungeon below, the initial health of the knight must be at least 7 if he follows the optimal path RIGHT-&amp;gt; RIGHT -&amp;gt; DOWN -&amp;gt; DOWN.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../images/14735883347096.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes:&quot;&gt;&lt;/a&gt;Notes:&lt;/h2&gt;&lt;p&gt;The knight’s health has no upper bound.&lt;br&gt;Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.&lt;/p&gt;
+&lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;骑士需要从左上角开始进入房间，每次向右或向下移动一步进入下一个房间，直到到达右下角的房间救出公主。每个房间可能由精灵把守，会造成骑士失血，用负数表示；可能为空，用0表示；也可能有魔法球，可以给骑士补血。从左上角第一个房间开始，直到进入右下角关押公主的房间，血量都不能&amp;lt;=0。&lt;/p&gt;
+&lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;这是一道二维的动态规划问题，用DP[i][j]表示状态，表示接下来骑士进入(i,j)房间后能救出公主最少需要具备多少血。状态转移方程为:&lt;/p&gt;
+&lt;p&gt;$dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1) $ (1)&lt;/p&gt;
+&lt;p&gt;选择向右或者向下中代价最小的方向，然后根据当前要进入的房间(i,j)相应调整需要的血量。&lt;/p&gt;
+&lt;p&gt;若$dungeon[i][j] &amp;lt;= 0$， 则$dp[i][j] =  min(dp[i+1][j], dp[i][j+1])-dungeon[i][j]$ (2)&lt;/p&gt;
+&lt;p&gt;若$dungeon[i][j] &amp;gt; 0$, 则$dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1)$ (3)&lt;/p&gt;
+&lt;p&gt;(2)、（3）式可以统一为（1）式子。&lt;/p&gt;
+&lt;h1 id=&quot;C-代码：&quot;&gt;&lt;a href=&quot;#C-代码：&quot; class=&quot;headerlink&quot; title=&quot;C++代码：&quot;&gt;&lt;/a&gt;C++代码：&lt;/h1&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Solution &amp;#123;&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public:&amp;#10;    int calculateMinimumHP(vector&amp;#60;vector&amp;#60;int&amp;#62;&amp;#62;&amp;#38; dungeon) &amp;#123;&amp;#10;        int rows = dungeon.size();&amp;#10;        int cols = dungeon[0].size();&amp;#10;        vector&amp;#60;vector&amp;#60;int&amp;#62;&amp;#62; dp(rows, vector&amp;#60;int&amp;#62;(cols, 0));&amp;#10;        dp[rows-1][cols-1] = max(1-dungeon[rows-1][cols-1], 1);&amp;#10;        &amp;#10;        for (int i=rows-2; i&amp;#62;=0; i--) &amp;#123;&amp;#10;            dp[i][cols-1] =  max(dp[i+1][cols-1]-dungeon[i][cols-1], 1);&amp;#10;        &amp;#125;&amp;#10;        for (int j=cols-2; j&amp;#62;=0; j--) &amp;#123;&amp;#10;            dp[rows-1][j] =  max(dp[rows-1][j+1]-dungeon[rows-1][j], 1);&amp;#10;        &amp;#125;&amp;#10;        for (int i=rows-2; i&amp;#62;=0; i--) &amp;#123;&amp;#10;            for (int j=cols-2; j&amp;#62;=0; j--) &amp;#123;&amp;#10;                dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1);&amp;#10;            &amp;#125;&amp;#10;        &amp;#125;&amp;#10;        return dp[0][0];&amp;#10;    &amp;#125;&amp;#10;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot; target
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
+    
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 解题报告</title>

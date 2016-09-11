@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="逆风飞翔的博客">
-    <title>分类: LeetCode - 逆风飞翔的博客</title>
+    <title>[LeetCode] 174. Dungeon Game - 逆风飞翔的博客</title>
     <meta name="author" content="steve choris">
     
         <meta name="keywords" content="hexo,blog,SteveChoris,">
@@ -17,15 +17,17 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description">
+    <meta name="description" content="题目描述:174. Dungeon GameThe demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="逆风飞翔的博客">
-<meta property="og:url" content="http://stevechoris.github.io/categories/LeetCode/index.html">
+<meta property="og:title" content="[LeetCode] 174. Dungeon Game">
+<meta property="og:url" content="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/index.html">
 <meta property="og:site_name" content="逆风飞翔的博客">
-<meta property="og:description">
+<meta property="og:description" content="题目描述:174. Dungeon GameThe demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight">
+<meta property="og:image" content="http://stevechoris.github.io/../../../../images/14735883347096.jpg">
+<meta property="og:updated_time" content="2016-09-11T10:38:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="逆风飞翔的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="[LeetCode] 174. Dungeon Game">
+<meta name="twitter:description" content="题目描述:174. Dungeon GameThe demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight">
     
     
         
@@ -63,7 +65,7 @@
         
     
 
-<header id="header" data-behavior="2">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <h1 class="header-title">
         <a class="header-title-link" href="/ ">逆风飞翔的博客</a>
@@ -85,7 +87,7 @@
 
     
 
-<nav id="sidebar" data-behavior="2">
+<nav id="sidebar" data-behavior="4">
     
         <div class="sidebar-profile">
             <a href="/#about">
@@ -221,28 +223,21 @@
 </nav>
 
             
-            <div id="main" data-behavior="2"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    
-
-<section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/09/11/LeetCode-174-Dungeon-Game/">
-                            [LeetCode] 174. Dungeon Game
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            [LeetCode] 174. Dungeon Game
+        </h1>
+    
+    <div class="post-meta">
     <time itemprop="datePublished" datetime="2016-09-11T18:00:53+08:00">
 	
 		    9月 11, 2016
@@ -257,10 +252,11 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/dungeon-game/" target="_blank" rel="external">174. Dungeon Game</a><br>The demons had captured the princess (<em>P</em>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<em>K</em>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/dungeon-game/" target="_blank" rel="external">174. Dungeon Game</a><br>The demons had captured the princess (<em>P</em>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<em>K</em>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
 <p>The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
 <p>Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0’s) or contain magic orbs that increase the knight’s health (positive integers).</p>
 <p>In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
@@ -277,161 +273,88 @@
 <p>(2)、（3）式可以统一为（1）式子。</p>
 <h1 id="C-代码："><a href="#C-代码：" class="headerlink" title="C++代码："></a>C++代码：</h1><figure class="highlight"><figcaption><span>Solution &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public:&#10;    int calculateMinimumHP(vector&#60;vector&#60;int&#62;&#62;&#38; dungeon) &#123;&#10;        int rows = dungeon.size();&#10;        int cols = dungeon[0].size();&#10;        vector&#60;vector&#60;int&#62;&#62; dp(rows, vector&#60;int&#62;(cols, 0));&#10;        dp[rows-1][cols-1] = max(1-dungeon[rows-1][cols-1], 1);&#10;        &#10;        for (int i=rows-2; i&#62;=0; i--) &#123;&#10;            dp[i][cols-1] =  max(dp[i+1][cols-1]-dungeon[i][cols-1], 1);&#10;        &#125;&#10;        for (int j=cols-2; j&#62;=0; j--) &#123;&#10;            dp[rows-1][j] =  max(dp[rows-1][j+1]-dungeon[rows-1][j], 1);&#10;        &#125;&#10;        for (int i=rows-2; i&#62;=0; i--) &#123;&#10;            for (int j=cols-2; j&#62;=0; j--) &#123;&#10;                dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1);&#10;            &#125;&#10;        &#125;&#10;        return dp[0][0];&#10;    &#125;&#10;&#125;;</span><br></pre></td></tr></table></figure>
 
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2016/09/11/LeetCode-174-Dungeon-Game/#post-footer" class="postShorten-excerpt_link link">
-                                注释和共享
-                            </a>
-                        </p>
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/09/10/LeetCode-解题报告/">
-                            LeetCode 解题报告
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-09-10T23:20:55+08:00">
-	
-		    9月 10, 2016
-    	
-    </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
-
-
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a> <a class="tag tag--primary tag--small t-link" href="/tags/LeetCode/">LeetCode</a>
 
             </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <table>
-<thead>
-<tr>
-<th>#</th>
-<th>解题报告</th>
-<th>分类</th>
-<th>难度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>377</td>
-<td><a href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/">Combination Sum</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
-<td>Medium</td>
-</tr>
-</tbody>
-</table>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2016/09/10/LeetCode-解题报告/#post-footer" class="postShorten-excerpt_link link">
-                                注释和共享
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-解题报告/" data-tooltip="LeetCode 解题报告">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
             
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/09/10/LeetCode-377-Combination-Sum/">
-                            [LeetCode] 377. Combination Sum
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-09-10T16:33:28+08:00">
-	
-		    9月 10, 2016
-    	
-    </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
-
-
-    
-</div>
-
-            </div>
+                <a class="post-action-btn btn btn--default" href="#">
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/combination-sum-iv/" target="_blank" rel="external">377. Combination Sum IV</a><br>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><blockquote>
-<p>nums = [1, 2, 3]<br>target = 4</p>
-<p>The possible combination ways are:<br>(1, 1, 1, 1)<br>(1, 1, 2)<br>(1, 2, 1)<br>(1, 3)<br>(2, 1, 1)<br>(2, 2)<br>(3, 1)</p>
-<p>Note that different sequences are counted as different combinations.</p>
-<p>Therefore the output is 7.</p>
-<h2 id="Follow-up"><a href="#Follow-up" class="headerlink" title="Follow up:"></a>Follow up:</h2><p>What if negative numbers are allowed in the given array?<br>How does it change the problem?<br>What limitation we need to add to the question to allow negative numbers?</p>
-</blockquote>
-<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
-<p>测试用例见题目描述。</p>
-<p>注意不同的序列顺序应当视为不同的组合。</p>
-<h2 id="进一步思考："><a href="#进一步思考：" class="headerlink" title="进一步思考："></a>进一步思考：</h2><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
-<p>测试用例见题目描述。</p>
-<p>注意不同的序列顺序应当视为不同的组合。</p>
-<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>动态规划（Dynamic Programming）</p>
-<p>状态转移方程：dp[x + y] += dp[x]</p>
-<p>其中dp[x]表示生成数字x的所有可能的组合方式的个数。</p>
-<h1 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):&#10;    def combinationSum4(self, nums, target):&#10;        &#34;&#34;&#34;&#10;        :type nums: List[int]&#10;        :type target: int&#10;        :rtype: int&#10;        &#34;&#34;&#34;&#10;        dp = [0] * (target + 1)&#10;        dp[0] = 1&#10;        for x in range(target + 1):&#10;            for y in nums:&#10;                if x + y &#60;= target:&#10;                    dp[x + y] += dp[x]&#10;        return dp[target]</span><br></pre></td></tr></table></figure>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2016/09/10/LeetCode-377-Combination-Sum/#post-footer" class="postShorten-excerpt_link link">
-                                注释和共享
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">第 1 页 共 1 页</li>
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/09/11/LeetCode-174-Dungeon-Game/"
+     data-title="[LeetCode] 174. Dungeon Game" data-url="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+</div>
+
+            
+        
+    </div>
+</article>
 
 
 
@@ -442,6 +365,89 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/10/LeetCode-解题报告/" data-tooltip="LeetCode 解题报告">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
             
         </div>
         
@@ -486,6 +492,20 @@
     <!--SCRIPTS-->
 <script src="/assets/js/script-i4qo6jx6jji9fg0dftpya6ivemizsbow4fhow76d8dwpm7m1wbvi378ssumx.min.js" type="text/javascript"></script>
 <!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'choris'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
 
 
 
