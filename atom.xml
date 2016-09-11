@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-11T12:53:53.000Z</updated>
+  <updated>2016-09-11T13:43:59.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"/>
     <id>http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</id>
     <published>2016-09-11T11:54:05.000Z</published>
-    <updated>2016-09-11T12:53:53.000Z</updated>
+    <updated>2016-09-11T13:43:59.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/russian-doll-envelopes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;354. Russian Doll Envelopes&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.&lt;/p&gt;
 &lt;p&gt;What is the maximum number of envelopes can you Russian doll? (put one inside other)&lt;/p&gt;
 &lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;p&gt;Given envelopes = [[5,4],[6,4],[6,7],[2,3]], the maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).&lt;/p&gt;
-&lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。&lt;/p&gt;
+&lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;首先将信封(w,h)按照按照宽度排序，宽度小的在宽度大的后面，若相等，则长度小的在前，这样排在后面的信封不可能包含在前面的信封之中。&lt;/p&gt;
 &lt;p&gt;动态规划的思想也从中而来，状态DP[i]表示第i个信封所包含的信封的数量。从上面可知，若一个信封包含其他的信封(DP[i]&amp;gt;1)则，它包含的一定是排在它之前的某个信封，即状态转移方程为&lt;/p&gt;
 &lt;p&gt;对每个信封i，初始化： $DP[i] = 1$ (1)&lt;br&gt;对于i&amp;gt;=2，&lt;img src=&quot;https://lh3.googleusercontent.com/-hMRCL5fA6zs/V9VTz0o8YhI/AAAAAAAAAPY/3Kquslplmm4/I/14735984062721.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -35,7 +35,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/russian-doll-envelope
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/russian-doll-envelopes/&quot;&gt;354. Russian Doll Envelopes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.&lt;/p&gt;
+&lt;p&gt;What is the maximum number of envelopes can you Russian doll? (put one inside other)&lt;/p&gt;
+&lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;p&gt;Given envelopes = [[5,4],[6,4],[6,7],[2,3]], the maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).&lt;/p&gt;
+&lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。&lt;br&gt;
     
     </summary>
     
@@ -53,20 +57,16 @@
     <link href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/"/>
     <id>http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/</id>
     <published>2016-09-11T10:00:53.000Z</published>
-    <updated>2016-09-11T13:29:07.000Z</updated>
+    <updated>2016-09-11T13:43:24.000Z</updated>
     
-    <content type="html">&lt;!-- excerpt --&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;174. Dungeon Game&lt;/a&gt;&lt;br&gt;The demons had captured the princess (&lt;em&gt;P&lt;/em&gt;) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (&lt;em&gt;K&lt;/em&gt;) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;174. Dungeon Game&lt;/a&gt;&lt;br&gt;The demons had captured the princess (&lt;em&gt;P&lt;/em&gt;) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (&lt;em&gt;K&lt;/em&gt;) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.&lt;/p&gt;
 &lt;p&gt;The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.&lt;/p&gt;
 &lt;p&gt;Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0’s) or contain magic orbs that increase the knight’s health (positive integers).&lt;/p&gt;
 &lt;p&gt;In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For example, given the dungeon below, the initial health of the knight must be at least 7 if he follows the optimal path RIGHT-&amp;gt; RIGHT -&amp;gt; DOWN -&amp;gt; DOWN.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-OK3mhMH5MAI/V9VGGlpt63I/AAAAAAAAAO4/kfxbG2D6x0E/I/14735883347096.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes:&quot;&gt;&lt;/a&gt;Notes:&lt;/h2&gt;&lt;p&gt;The knight’s health has no upper bound.&lt;br&gt;Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.&lt;/p&gt;
+&lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes:&quot;&gt;&lt;/a&gt;Notes:&lt;/h2&gt;&lt;p&gt;The knight’s health has no upper bound.&lt;br&gt;Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;骑士需要从左上角开始进入房间，每次向右或向下移动一步进入下一个房间，直到到达右下角的房间救出公主。每个房间可能由精灵把守，会造成骑士失血，用负数表示；可能为空，用0表示；也可能有魔法球，可以给骑士补血。从左上角第一个房间开始，直到进入右下角关押公主的房间，血量都不能&amp;lt;=0。&lt;/p&gt;
 &lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;这是一道二维的动态规划问题，用DP[i][j]表示状态，表示接下来骑士进入(i,j)房间后能救出公主最少需要具备多少血。状态转移方程为:&lt;/p&gt;
 &lt;p&gt;$ dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1) $ (1)&lt;/p&gt;
@@ -75,6 +75,18 @@
 &lt;p&gt;若$dungeon[i][j] &amp;gt; 0$,则$dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1) $ (3) &lt;/p&gt;
 &lt;p&gt;(2)、（3）式可以统一为（1）式子。&lt;/p&gt;
 &lt;h1 id=&quot;C-代码：&quot;&gt;&lt;a href=&quot;#C-代码：&quot; class=&quot;headerlink&quot; title=&quot;C++代码：&quot;&gt;&lt;/a&gt;C++代码：&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class Solution &amp;#123;&amp;#10;public:&amp;#10;    int calculateMinimumHP(vector&amp;#60;vector&amp;#60;int&amp;#62;&amp;#62;&amp;#38; dungeon) &amp;#123;&amp;#10;        int rows = dungeon.size();&amp;#10;        int cols = dungeon[0].size();&amp;#10;        vector&amp;#60;vector&amp;#60;int&amp;#62;&amp;#62; dp(rows, vector&amp;#60;int&amp;#62;(cols, 0));&amp;#10;        dp[rows-1][cols-1] = max(1-dungeon[rows-1][cols-1], 1);&amp;#10;        &amp;#10;        for (int i=rows-2; i&amp;#62;=0; i--) &amp;#123;&amp;#10;            dp[i][cols-1] =  max(dp[i+1][cols-1]-dungeon[i][cols-1], 1);&amp;#10;        &amp;#125;&amp;#10;        for (int j=cols-2; j&amp;#62;=0; j--) &amp;#123;&amp;#10;            dp[rows-1][j] =  max(dp[rows-1][j+1]-dungeon[rows-1][j], 1);&amp;#10;        &amp;#125;&amp;#10;        for (int i=rows-2; i&amp;#62;=0; i--) &amp;#123;&amp;#10;            for (int j=cols-2; j&amp;#62;=0; j--) &amp;#123;&amp;#10;                dp[i][j] =  max(min(dp[i+1][j], dp[i][j+1])-dungeon[i][j], 1);&amp;#10;            &amp;#125;&amp;#10;        &amp;#125;&amp;#10;        return dp[0][0];&amp;#10;    &amp;#125;&amp;#10;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/dungeon-game/&quot;&gt;174. Dungeon Game&lt;/a&gt;&lt;br&gt;The demons had captured the princess (&lt;em&gt;P&lt;/em&gt;) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (&lt;em&gt;K&lt;/em&gt;) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.&lt;/p&gt;
+&lt;p&gt;The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.&lt;/p&gt;
+&lt;p&gt;Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0’s) or contain magic orbs that increase the knight’s health (positive integers).&lt;/p&gt;
+&lt;p&gt;In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For example, given the dungeon below, the initial health of the knight must be at least 7 if he follows the optimal path RIGHT-&amp;gt; RIGHT -&amp;gt; DOWN -&amp;gt; DOWN.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-OK3mhMH5MAI/V9VGGlpt63I/AAAAAAAAAO4/kfxbG2D6x0E/I/14735883347096.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes:&quot;&gt;&lt;/a&gt;Notes:&lt;/h2&gt;&lt;p&gt;The knight’s health has no upper bound.&lt;br&gt;Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.&lt;br&gt;
     
     </summary>
     
@@ -92,7 +104,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     <id>http://stevechoris.github.io/2016/09/10/LeetCode-解题报告/</id>
     <published>2016-09-10T15:20:55.000Z</published>
-    <updated>2016-09-11T12:57:42.000Z</updated>
+    <updated>2016-09-11T13:43:35.000Z</updated>
     
     <content type="html">&lt;table&gt;
 &lt;thead&gt;
@@ -124,6 +136,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 </content>
     
     <summary type="html">
@@ -140,7 +153,24 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;174&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;http://stevechor
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/&quot;&gt;Dungeon Game&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/tags/Dynamic-Programming/&quot;&gt;Dynamic Programming&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Hard&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;354&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/&quot;&gt;Russian Doll Envelopes&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/tags/Dynamic-Programming/&quot;&gt;Dynamic Programming&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Hard&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;377&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/&quot;&gt;Combination Sum&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/tags/Dynamic-Programming/&quot;&gt;Dynamic Programming&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
     
     </summary>
     
@@ -156,9 +186,9 @@
     <link href="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/"/>
     <id>http://stevechoris.github.io/2016/09/10/Post-with-cover-image/</id>
     <published>2016-09-10T13:29:21.000Z</published>
-    <updated>2016-09-10T15:13:27.000Z</updated>
+    <updated>2016-09-11T13:43:46.000Z</updated>
     
-    <content type="html">&lt;p&gt;女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。&lt;br&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no&quot; alt=&quot;天使&quot;&gt;&lt;br&gt;海莉为流浪汉们做公益已经有四年的时间了。那还是四年前，她她与妈妈米兰达逛完杂货铺出来，遇到了在当地丢失工作的流浪汉爱德华，他坐在路边，目光呆滞，已经很多天没吃饱饭了，饿得奄奄一息，五岁的海莉动了恻隐之心，跟妈妈商量着给爱德华买了个三明治。爱德华高兴得当场落泪，多年的流浪生涯让他看透了人情冷暖，世态的炎凉，而这个小女孩给了他温暖的一天。&lt;/p&gt;
+    <content type="html">&lt;p&gt;女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。&lt;br&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no&quot; alt=&quot;天使&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;海莉为流浪汉们做公益已经有四年的时间了。那还是四年前，她她与妈妈米兰达逛完杂货铺出来，遇到了在当地丢失工作的流浪汉爱德华，他坐在路边，目光呆滞，已经很多天没吃饱饭了，饿得奄奄一息，五岁的海莉动了恻隐之心，跟妈妈商量着给爱德华买了个三明治。爱德华高兴得当场落泪，多年的流浪生涯让他看透了人情冷暖，世态的炎凉，而这个小女孩给了他温暖的一天。&lt;/p&gt;
 &lt;p&gt;在街上，海莉又遇到了另一个流浪汉比利·雷，一个退伍军人，在战争中失去了双腿，无家可归的他再次激起了海莉的爱心。帮完了一个又一个流浪汉后，母亲告诉她：“我们并不是多么富裕，没有能力帮助所有的人。”小女孩的眼角挂着泪水，倔强地看着母亲，她没有绝望，任性地说：“不！我要试试看！”买不起食物，她就自己去种。&lt;/p&gt;
 &lt;p&gt;就这样，这个善良的小女孩开始挖地，播种，除草，建栅栏，她要自己培育果蔬，为更多无家可归的人提供食物。没有种植经验，她就在晚上一个人抱着厚厚的书本学习，功夫不负有心人，她终于收获55磅的果蔬，悉数捐出，这可以满足流浪者一年的食量。如今，她的目标是收获250磅的食物，并通过自己动手，为流浪者建造庇护所，她拿起刀子，扛起电钻她要为流浪者建一个遮风避雨的小屋，带着口罩认真的粉刷墙壁。&lt;/p&gt;
 &lt;p&gt;为了资助海莉的项目，妈妈米兰达向一家非营利性组织申请了一笔补助，海莉收到了3000美元的赠款。当地的一家建材商店劳氏商店承诺，海莉来采购建屋的材料能最低打五折。&lt;/p&gt;
@@ -169,7 +199,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造
+      &lt;p&gt;女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。&lt;br&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no&quot; alt=&quot;天使&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -183,7 +213,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/"/>
     <id>http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/</id>
     <published>2016-09-10T08:33:28.000Z</published>
-    <updated>2016-09-10T15:13:36.000Z</updated>
+    <updated>2016-09-11T13:43:56.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combination-sum-iv/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;377. Combination Sum IV&lt;/a&gt;&lt;br&gt;Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.&lt;/p&gt;
 &lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;blockquote&gt;
@@ -191,9 +221,9 @@
 &lt;p&gt;The possible combination ways are:&lt;br&gt;(1, 1, 1, 1)&lt;br&gt;(1, 1, 2)&lt;br&gt;(1, 2, 1)&lt;br&gt;(1, 3)&lt;br&gt;(2, 1, 1)&lt;br&gt;(2, 2)&lt;br&gt;(3, 1)&lt;/p&gt;
 &lt;p&gt;Note that different sequences are counted as different combinations.&lt;/p&gt;
 &lt;p&gt;Therefore the output is 7.&lt;/p&gt;
-&lt;h2 id=&quot;Follow-up&quot;&gt;&lt;a href=&quot;#Follow-up&quot; class=&quot;headerlink&quot; title=&quot;Follow up:&quot;&gt;&lt;/a&gt;Follow up:&lt;/h2&gt;&lt;p&gt;What if negative numbers are allowed in the given array?&lt;br&gt;How does it change the problem?&lt;br&gt;What limitation we need to add to the question to allow negative numbers?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;Follow-up&quot;&gt;&lt;a href=&quot;#Follow-up&quot; class=&quot;headerlink&quot; title=&quot;Follow up:&quot;&gt;&lt;/a&gt;Follow up:&lt;/h2&gt;&lt;p&gt;What if negative numbers are allowed in the given array?&lt;br&gt;How does it change the problem?&lt;br&gt;What limitation we need to add to the question to allow negative numbers?&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;测试用例见题目描述。&lt;/p&gt;
 &lt;p&gt;注意不同的序列顺序应当视为不同的组合。&lt;/p&gt;
 &lt;h2 id=&quot;进一步思考：&quot;&gt;&lt;a href=&quot;#进一步思考：&quot; class=&quot;headerlink&quot; title=&quot;进一步思考：&quot;&gt;&lt;/a&gt;进一步思考：&lt;/h2&gt;&lt;p&gt;给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。&lt;/p&gt;
@@ -207,7 +237,13 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combination-sum-iv/&quot; 
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combination-sum-iv/&quot;&gt;377. Combination Sum IV&lt;/a&gt;&lt;br&gt;Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.&lt;/p&gt;
+&lt;h2 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example:&quot;&gt;&lt;/a&gt;Example:&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;nums = [1, 2, 3]&lt;br&gt;target = 4&lt;/p&gt;
+&lt;p&gt;The possible combination ways are:&lt;br&gt;(1, 1, 1, 1)&lt;br&gt;(1, 1, 2)&lt;br&gt;(1, 2, 1)&lt;br&gt;(1, 3)&lt;br&gt;(2, 1, 1)&lt;br&gt;(2, 2)&lt;br&gt;(3, 1)&lt;/p&gt;
+&lt;p&gt;Note that different sequences are counted as different combinations.&lt;/p&gt;
+&lt;p&gt;Therefore the output is 7.&lt;/p&gt;
+&lt;h2 id=&quot;Follow-up&quot;&gt;&lt;a href=&quot;#Follow-up&quot; class=&quot;headerlink&quot; title=&quot;Follow up:&quot;&gt;&lt;/a&gt;Follow up:&lt;/h2&gt;&lt;p&gt;What if negative numbers are allowed in the given array?&lt;br&gt;How does it change the problem?&lt;br&gt;What limitation we need to add to the question to allow negative numbers?&lt;br&gt;
     
     </summary>
     
