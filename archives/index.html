@@ -237,6 +237,84 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/">
+                            [LeetCode] 354. Russian Doll Envelopes
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-09-11T19:54:05+08:00">
+	
+		    9月 11, 2016
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/russian-doll-envelopes/" target="_blank" rel="external">354. Russian Doll Envelopes</a></p>
+<p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.</p>
+<p>What is the maximum number of envelopes can you Russian doll? (put one inside other)</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><p>Given envelopes = [[5,4],[6,4],[6,7],[2,3]], the maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).</p>
+<h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>首先将信封(w,h)按照按照宽度排序，宽度小的在宽度大的后面，若相等，则长度小的在前，这样排在后面的信封不可能包含在前面的信封之中。</p>
+<p>动态规划的思想也从中而来，状态DP[i]表示第i个信封所包含的信封的数量。从上面可知，若一个信封包含其他的信封(DP[i]&gt;1)则，它包含的一定是排在它之前的某个信封，即状态转移方程为</p>
+<p>对每个信封i，初始化： $DP[i] = 1$ (1)<br>对于i&gt;=2，$DP[i] = max(DP[i], DP[j]+1) \ ,{j<i\ and\="" w_i="">w_j \ and\  h_i&gt;h_j}$ (2)</i\></p>
+<h1 id="C-代码："><a href="#C-代码：" class="headerlink" title="C++代码："></a>C++代码：</h1><p>‘’’<br>struct cmp {<br>  bool operator()(pair<int,int>&amp; a, pair<int,int>&amp; b) {<br>      return b.first &lt; a.first || (b.first==a.first &amp;&amp; b.second <a.second); }="" };="" class="" solution="" {="" public:="" int="" maxenvelopes(vector<pair<int,="">&gt;&amp; envelopes) {<br>        sort(envelopes.begin(), envelopes.end());<br>        int n = envelopes.size();<br>        if (n &lt;= 1) return n;</a.second);></int,int></int,int></p>
+<pre><code>    int ans = INT_MIN;
+    vector&lt;int&gt; dp(n, 1);
+    vector&lt;int&gt; pre(n, -1);
+    for (int i=1; i&lt;n; i++) {
+        for (int j=0; j&lt;i; j++) {
+            if (canContain(envelopes[i], envelopes[j]) &amp;&amp; dp[j]+1&gt;dp[i]) {
+                dp[i] = dp[j]+1;
+                pre[i] = j;
+            }
+        }
+    }
+
+    for (int i=0; i&lt;n; i++) {
+        ans = max(ans, dp[i]);
+    }
+    return ans;
+}
+
+bool canContain(pair&lt;int,int&gt;&amp; a, pair&lt;int,int&gt;&amp; b) {
+    return a.first &gt; b.first &amp;&amp; a.second &gt; b.second;
+}
+</code></pre><p>};<br>‘’’</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/#post-footer" class="postShorten-excerpt_link link">
+                                注释和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2016/09/11/LeetCode-174-Dungeon-Game/">
                             [LeetCode] 174. Dungeon Game
                         </a>
@@ -266,7 +344,7 @@
 <p>In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
 <p><em>Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.</em></p>
 <p>For example, given the dungeon below, the initial health of the knight must be at least 7 if he follows the optimal path RIGHT-&gt; RIGHT -&gt; DOWN -&gt; DOWN.</p>
-<p><img src="../../../../images/14735883347096.jpg" alt=""></p>
+<p><img src="https://lh3.googleusercontent.com/-OK3mhMH5MAI/V9VGGlpt63I/AAAAAAAAAO4/kfxbG2D6x0E/I/14735883347096.jpg" alt=""></p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><p>The knight’s health has no upper bound.<br>Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.</p>
 <h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>骑士需要从左上角开始进入房间，每次向右或向下移动一步进入下一个房间，直到到达右下角的房间救出公主。每个房间可能由精灵把守，会造成骑士失血，用负数表示；可能为空，用0表示；也可能有魔法球，可以给骑士补血。从左上角第一个房间开始，直到进入右下角关押公主的房间，血量都不能&lt;=0。</p>
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>这是一道二维的动态规划问题，用DP[i][j]表示状态，表示接下来骑士进入(i,j)房间后能救出公主最少需要具备多少血。状态转移方程为:</p>
@@ -413,7 +491,7 @@
             
             
             <div class="photo-box">
-                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyj2wkm000bnyn5bsqt1epc"
+                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyl3c8q000fhan51kn8xm36"
                    title="天使1" href="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg">
                     <img class="photo" src="http://wide-kabegami.com/1920_others/wallpapers/image/1920-008wallpaper.jpg" itemprop="image">
                 </a>
@@ -421,7 +499,7 @@
             
             
             <div class="photo-box">
-                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyj2wkm000bnyn5bsqt1epc"
+                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cisyl3c8q000fhan51kn8xm36"
                    title="天使2" href="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg">
                     <img class="photo" src="http://wide-kabegami.com/1920_others/wallpapers/image/1920-009wallpaper.jpg" itemprop="image">
                 </a>

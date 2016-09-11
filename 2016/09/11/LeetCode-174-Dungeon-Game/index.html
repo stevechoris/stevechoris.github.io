@@ -23,8 +23,8 @@
 <meta property="og:url" content="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/index.html">
 <meta property="og:site_name" content="逆风飞翔的博客">
 <meta property="og:description" content="题目描述:174. Dungeon GameThe demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight">
-<meta property="og:image" content="http://stevechoris.github.io/../../../../images/14735883347096.jpg">
-<meta property="og:updated_time" content="2016-09-11T11:33:27.000Z">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-OK3mhMH5MAI/V9VGGlpt63I/AAAAAAAAAO4/kfxbG2D6x0E/I/14735883347096.jpg">
+<meta property="og:updated_time" content="2016-09-11T11:55:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 174. Dungeon Game">
 <meta name="twitter:description" content="题目描述:174. Dungeon GameThe demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight">
@@ -262,7 +262,7 @@
 <p>In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
 <p><em>Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.</em></p>
 <p>For example, given the dungeon below, the initial health of the knight must be at least 7 if he follows the optimal path RIGHT-&gt; RIGHT -&gt; DOWN -&gt; DOWN.</p>
-<p><img src="../../../../images/14735883347096.jpg" alt=""></p>
+<p><img src="https://lh3.googleusercontent.com/-OK3mhMH5MAI/V9VGGlpt63I/AAAAAAAAAO4/kfxbG2D6x0E/I/14735883347096.jpg" alt=""></p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><p>The knight’s health has no upper bound.<br>Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.</p>
 <h1 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>骑士需要从左上角开始进入房间，每次向右或向下移动一步进入下一个房间，直到到达右下角的房间救出公主。每个房间可能由精灵把守，会造成骑士失血，用负数表示；可能为空，用0表示；也可能有魔法球，可以给骑士补血。从左上角第一个房间开始，直到进入右下角关押公主的房间，血量都不能&lt;=0。</p>
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>这是一道二维的动态规划问题，用DP[i][j]表示状态，表示接下来骑士进入(i,j)房间后能救出公主最少需要具备多少血。状态转移方程为:</p>
@@ -290,7 +290,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"  data-tooltip="[LeetCode] 354. Russian Doll Envelopes">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -372,7 +372,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"  data-tooltip="[LeetCode] 354. Russian Doll Envelopes">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
