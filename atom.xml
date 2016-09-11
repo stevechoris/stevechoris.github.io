@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-09-11T12:15:24.000Z</updated>
+  <updated>2016-09-11T12:24:09.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"/>
     <id>http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</id>
     <published>2016-09-11T11:54:05.000Z</published>
-    <updated>2016-09-11T12:15:24.000Z</updated>
+    <updated>2016-09-11T12:24:09.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述:&quot;&gt;&lt;/a&gt;题目描述:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/russian-doll-envelopes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;354. Russian Doll Envelopes&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;h1 id=&quot;题目大意：&quot;&gt;&lt;a href=&quot;#题目大意：&quot; class=&quot;headerlink&quot; title=&quot;题目大意：&quot;&gt;&lt;/a&gt;题目大意：&lt;/h1&gt;&lt;p&gt;题意比较简单，给定一定量不同长宽的信封，小的信封可以放在大的信封内部，问最多能嵌套放几个。&lt;/p&gt;
 &lt;h1 id=&quot;解题思路：&quot;&gt;&lt;a href=&quot;#解题思路：&quot; class=&quot;headerlink&quot; title=&quot;解题思路：&quot;&gt;&lt;/a&gt;解题思路：&lt;/h1&gt;&lt;p&gt;首先将信封(w,h)按照按照宽度排序，宽度小的在宽度大的后面，若相等，则长度小的在前，这样排在后面的信封不可能包含在前面的信封之中。&lt;/p&gt;
 &lt;p&gt;动态规划的思想也从中而来，状态DP[i]表示第i个信封所包含的信封的数量。从上面可知，若一个信封包含其他的信封(DP[i]&amp;gt;1)则，它包含的一定是排在它之前的某个信封，即状态转移方程为&lt;/p&gt;
-&lt;p&gt;对每个信封i，初始化： $DP[i] = 1$ (1)&lt;br&gt;对于i&amp;gt;=2，$DP[i] = max(DP[i], DP[j]+1) \ ,{j&lt;i\ and\=&quot;&quot; w_i=&quot;&quot;&gt;w_j \ and\  h_i&amp;gt;h_j}$ (2)&lt;/i\&gt;&lt;/p&gt;
+&lt;p&gt;对每个信封i，初始化： $DP[i] = 1$ (1)&lt;br&gt;对于i&amp;gt;=2，$DP[i]=max(DP[i],\quad DP[j]+1),\quad { j&lt;i\quad and\quad=&quot;&quot; w_{=&quot;&quot; i=&quot;&quot; }=&quot;&quot;&gt;w&lt;em&gt;{ j }\quad and\quad h&lt;/em&gt;{ i }&amp;gt;h_{ j }} $ (2)&lt;/i\quad&gt;&lt;/p&gt;
 &lt;h1 id=&quot;C-代码：&quot;&gt;&lt;a href=&quot;#C-代码：&quot; class=&quot;headerlink&quot; title=&quot;C++代码：&quot;&gt;&lt;/a&gt;C++代码：&lt;/h1&gt;&lt;p&gt;‘’’&lt;br&gt;struct cmp {&lt;br&gt;  bool operator()(pair&lt;int,int&gt;&amp;amp; a, pair&lt;int,int&gt;&amp;amp; b) {&lt;br&gt;      return b.first &amp;lt; a.first || (b.first==a.first &amp;amp;&amp;amp; b.second &lt;a.second); }=&quot;&quot; };=&quot;&quot; class=&quot;&quot; solution=&quot;&quot; {=&quot;&quot; public:=&quot;&quot; int=&quot;&quot; maxenvelopes(vector&lt;pair&lt;int,=&quot;&quot;&gt;&amp;gt;&amp;amp; envelopes) {&lt;br&gt;        sort(envelopes.begin(), envelopes.end());&lt;br&gt;        int n = envelopes.size();&lt;br&gt;        if (n &amp;lt;= 1) return n;&lt;/a.second);&gt;&lt;/int,int&gt;&lt;/int,int&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    int ans = INT_MIN;
     vector&amp;lt;int&amp;gt; dp(n, 1);
