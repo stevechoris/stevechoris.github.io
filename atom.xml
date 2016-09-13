@@ -189,7 +189,7 @@
     <link href="http://stevechoris.github.io/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     <id>http://stevechoris.github.io/2016/09/10/LeetCode-解题报告/</id>
     <published>2016-09-10T15:20:55.000Z</published>
-    <updated>2016-09-11T15:27:17.000Z</updated>
+    <updated>2016-09-13T13:06:31.000Z</updated>
     
     <content type="html">&lt;table&gt;
 &lt;thead&gt;
@@ -201,6 +201,12 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/&quot;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/tags/Dynamic-Programming/&quot;&gt;Dynamic Programming&lt;/a&gt; &lt;a href=&quot;http://stevechoris.github.io/all-tags/#Stack-list&quot;&gt;Stack&lt;/a&gt; &lt;a href=&quot;http://stevechoris.github.io/all-tags/#String-list&quot;&gt;String&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Hard&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;174&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/&quot;&gt;Dungeon Game&lt;/a&gt;&lt;/td&gt;
@@ -242,6 +248,12 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/&quot;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/tags/Dynamic-Programming/&quot;&gt;Dynamic Programming&lt;/a&gt; &lt;a href=&quot;http://stevechoris.github.io/all-tags/#Stack-list&quot;&gt;Stack&lt;/a&gt; &lt;a href=&quot;http://stevechoris.github.io/all-tags/#String-list&quot;&gt;String&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Hard&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;174&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/&quot;&gt;Dungeon Game&lt;/a&gt;&lt;/td&gt;
