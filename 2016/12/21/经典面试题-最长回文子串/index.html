@@ -20,7 +20,8 @@
     <meta name="description" content="本文主要参考微信公众号(待字闺中)推文”【经典面试题】最长回文”
 整理而成，在此特别感谢。
 
-题目">
+题目LeetCode 5. Longest Palindromic Substring
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="[经典面试题] 最长回文子串">
 <meta property="og:url" content="http://stevechoris.github.io/2016/12/21/经典面试题-最长回文子串/index.html">
@@ -28,14 +29,16 @@
 <meta property="og:description" content="本文主要参考微信公众号(待字闺中)推文”【经典面试题】最长回文”
 整理而成，在此特别感谢。
 
-题目">
-<meta property="og:updated_time" content="2016-12-21T08:43:28.000Z">
+题目LeetCode 5. Longest Palindromic Substring
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is">
+<meta property="og:updated_time" content="2016-12-21T09:12:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[经典面试题] 最长回文子串">
 <meta name="twitter:description" content="本文主要参考微信公众号(待字闺中)推文”【经典面试题】最长回文”
 整理而成，在此特别感谢。
 
-题目">
+题目LeetCode 5. Longest Palindromic Substring
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is">
     
     
         
@@ -284,7 +287,36 @@
 <p>本文主要参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
 </a>整理而成，在此特别感谢。</p>
 </blockquote>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">LeetCode 5. Longest Palindromic Substring</a></p>
+<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
+<p>Example:</p>
+<blockquote>
+<p>Input: “babad”</p>
+<p>Output: “bab”</p>
+</blockquote>
+<p>Note: “aba” is also a valid answer.<br>Example:</p>
+<blockquote>
+<p>Input: “cbbd”</p>
+<p>Output: “bb”</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1. 暴力解法"></a>1. 暴力解法</h3><p>在外层使用2重循环找出所有子串，内层循环判断当前子串是否为回文子串。</p>
+<blockquote>
+<p>时间复杂度为$O(n^3)$，空间复杂度为$O(1)$</p>
+</blockquote>
+<h3 id="2-动态规划方法"><a href="#2-动态规划方法" class="headerlink" title="2. 动态规划方法"></a>2. 动态规划方法</h3><p>开辟一个二维数组p[i][j]用来表示str[i…j]是否为回文子串，p[i][j]的状态转移方程为：</p>
+<ol>
+<li>i==j时，<code>p[i][j]=true</code></li>
+<li>i+1==j时，<code>p[i][j]=(str[i]==str[j])</code></li>
+<li>其他情况,<code>p[i][j]=(str[i]==str[j] &amp;&amp; p[i+1]==p[j-1])</code></li>
+</ol>
+<blockquote>
+<p>时间复杂度为$O(n^2)$，空间复杂度为$O(n^2)$, 时间上比暴力法有较大优化。</p>
+</blockquote>
+<h3 id="3-确定中心后像两边扩展"><a href="#3-确定中心后像两边扩展" class="headerlink" title="3. 确定中心后像两边扩展"></a>3. 确定中心后像两边扩展</h3><p>可以先确定一个字符为中心，然后向两边扩展，需要注意的是<strong>要同时考虑奇数和偶数的情况</strong>。</p>
+<blockquote>
+<p>时间复杂度为$O(n^2)$，空间复杂度为$O(1)$</p>
+</blockquote>
+<h3 id="4-后缀数组"><a href="#4-后缀数组" class="headerlink" title="4. 后缀数组"></a>4. 后缀数组</h3>
             
         </div>
     </div>
@@ -804,7 +836,24 @@
     <script>
         var algoliaClient = algoliasearch('THRL60ZKUC', '684d086b7aa042762a10199cf43bd9d3');
         var algoliaIndex = algoliaClient.initIndex('tranquilpeak');
-    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
     </body>
 </html>
