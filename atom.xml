@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-12-21T09:12:31.000Z</updated>
+  <updated>2016-12-22T03:12:16.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://stevechoris.github.io/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
     <id>http://stevechoris.github.io/2016/12/21/经典面试题-最长回文子串/</id>
     <published>2016-12-21T08:21:52.000Z</published>
-    <updated>2016-12-21T09:12:31.000Z</updated>
+    <updated>2016-12-22T03:12:16.000Z</updated>
     
     <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;blockquote&gt;
@@ -56,7 +56,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;时间复杂度为$O(n^2)$，空间复杂度为$O(1)$&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;4-后缀数组&quot;&gt;&lt;a href=&quot;#4-后缀数组&quot; class=&quot;headerlink&quot; title=&quot;4. 后缀数组&quot;&gt;&lt;/a&gt;4. 后缀数组&lt;/h3&gt;</content>
+&lt;h3 id=&quot;4-后缀数组&quot;&gt;&lt;a href=&quot;#4-后缀数组&quot; class=&quot;headerlink&quot; title=&quot;4. 后缀数组&quot;&gt;&lt;/a&gt;4. 后缀数组&lt;/h3&gt;&lt;p&gt;可以利用后缀数组，将最长回文子串问题转换为求后缀数组中最长公共前缀的问题。具体做法是将字符串反转，拼接到原字符之后，中间注意用特殊字符隔开。然后求新字符串的后缀数组的任意两个字符串的最大公共前缀。&lt;/p&gt;
+&lt;p&gt;例如原字符串s0=”abcbd”，那转换后编程s1=”abcbd#dbcba”，则后缀数组为：&lt;br&gt;“a”&lt;br&gt;“ba”&lt;br&gt;“cba”&lt;br&gt;“bcba”&lt;br&gt;“dbcba”&lt;br&gt;“#dbcba”&lt;br&gt;“d#dbcba”&lt;br&gt;“bd#dbcba”&lt;br&gt;“cbd#dbcba”&lt;br&gt;“bcbd#dbcba”&lt;br&gt;“abcbd#dbcba”&lt;br&gt;可以看出，字符串”bcba”和“bcbd#dbcba”的最大公共前缀=3最长。&lt;br&gt;具体实现算法好坏可能导致复杂度差异很大。&lt;/p&gt;
+&lt;h3 id=&quot;5-Manacher算法&quot;&gt;&lt;a href=&quot;#5-Manacher算法&quot; class=&quot;headerlink&quot; title=&quot;5. Manacher算法&quot;&gt;&lt;/a&gt;5. Manacher算法&lt;/h3&gt;&lt;p&gt;Manacher算法是一种接近线性时间的算法，在上面的方法3中需要考虑回文长度为奇数和偶数的情况，这里引入一个技巧，通过在字符之间插入特殊字符（例如#）可以统一处理。&lt;br&gt;例如字符串“abba”，插入#字符后转换为“#a#b#b#a#”，然后创建一个数组p，计算以当前第i各字符为中心的回文串的半径。&lt;br&gt;&lt;img src=&quot;../../../../images/14823759882277.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;可以发现任意一个回文串的长度都是奇数，而且该回文串包含的原来字符串中的字符个数=p[i]-1，并且一定为回文串。&lt;/p&gt;
+&lt;p&gt;具体的算法详解可以参考&lt;a href=&quot;http://mp.weixin.qq.com/s?src=3&amp;amp;timestamp=1482308889&amp;amp;ver=1&amp;amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信公众号(待字闺中)推文”【经典面试题】最长回文”
+&lt;/a&gt;和&lt;a href=&quot;http://blog.csdn.net/xingyeyongheng/article/details/9310555&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hdu3068之manacher算法+详解&lt;/a&gt;这两篇博客内容。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
