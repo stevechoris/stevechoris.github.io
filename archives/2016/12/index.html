@@ -312,7 +312,7 @@
 <blockquote>
 <p>具体实现算法好坏可能导致复杂度差异很大。</p>
 </blockquote>
-<h3 id="5-Manacher算法"><a href="#5-Manacher算法" class="headerlink" title="5. Manacher算法"></a>5. Manacher算法</h3><p>Manacher算法是一种接近线性时间的算法，在上面的方法3中需要考虑回文长度为奇数和偶数的情况，这里引入一个技巧，通过在字符之间插入特殊字符（例如#）可以统一处理。<br>例如字符串“abba”，插入#字符后转换为“#a#b#b#a#”，然后创建一个数组p，计算以当前第i各字符为中心的回文串的半径。<br><img src="../../../../images/14823759882277.jpg" alt=""><br>可以发现任意一个回文串的长度都是奇数，而且该回文串包含的原来字符串中的字符个数=p[i]-1，并且一定为回文串。</p>
+<h3 id="5-Manacher算法"><a href="#5-Manacher算法" class="headerlink" title="5. Manacher算法"></a>5. Manacher算法</h3><p>Manacher算法是一种接近线性时间的算法，在上面方法3中需要考虑回文长度为奇数和偶数的情况，这里引入一个技巧，通过在字符之间插入特殊字符（例如#字符）可以统一处理。<br>例如字符串“abba”，插入#字符后转换为“#a#b#b#a#”，然后创建一个数组p，计算以当前第i个字符为中心的回文串的半径。<br><img src="../../../../images/14823759882277.jpg" alt=""><br>可以发现任意一个回文串的长度都是奇数，而且该回文串包含的原字符串中的字符个数=p[i]-1，且这些原字符一定构成回文串。</p>
 <p>具体的算法详解可以参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
 </a>和<a href="http://blog.csdn.net/xingyeyongheng/article/details/9310555" target="_blank" rel="external">hdu3068之manacher算法+详解</a>这两篇博客内容。</p>
 
