@@ -244,7 +244,7 @@
     <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -272,13 +272,12 @@
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <a id="more"></a>
-<blockquote>
-<p>本文主要参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <blockquote>
+<p>本文主要参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==">微信公众号(待字闺中)推文”【经典面试题】最长回文”
 </a>整理而成，在此特别感谢。</p>
 </blockquote>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">LeetCode 5. Longest Palindromic Substring</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://leetcode.com/problems/longest-palindromic-substring/">LeetCode 5. Longest Palindromic Substring</a></p>
 <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
 <p>Example:</p>
 <blockquote>
@@ -290,41 +289,11 @@
 <p>Input: “cbbd”</p>
 <p>Output: “bb”</p>
 </blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1. 暴力解法"></a>1. 暴力解法</h3><p>在外层使用2重循环找出所有子串，内层循环判断当前子串是否为回文子串。</p>
-<blockquote>
-<p>时间复杂度为$O(n^3)$，空间复杂度为$O(1)$</p>
-</blockquote>
-<h3 id="2-动态规划方法"><a href="#2-动态规划方法" class="headerlink" title="2. 动态规划方法"></a>2. 动态规划方法</h3><p>开辟一个二维数组p[i][j]用来表示str[i…j]是否为回文子串，p[i][j]的状态转移方程为：</p>
-<ol>
-<li>i==j时，<code>p[i][j]=true</code></li>
-<li>i+1==j时，<code>p[i][j]=(str[i]==str[j])</code></li>
-<li>其他情况,<code>p[i][j]=(str[i]==str[j] &amp;&amp; p[i+1]==p[j-1])</code></li>
-</ol>
-<blockquote>
-<p>时间复杂度为$O(n^2)$，空间复杂度为$O(n^2)$, 时间上比暴力法有较大优化。</p>
-</blockquote>
-<h3 id="3-确定中心后像两边扩展"><a href="#3-确定中心后像两边扩展" class="headerlink" title="3. 确定中心后像两边扩展"></a>3. 确定中心后像两边扩展</h3><p>可以先确定一个字符为中心，然后向两边扩展，需要注意的是<strong>要同时考虑奇数和偶数的情况</strong>。</p>
-<blockquote>
-<p>时间复杂度为$O(n^2)$，空间复杂度为$O(1)$</p>
-</blockquote>
-<h3 id="4-后缀数组"><a href="#4-后缀数组" class="headerlink" title="4. 后缀数组"></a>4. 后缀数组</h3><p>可以利用后缀数组，将最长回文子串问题转换为求后缀数组中最长公共前缀的问题。具体做法是将字符串反转，拼接到原字符之后，中间注意用特殊字符隔开。然后求新字符串的后缀数组的任意两个字符串的最大公共前缀。</p>
-<p>例如原字符串s0=”abcbd”，那转换后编程s1=”abcbd#dbcba”，则后缀数组为：<br>“a”<br>“ba”<br>“cba”<br>“bcba”<br>“dbcba”<br>“#dbcba”<br>“d#dbcba”<br>“bd#dbcba”<br>“cbd#dbcba”<br>“bcbd#dbcba”<br>“abcbd#dbcba”<br>可以看出，字符串”bcba”和“bcbd#dbcba”的最大公共前缀=3，长度最长。</p>
-<blockquote>
-<p>具体实现算法好坏可能导致复杂度差异很大。</p>
-</blockquote>
-<h3 id="5-Manacher算法"><a href="#5-Manacher算法" class="headerlink" title="5. Manacher算法"></a>5. Manacher算法</h3><p>Manacher算法是一种接近线性时间的算法，在上面方法3中需要考虑回文长度为奇数和偶数的情况，这里引入一个技巧，通过在字符之间插入特殊字符（例如#字符）可以统一处理。<br>例如字符串“abba”，插入#字符后转换为“#a#b#b#a#”，然后创建一个数组p，计算以当前第i个字符为中心的回文串的半径。<br><img src="../../../../images/14823759882277.jpg" alt=""><br>可以发现任意一个回文串的长度都是奇数，而且该回文串包含的原字符串中的字符个数=p[i]-1，且这些原字符一定构成回文串。</p>
-<p>具体的算法详解可以参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
-</a>和<a href="http://blog.csdn.net/xingyeyongheng/article/details/9310555" target="_blank" rel="external">hdu3068之manacher算法+详解</a>这两篇博客内容。</p>
-
                     
+                        <a href="/2016/12/21/经典面试题-最长回文子串/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2016/12/21/经典面试题-最长回文子串/#post-footer" class="postShorten-excerpt_link link">
-                                注释和共享
-                            </a>
-                        </p>
                     
                 </div>
             
