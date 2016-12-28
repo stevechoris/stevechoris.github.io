@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2016-12-22T03:45:35.000Z</updated>
+  <updated>2016-12-28T08:00:31.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -16,11 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux常用命令整理</title>
+    <link href="http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
+    <id>http://stevechoris.github.io/2016/12/28/Linux常用命令整理/</id>
+    <published>2016-12-28T07:52:12.000Z</published>
+    <updated>2016-12-28T08:00:31.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&amp;emsp;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一-磁盘信息&quot;&gt;&lt;a href=&quot;#一-磁盘信息&quot; class=&quot;headerlink&quot; title=&quot;一. 磁盘信息&quot;&gt;&lt;/a&gt;一. 磁盘信息&lt;/h2&gt;&lt;h3 id=&quot;1-查看磁盘空间&quot;&gt;&lt;a href=&quot;#1-查看磁盘空间&quot; class=&quot;headerlink&quot; title=&quot;1. 查看磁盘空间&quot;&gt;&lt;/a&gt;1. 查看磁盘空间&lt;/h3&gt;&lt;h4 id=&quot;1-命令格式：df-h&quot;&gt;&lt;a href=&quot;#1-命令格式：df-h&quot; class=&quot;headerlink&quot; title=&quot;1. 命令格式：df -h&quot;&gt;&lt;/a&gt;1. 命令格式：&lt;code&gt;df -h&lt;/code&gt;&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;以磁盘分区为单位查看文件系统&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../images/14829116578841.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;二-查看进程&quot;&gt;&lt;a href=&quot;#二-查看进程&quot; class=&quot;headerlink&quot; title=&quot;二. 查看进程&quot;&gt;&lt;/a&gt;二. 查看进程&lt;/h2&gt;&lt;h3 id=&quot;1-查看占用特定端口的进程&quot;&gt;&lt;a href=&quot;#1-查看占用特定端口的进程&quot; class=&quot;headerlink&quot; title=&quot;1. 查看占用特定端口的进程&quot;&gt;&lt;/a&gt;1. 查看占用特定端口的进程&lt;/h3&gt;&lt;p&gt;命令格式：&lt;code&gt;lsof -i:6006&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中6006为想要查看的端口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../images/14829118493300.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-根据进程号KILL特定进程&quot;&gt;&lt;a href=&quot;#2-根据进程号KILL特定进程&quot; class=&quot;headerlink&quot; title=&quot;2. 根据进程号KILL特定进程&quot;&gt;&lt;/a&gt;2. 根据进程号KILL特定进程&lt;/h3&gt;&lt;p&gt;命令格式：&lt;code&gt;kill -KILL 738&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中738为想要kill的进程的进程号&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;
+    
+    </summary>
+    
+      <category term="Linux命令" scheme="http://stevechoris.github.io/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="Linux命令" scheme="http://stevechoris.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[经典面试题] 最长回文子串</title>
     <link href="http://stevechoris.github.io/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
     <id>http://stevechoris.github.io/2016/12/21/经典面试题-最长回文子串/</id>
     <published>2016-12-21T08:21:52.000Z</published>
-    <updated>2016-12-22T03:45:35.000Z</updated>
+    <updated>2016-12-22T03:58:43.000Z</updated>
     
     <content type="html">&lt;p&gt;&amp;emsp;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -452,7 +488,7 @@
     <link href="http://stevechoris.github.io/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
     <id>http://stevechoris.github.io/2016/06/09/图片博客模板/</id>
     <published>2016-06-09T05:33:36.000Z</published>
-    <updated>2016-09-10T13:03:41.000Z</updated>
+    <updated>2016-12-22T03:45:23.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-Q-mL0R4-5xE/V9PJW_JCQYI/AAAAAAAAAL8/elGdM3Wd92I/I/12577849%25252C2560%25252C1600.jpg&quot; alt=&quot;12577849,2560,1600&quot;&gt;&lt;/p&gt;
 </content>
