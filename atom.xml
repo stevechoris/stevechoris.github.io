@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-01-12T06:04:14.000Z</updated>
+  <updated>2017-01-12T06:07:38.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,28 +20,28 @@
     <link href="http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
     <id>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</id>
     <published>2017-01-12T03:59:22.000Z</published>
-    <updated>2017-01-12T06:04:14.000Z</updated>
+    <updated>2017-01-12T06:07:38.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;一、前沿&quot;&gt;&lt;a href=&quot;#一、前沿&quot; class=&quot;headerlink&quot; title=&quot;一、前沿&quot;&gt;&lt;/a&gt;一、前沿&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&lt;br&gt;&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&lt;br&gt;&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢：&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&lt;br&gt;&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&lt;br&gt;&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在 python3.5 下使用 Caffe Using Caffe with Python3.5&lt;/a&gt;[^1]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#caffe&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Setting up a Deep Learning Machine from Scratch (Software)&lt;/a&gt;[^2]&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/663029044efd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装&lt;/a&gt;&lt;a href=&quot;[Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装](http://www.jianshu.com/p/663029044efd)&quot;&gt;^3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/663029044efd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装&lt;/a&gt;[^3]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://yangcha.github.io/Caffe-Conda/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Install Caffe With Anaconda&lt;/a&gt;[^4]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&amp;emsp;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;二、准备环境&quot;&gt;&lt;a href=&quot;#二、准备环境&quot; class=&quot;headerlink&quot; title=&quot;二、准备环境&quot;&gt;&lt;/a&gt;二、准备环境&lt;/h2&gt;&lt;h3 id=&quot;1-ubuntu14-04系统&quot;&gt;&lt;a href=&quot;#1-ubuntu14-04系统&quot; class=&quot;headerlink&quot; title=&quot;1. ubuntu14.04系统&quot;&gt;&lt;/a&gt;1. ubuntu14.04系统&lt;/h3&gt;&lt;p&gt;可以输入&lt;code&gt;cat /etc/issue&lt;/code&gt;查看ubuntu的版本&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-Vncx38SBlJE/WHcbuYf-cWI/AAAAAAAAATQ/wmEHr89ss68/I/14841947936350.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2-显卡驱动与CUDA安装&quot;&gt;&lt;a href=&quot;#2-显卡驱动与CUDA安装&quot; class=&quot;headerlink&quot; title=&quot;2. 显卡驱动与CUDA安装&quot;&gt;&lt;/a&gt;2. 显卡驱动与CUDA安装&lt;/h3&gt;&lt;p&gt;主要参考[^1]上的步骤，Nvidia显卡驱动安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#nvidia-drivers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nvidia Drivers安装步骤&lt;/a&gt;，CUDA安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#cuda&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CUDA安装步骤&lt;/a&gt;，cuDNN安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#cudnn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cuDNN安装步骤&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;3-BLAS安装与配置&quot;&gt;&lt;a href=&quot;#3-BLAS安装与配置&quot; class=&quot;headerlink&quot; title=&quot;3. BLAS安装与配置&quot;&gt;&lt;/a&gt;3. BLAS安装与配置&lt;/h3&gt;&lt;p&gt;BLAS（基础线性代数集合）是一个应用程序接口的标准。Caffe官网上推荐了三种实现：ATLAS, MKL, or OpenBLAS。其中atlas可以直接通过命令行安装（本文采用的就是这个），如果要使用intel的MKL库，可以参考[^2]的中BLAS安装与配置步骤。&lt;/p&gt;
-&lt;h3 id=&quot;4-安装相关依赖包&quot;&gt;&lt;a href=&quot;#4-安装相关依赖包&quot; class=&quot;headerlink&quot; title=&quot;4. 安装相关依赖包&quot;&gt;&lt;/a&gt;4. 安装相关依赖包&lt;/h3&gt;&lt;p&gt;Caffe的编译依赖于很多C和C++的动态链接库，因此需要先用apt-get工具安装这些动态链接库。参考[^4]主要步骤如下：&lt;/p&gt;
+&lt;h3 id=&quot;2-显卡驱动与CUDA安装&quot;&gt;&lt;a href=&quot;#2-显卡驱动与CUDA安装&quot; class=&quot;headerlink&quot; title=&quot;2. 显卡驱动与CUDA安装&quot;&gt;&lt;/a&gt;2. 显卡驱动与CUDA安装&lt;/h3&gt;&lt;p&gt;主要参考博客1上的步骤，Nvidia显卡驱动安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#nvidia-drivers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nvidia Drivers安装步骤&lt;/a&gt;，CUDA安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#cuda&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CUDA安装步骤&lt;/a&gt;，cuDNN安装可以参考&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#cudnn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cuDNN安装步骤&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-BLAS安装与配置&quot;&gt;&lt;a href=&quot;#3-BLAS安装与配置&quot; class=&quot;headerlink&quot; title=&quot;3. BLAS安装与配置&quot;&gt;&lt;/a&gt;3. BLAS安装与配置&lt;/h3&gt;&lt;p&gt;BLAS（基础线性代数集合）是一个应用程序接口的标准。Caffe官网上推荐了三种实现：ATLAS, MKL, or OpenBLAS。其中atlas可以直接通过命令行安装（本文采用的就是这个），如果要使用intel的MKL库，可以参考博客2的中BLAS安装与配置步骤。&lt;/p&gt;
+&lt;h3 id=&quot;4-安装相关依赖包&quot;&gt;&lt;a href=&quot;#4-安装相关依赖包&quot; class=&quot;headerlink&quot; title=&quot;4. 安装相关依赖包&quot;&gt;&lt;/a&gt;4. 安装相关依赖包&lt;/h3&gt;&lt;p&gt;Caffe的编译依赖于很多C和C++的动态链接库，因此需要先用apt-get工具安装这些动态链接库。参考博客4主要步骤如下：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get update&amp;#10;&amp;#10;sudo apt-get upgrade&amp;#10;&amp;#10;sudo apt-get install -y build-essential cmake git pkg-config&amp;#10;&amp;#10;sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev protobuf-compiler&amp;#10;&amp;#10;sudo apt-get install -y libatlas-base-dev &amp;#10;&amp;#10;sudo apt-get install -y --no-install-recommends libboost-all-dev&amp;#10;&amp;#10;sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
-&lt;p&gt;根据[^1]这里有两个包的版本要注意：&lt;br&gt;protobuf版本要3.0或以上版本&lt;br&gt;libboost版本要1.55或以上版本&lt;br&gt;下面介绍这两个包的具体配置&lt;/p&gt;
+&lt;p&gt;根据博客1这里有两个包的版本要注意：&lt;br&gt;protobuf版本要3.0或以上版本&lt;br&gt;libboost版本要1.55或以上版本&lt;br&gt;下面介绍这两个包的具体配置&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;protobuf安装&quot;&gt;&lt;a href=&quot;#protobuf安装&quot; class=&quot;headerlink&quot; title=&quot;protobuf安装&quot;&gt;&lt;/a&gt;protobuf安装&lt;/h3&gt;&lt;p&gt;博客[^1]提到使用apt-get安装的是2.0版本，不可以。因此需要到protobuf的&lt;a href=&quot;https://github.com/google/protobuf/releases&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;release页面&lt;/a&gt;下载两个安装包：&lt;/p&gt;
+&lt;h3 id=&quot;protobuf安装&quot;&gt;&lt;a href=&quot;#protobuf安装&quot; class=&quot;headerlink&quot; title=&quot;protobuf安装&quot;&gt;&lt;/a&gt;protobuf安装&lt;/h3&gt;&lt;p&gt;博客博客1提到使用apt-get安装的是2.0版本，不可以。因此需要到protobuf的&lt;a href=&quot;https://github.com/google/protobuf/releases&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;release页面&lt;/a&gt;下载两个安装包：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;protobuf-cpp-3.0.0-beta-2.zip 或以上版本；&lt;/li&gt;
 &lt;li&gt;protobuf-python-3.0.0-beta-2.zip 或以上版本。&lt;br&gt;注意&lt;strong&gt;cpp和python的版本应该保持一致&lt;/strong&gt;。&lt;/li&gt;
@@ -52,13 +52,13 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ conda list | grep protobuf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-I1_TDKgfPFw/WHcbvBGCXLI/AAAAAAAAATY/wgxyPm_C7Mc/I/14841986461841.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;我这里貌似安装了两个版本的，不过有3.0.0版本的就可以了。&lt;/p&gt;
-&lt;h3 id=&quot;libboost安装&quot;&gt;&lt;a href=&quot;#libboost安装&quot; class=&quot;headerlink&quot; title=&quot;libboost安装&quot;&gt;&lt;/a&gt;libboost安装&lt;/h3&gt;&lt;p&gt;按照[^1]的解释，libboost安装完之后会产生两个版本的libboost_python:&lt;/p&gt;
+&lt;h3 id=&quot;libboost安装&quot;&gt;&lt;a href=&quot;#libboost安装&quot; class=&quot;headerlink&quot; title=&quot;libboost安装&quot;&gt;&lt;/a&gt;libboost安装&lt;/h3&gt;&lt;p&gt;按照博客1的解释，libboost安装完之后会产生两个版本的libboost_python:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;libboost_python-py33.so.XXX&lt;/li&gt;
 &lt;li&gt;libboost_python-py34.so.XXX&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;而这里必须选择py34的动态链接库，否则在实际运行Caffe的时候可能会在得不到任何错误提示的情况下python kernel直接崩溃。&lt;/p&gt;
-&lt;p&gt;具体安装步骤可以参考[^1]的步骤，这里有一个关键步骤必须要执行：&lt;/p&gt;
+&lt;p&gt;具体安装步骤可以参考博客1的步骤，这里有一个关键步骤必须要执行：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py34.so.1.55.0 /usr/local/lib/libboost_python3.so&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;就是在/usr/local/lib目录下建立一个libboost_python3.so的软链接，而且到这里，需要配置一下.bashrc或者.zshrc的环境变量：&lt;br&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-l0dP6gA8yd8/WHcbvVmbmcI/AAAAAAAAATc/bKgrmZBVMTc/I/14841990222795.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这里主要是在LD_LIBRARY_PATH环境变量中添加了Anaconda，Caffe的链接库路径以及/usr/local/lib目录，这样在编译的时候才能找到比如上面libboost_python3.so这样的动态链接库文件。&lt;/p&gt;
@@ -67,7 +67,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;三、Anaconda3以及Caffe的编译和安装&quot;&gt;&lt;a href=&quot;#三、Anaconda3以及Caffe的编译和安装&quot; class=&quot;headerlink&quot; title=&quot;三、Anaconda3以及Caffe的编译和安装&quot;&gt;&lt;/a&gt;三、Anaconda3以及Caffe的编译和安装&lt;/h2&gt;&lt;h2 id=&quot;1-Anaconda3安装&quot;&gt;&lt;a href=&quot;#1-Anaconda3安装&quot; class=&quot;headerlink&quot; title=&quot;1. Anaconda3安装&quot;&gt;&lt;/a&gt;1. Anaconda3安装&lt;/h2&gt;&lt;p&gt;Anaconda3的安装比较简单，在&lt;a href=&quot;https://www.continuum.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Anaconda官网&lt;/a&gt;下载对于的Linux安装包（.sh文件）即可，安装命令为：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bash Anaconda3-4.0.0-Linux-x86_64.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;安装完Anaconda3之后可以参考[^4]的建议，安装一下OpenCV包：&lt;/p&gt;
+&lt;p&gt;安装完Anaconda3之后可以参考博客4的建议，安装一下OpenCV包：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda install -c menpo opencv3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;2-Caffe的编译和安装&quot;&gt;&lt;a href=&quot;#2-Caffe的编译和安装&quot; class=&quot;headerlink&quot; title=&quot;2. Caffe的编译和安装&quot;&gt;&lt;/a&gt;2. Caffe的编译和安装&lt;/h2&gt;&lt;p&gt;到这里就可以正式进行Caffe的编译和安装了，首先下载并解压，这一步大家都会，到github官网下载即可，解压后进入Caffe目录。&lt;/p&gt;
 &lt;p&gt;这里的主要步骤是Makefile.config文件的配置,首先运行&lt;code&gt;cp Makefile.config.example Makefile.config&lt;/code&gt;创建一个Makefile.config，然后对其中内容进行更改，运行&lt;code&gt;vim Makefile.config&lt;/code&gt;打开文件，进行如下修改：&lt;/p&gt;
@@ -88,18 +88,16 @@
 &lt;p&gt;PS：修改.bashrc或.zshrc之后记得&lt;code&gt;source ~/.bashrc&lt;/code&gt;或者&lt;code&gt;source  ~/.zshrc&lt;/code&gt;一下才生效哦。&lt;/p&gt;
 &lt;h1 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h1&gt;&lt;p&gt;打开python或ipython已经可以正常使用caffe了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;[^1]:  &lt;a href=&quot;http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在 python3.5 下使用 Caffe Using Caffe with Python3.5&lt;/a&gt;&lt;br&gt;[^2]: &lt;a href=&quot;https://github.com/saiprashanths/dl-setup#caffe&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Setting up a Deep Learning Machine from Scratch (Software)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[^4]: &lt;a href=&quot;https://yangcha.github.io/Caffe-Conda/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Install Caffe With Anaconda&lt;/a&gt;&lt;br&gt;[^5]: &lt;a href=&quot;http://yiranwuqing.iteye.com/blog/974246&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux 共享库 LD_LIBRARY_PATH 与ld.so.conf的使用ldconfig&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;一、前沿&quot;&gt;&lt;a href=&quot;#一、前沿&quot; class=&quot;headerlink&quot; title=&quot;一、前沿&quot;&gt;&lt;/a&gt;一、前沿&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&lt;br&gt;&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&lt;br&gt;&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢：&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&lt;br&gt;&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&lt;br&gt;&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/&quot;&gt;在 python3.5 下使用 Caffe Using Caffe with Python3.5&lt;/a&gt;[^1]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/saiprashanths/dl-setup#caffe&quot;&gt;Setting up a Deep Learning Machine from Scratch (Software)&lt;/a&gt;[^2]&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/663029044efd&quot;&gt;Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装&lt;/a&gt;&lt;a href=&quot;[Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装](http://www.jianshu.com/p/663029044efd)&quot;&gt;^3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/663029044efd&quot;&gt;Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装&lt;/a&gt;[^3]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://yangcha.github.io/Caffe-Conda/&quot;&gt;Install Caffe With Anaconda&lt;/a&gt;[^4]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
