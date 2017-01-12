@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-h8acahv-hqU/WHcb0jz0EpI/AAAAAAAAATo/zOInspf24BE/I/14842000687384.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg">
-<meta property="og:updated_time" content="2017-01-12T06:07:38.000Z">
+<meta property="og:updated_time" content="2017-01-12T06:08:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3.5 Anaconda3 Caffe深度学习框架搭建">
 <meta name="twitter:description" content="一、前沿
@@ -285,10 +285,10 @@
             <h2 id="一、前沿"><a href="#一、前沿" class="headerlink" title="一、前沿"></a>一、前沿</h2><blockquote>
 <p>&emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。<br>&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。<br>&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：</p>
 <ol>
-<li><a href="http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/" target="_blank" rel="external">在 python3.5 下使用 Caffe Using Caffe with Python3.5</a>[^1]</li>
-<li><a href="https://github.com/saiprashanths/dl-setup#caffe" target="_blank" rel="external">Setting up a Deep Learning Machine from Scratch (Software)</a>[^2]</li>
-<li><a href="http://www.jianshu.com/p/663029044efd" target="_blank" rel="external">Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装</a>[^3]</li>
-<li><a href="https://yangcha.github.io/Caffe-Conda/" target="_blank" rel="external">Install Caffe With Anaconda</a>[^4]</li>
+<li><a href="http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/" target="_blank" rel="external">在 python3.5 下使用 Caffe Using Caffe with Python3.5</a></li>
+<li><a href="https://github.com/saiprashanths/dl-setup#caffe" target="_blank" rel="external">Setting up a Deep Learning Machine from Scratch (Software)</a></li>
+<li><a href="http://www.jianshu.com/p/663029044efd" target="_blank" rel="external">Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装</a></li>
+<li><a href="https://yangcha.github.io/Caffe-Conda/" target="_blank" rel="external">Install Caffe With Anaconda</a></li>
 </ol>
 </blockquote>
 <p>&emsp;<a id="more"></a></p>
@@ -323,7 +323,7 @@
 <p>就是在/usr/local/lib目录下建立一个libboost_python3.so的软链接，而且到这里，需要配置一下.bashrc或者.zshrc的环境变量：<br><img src="https://lh3.googleusercontent.com/-l0dP6gA8yd8/WHcbvVmbmcI/AAAAAAAAATc/bKgrmZBVMTc/I/14841990222795.jpg" alt=""></p>
 <p>这里主要是在LD_LIBRARY_PATH环境变量中添加了Anaconda，Caffe的链接库路径以及/usr/local/lib目录，这样在编译的时候才能找到比如上面libboost_python3.so这样的动态链接库文件。</p>
 <blockquote>
-<p>关于LD_LIBRARY_PATH环境变量以及ld.so.conf文件和ldconfig命令的使用，可以参考<a href="http://yiranwuqing.iteye.com/blog/974246" target="_blank" rel="external">Linux 共享库 LD_LIBRARY_PATH 与ld.so.conf的使用ldconfig</a>[^5]</p>
+<p>关于LD_LIBRARY_PATH环境变量以及ld.so.conf文件和ldconfig命令的使用，可以参考<a href="http://yiranwuqing.iteye.com/blog/974246" target="_blank" rel="external">Linux 共享库 LD_LIBRARY_PATH 与ld.so.conf的使用ldconfig</a></p>
 </blockquote>
 <h2 id="三、Anaconda3以及Caffe的编译和安装"><a href="#三、Anaconda3以及Caffe的编译和安装" class="headerlink" title="三、Anaconda3以及Caffe的编译和安装"></a>三、Anaconda3以及Caffe的编译和安装</h2><h2 id="1-Anaconda3安装"><a href="#1-Anaconda3安装" class="headerlink" title="1. Anaconda3安装"></a>1. Anaconda3安装</h2><p>Anaconda3的安装比较简单，在<a href="https://www.continuum.io/" target="_blank" rel="external">Anaconda官网</a>下载对于的Linux安装包（.sh文件）即可，安装命令为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda3-4.0.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
