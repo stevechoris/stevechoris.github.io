@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-01-12T09:17:54.000Z</updated>
+  <updated>2017-02-21T06:43:36.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -16,11 +16,151 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理</title>
+    <link href="http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
+    <id>http://stevechoris.github.io/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/</id>
+    <published>2017-02-21T06:40:42.000Z</published>
+    <updated>2017-02-21T06:43:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&amp;emsp;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;一-深度学习&quot;&gt;&lt;a href=&quot;#一-深度学习&quot; class=&quot;headerlink&quot; title=&quot;一 深度学习&quot;&gt;&lt;/a&gt;一 深度学习&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;参考Deep Learning Tutorial&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;二-TensorFlow&quot;&gt;&lt;a href=&quot;#二-TensorFlow&quot; class=&quot;headerlink&quot; title=&quot;二 TensorFlow&quot;&gt;&lt;/a&gt;二 TensorFlow&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;TensorFlow是一个基于数据流图的深度学习框架&lt;/li&gt;
+&lt;li&gt;图中的节点表示数学运算，而图边表示在它们之间传递的张量（多维数组）&lt;/li&gt;
+&lt;li&gt;TensorFlow的优点是架构非常灵活，允许你通过&lt;strong&gt;单一的API&lt;/strong&gt;将计算部署到PC机，服务器或移动设备的一个或多个CPU或GPU&lt;/li&gt;
+&lt;li&gt;目前的版本是1.0，基于8GPU对Inception V3实现了7.3倍加速，以及基于64GPU对分布式Inception V3训练实现58倍加速。主要引入了以下新的特点：&lt;ul&gt;
+&lt;li&gt;提供Java和Go的实验API&lt;/li&gt;
+&lt;li&gt;引入了高级API模块：&lt;code&gt;tf.contrib.learn&lt;/code&gt;，还包含一个全新的&lt;code&gt;tf.keras&lt;/code&gt;模块，能够与高级神经网络库Keras完全兼容&lt;/li&gt;
+&lt;li&gt;发布了面向CPU和GPU的TensorFlow图形的特定领域编译器XLA的实验版本&lt;/li&gt;
+&lt;li&gt;生成TensorFlow Debugger(tfdbg)，一个用于调试实时TensorFlow程序的命令行界面和API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接下来我将结合如何从零开始构建一个卷积神经网络图像分类器来介绍并总结TensorFlow的使用经验&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;（一）图像数据的创建&quot;&gt;&lt;a href=&quot;#（一）图像数据的创建&quot; class=&quot;headerlink&quot; title=&quot;（一）图像数据的创建&quot;&gt;&lt;/a&gt;（一）图像数据的创建&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-bfpA60gUBjo/WKml0jD5eqI/AAAAAAAAAUQ/U_4EtRPZ88I/I/%25255BUNSET%25255D.png&quot; alt=&quot;数据获取与组织&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;（二）读取图片并保存为tfrecords文件&quot;&gt;&lt;a href=&quot;#（二）读取图片并保存为tfrecords文件&quot; class=&quot;headerlink&quot; title=&quot;（二）读取图片并保存为tfrecords文件&quot;&gt;&lt;/a&gt;（二）读取图片并保存为tfrecords文件&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;.tfrecords文件为TensorFlow特有的序列化，保存数据的文件。便于后续的大数据的读取。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-vNuMu38aATc/WKmuEIr8_KI/AAAAAAAAAUs/o12aj7W4oUk/I/14875150953274.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;（三）训练时数据的读取&quot;&gt;&lt;a href=&quot;#（三）训练时数据的读取&quot; class=&quot;headerlink&quot; title=&quot;（三）训练时数据的读取&quot;&gt;&lt;/a&gt;（三）训练时数据的读取&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-Q54gpCCUu-g/WKmuETFjm6I/AAAAAAAAAUw/cfJ_an92XNw/I/14875151258687.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;（四）模型的定义&quot;&gt;&lt;a href=&quot;#（四）模型的定义&quot; class=&quot;headerlink&quot; title=&quot;（四）模型的定义&quot;&gt;&lt;/a&gt;（四）模型的定义&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;到上一步为止，我们已经可以获得用于训练的一个batch的examples和labels，其本质为numpy数组。如果你直接有numpy数组数据，也可以直接用于训练或预测。&lt;br&gt;Tensorflow运行需要两步：1. 定义图的结构 2. 将操作放到一个会话中(Session)中运行。&lt;br&gt;因此，在TensorFlow可以运行之前，我们必须先定义Graph，它是整个模型的结构。 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;TensorFlow模型主要有三个部分，和机器学习算法的三个主要部分对应。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference: 定义神经网络的输入，输出，隐含层单元以及权重，对于一个batch的输入，可以通过前馈计算，输出一个batch的logits(可以理解为每一类的输出大小)。&lt;/li&gt;
+&lt;li&gt;Loss: 通过logits和labels计算出当前输出结果的预测值与实际值之间差距的大小。通常使用的是softmax_cross_entropy&lt;/li&gt;
+&lt;li&gt;Training: 通常使用的AdamOptimizer（自适应的随机梯度下降方法）。涉及到权重衰减，自适应学习率和动量等，使得模型不断趋向于最优解。不会限于局部最优且不会过冲。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-Inference中用到的主要函数&quot;&gt;&lt;a href=&quot;#1-Inference中用到的主要函数&quot; class=&quot;headerlink&quot; title=&quot;1 Inference中用到的主要函数&quot;&gt;&lt;/a&gt;1 Inference中用到的主要函数&lt;/h4&gt;&lt;h5 id=&quot;卷积层&quot;&gt;&lt;a href=&quot;#卷积层&quot; class=&quot;headerlink&quot; title=&quot;卷积层&quot;&gt;&lt;/a&gt;卷积层&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.get_variable&lt;/code&gt; # 定义卷积核与偏置的初始权值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.add_to_collection&lt;/code&gt; # 添加变量到字典中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.conv2d&lt;/code&gt; # 卷积&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.bias_add&lt;/code&gt; # 偏置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;池化层&quot;&gt;&lt;a href=&quot;#池化层&quot; class=&quot;headerlink&quot; title=&quot;池化层&quot;&gt;&lt;/a&gt;池化层&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.max_pool&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;全连接层&quot;&gt;&lt;a href=&quot;#全连接层&quot; class=&quot;headerlink&quot; title=&quot;全连接层&quot;&gt;&lt;/a&gt;全连接层&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.get_variable&lt;/code&gt; # 定义全连接和偏置的初始权值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.reshape&lt;/code&gt; # 可能需要将最后池化层结果拉长成一个向量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.relu_layer&lt;/code&gt; # 添加ReLU非线性模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;Dropout层&quot;&gt;&lt;a href=&quot;#Dropout层&quot; class=&quot;headerlink&quot; title=&quot;Dropout层&quot;&gt;&lt;/a&gt;Dropout层&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.dropout&lt;/code&gt; # 在最后全连接层后加入dropout&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;输出层&quot;&gt;&lt;a href=&quot;#输出层&quot; class=&quot;headerlink&quot; title=&quot;输出层&quot;&gt;&lt;/a&gt;输出层&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.get_variable&lt;/code&gt; # 定义全连接和偏置的初识权值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.add(tf.matmul())&lt;/code&gt; # 最后全连接方式输出logits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意当模型复杂化的时候可以使用&lt;code&gt;tf.variable_scope&lt;/code&gt;和&lt;code&gt;tf.name_scope&lt;/code&gt;函数来共享参数。&lt;br&gt;其中&lt;code&gt;tf.variable_scope&lt;/code&gt;主要影响变量的命名，但默认会调用&lt;code&gt;tf.name_scope&lt;/code&gt;，而&lt;code&gt;tf.name_scope&lt;/code&gt;只会影响ops的命名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;2-Loss-logits-labels-中用到的主要函数&quot;&gt;&lt;a href=&quot;#2-Loss-logits-labels-中用到的主要函数&quot; class=&quot;headerlink&quot; title=&quot;2 Loss(logits, labels)中用到的主要函数:&quot;&gt;&lt;/a&gt;2 Loss(logits, labels)中用到的主要函数:&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.reshape&lt;/code&gt; # 将labels reshape为[batch_size, 1]大小&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.concat&lt;/code&gt; # 与同样大小的tf.range(0, batch_size)连接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.sparse_to_dense&lt;/code&gt; # 稀疏矩阵转为稠密矩阵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.softmax_cross_entropy_with_logits&lt;/code&gt; # 计算交叉熵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.reduce_mean&lt;/code&gt; # 计算平均值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;3-Training-loss-global-step-中用到的主要函数&quot;&gt;&lt;a href=&quot;#3-Training-loss-global-step-中用到的主要函数&quot; class=&quot;headerlink&quot; title=&quot;3 Training(loss, global_step)中用到的主要函数&quot;&gt;&lt;/a&gt;3 Training(loss, global_step)中用到的主要函数&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.train.exponential_decay&lt;/code&gt; # 权值衰减设置函数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;optimizer=tf.train.AdamOptimizer&lt;/code&gt; # 自适应梯度优化器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;train_op=optimizer.minimize(loss, global_step=global_step)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;4-Evaluation-logits-labels-预测评估中用到的主要函数&quot;&gt;&lt;a href=&quot;#4-Evaluation-logits-labels-预测评估中用到的主要函数&quot; class=&quot;headerlink&quot; title=&quot;4 Evaluation(logits, labels) 预测评估中用到的主要函数&quot;&gt;&lt;/a&gt;4 Evaluation(logits, labels) 预测评估中用到的主要函数&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.nn.in_top_k&lt;/code&gt; # 计算每个实例的labels是否在logits预测的前k个类别中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.reduce_sum&lt;/code&gt; # 计算预测正确的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;（五）模型运行&quot;&gt;&lt;a href=&quot;#（五）模型运行&quot; class=&quot;headerlink&quot; title=&quot;（五）模型运行&quot;&gt;&lt;/a&gt;（五）模型运行&lt;/h3&gt;&lt;h4 id=&quot;1-TensorFlow的几个重要元素&quot;&gt;&lt;a href=&quot;#1-TensorFlow的几个重要元素&quot; class=&quot;headerlink&quot; title=&quot;1 TensorFlow的几个重要元素&quot;&gt;&lt;/a&gt;1 TensorFlow的几个重要元素&lt;/h4&gt;&lt;h5 id=&quot;变量和操作&quot;&gt;&lt;a href=&quot;#变量和操作&quot; class=&quot;headerlink&quot; title=&quot;变量和操作&quot;&gt;&lt;/a&gt;变量和操作&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Variable&lt;/li&gt;
+&lt;li&gt;Constant&lt;/li&gt;
+&lt;li&gt;Placeholder&lt;/li&gt;
+&lt;li&gt;其他各种OPs&lt;/li&gt;
+&lt;li&gt;Session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;相关函数&quot;&gt;&lt;a href=&quot;#相关函数&quot; class=&quot;headerlink&quot; title=&quot;相关函数&quot;&gt;&lt;/a&gt;相关函数&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.global_variables_initializer()&lt;/code&gt; # 用于初始化所有变量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;input_pipeline()&lt;/code&gt; # 从tfrecords读取数据&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;placeholder_inputs()&lt;/code&gt; # 定义输入&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inference()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;loss()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;training()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;evaluation()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;coord = tf.train.Coordinator()&lt;/code&gt; # 用于驱动tfrecords数据的读取&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;threads = tf.train.start_queue_runners(sess=sess, coord=coord)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Session.run()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2-Tensorboard&quot;&gt;&lt;a href=&quot;#2-Tensorboard&quot; class=&quot;headerlink&quot; title=&quot;2 Tensorboard&quot;&gt;&lt;/a&gt;2 Tensorboard&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Tensorboard用于训练过程中相关信息的记录，便于可视化的分析和监视训练过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;相关函数-1&quot;&gt;&lt;a href=&quot;#相关函数-1&quot; class=&quot;headerlink&quot; title=&quot;相关函数&quot;&gt;&lt;/a&gt;相关函数&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tf.summary.scalar&lt;/code&gt; # 定义各种标量信息，例如当前step的Accuracy, Loss等&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.summary.image&lt;/code&gt; # 保存当前batch的图片&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.summary.merge_all()&lt;/code&gt; # 将所有summary汇总为一个操作&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summary_writer = tf.summary.FileWriter(log_dir,graph_def=sess.graph_def)&lt;/code&gt; # 定义一个写summary的句柄&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summary_str = sess.run([summary_op], feed_dict=summary_feed)&lt;/code&gt; # 生成summary字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summary_writer.add_summary(summary_str[0], step)&lt;/code&gt; # 将summary字符串用句柄写入文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;3-模型保存与加载&quot;&gt;&lt;a href=&quot;#3-模型保存与加载&quot; class=&quot;headerlink&quot; title=&quot;3 模型保存与加载&quot;&gt;&lt;/a&gt;3 模型保存与加载&lt;/h4&gt;&lt;h5 id=&quot;保存模型&quot;&gt;&lt;a href=&quot;#保存模型&quot; class=&quot;headerlink&quot; title=&quot;保存模型&quot;&gt;&lt;/a&gt;保存模型&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;saver = tf.train.Saver(max_to_keep=30)&lt;/code&gt; # 定义一个模型保存器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;checkpoint_path = os.path.join(checkpoint_dir, &amp;#39;model.ckpt&amp;#39;)&lt;/code&gt; # 设置保存的位置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;saver.save(sess, checkpoint_path, global_step=step)&lt;/code&gt; # 保存模型（需要Session, 位置以及当前训练的步数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;加载模型&quot;&gt;&lt;a href=&quot;#加载模型&quot; class=&quot;headerlink&quot; title=&quot;加载模型&quot;&gt;&lt;/a&gt;加载模型&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ckpt = tf.train.get_checkpoint_state(checkpoint_dir=checkpoint_dir)&lt;/code&gt; # （通过路径找到保存的模型）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;saver.restore(sess, ckpt.model_checkpoint_path)&lt;/code&gt; # 加载模型&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://stevechoris.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://stevechoris.github.io/tags/Machine-Learning/"/>
+    
+      <category term="TensorFlow" scheme="http://stevechoris.github.io/tags/TensorFlow/"/>
+    
+      <category term="机器学习" scheme="http://stevechoris.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python3.5 Anaconda3 Caffe深度学习框架搭建</title>
     <link href="http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
     <id>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</id>
     <published>2017-01-12T03:59:22.000Z</published>
-    <updated>2017-01-12T09:17:54.000Z</updated>
+    <updated>2017-01-12T09:23:41.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;一、前沿&quot;&gt;&lt;a href=&quot;#一、前沿&quot; class=&quot;headerlink&quot; title=&quot;一、前沿&quot;&gt;&lt;/a&gt;一、前沿&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&lt;br&gt;&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&lt;br&gt;&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：&lt;/p&gt;
@@ -121,7 +261,7 @@
     <link href="http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2016/12/28/Linux常用命令整理/</id>
     <published>2016-12-28T07:52:12.000Z</published>
-    <updated>2017-01-12T03:57:00.000Z</updated>
+    <updated>2017-01-31T10:53:40.000Z</updated>
     
     <content type="html">&lt;p&gt;&amp;emsp;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;一-磁盘信息&quot;&gt;&lt;a href=&quot;#一-磁盘信息&quot; class=&quot;headerlink&quot; title=&quot;一. 磁盘信息&quot;&gt;&lt;/a&gt;一. 磁盘信息&lt;/h2&gt;&lt;h3 id=&quot;1-查看磁盘空间&quot;&gt;&lt;a href=&quot;#1-查看磁盘空间&quot; class=&quot;headerlink&quot; title=&quot;1. 查看磁盘空间&quot;&gt;&lt;/a&gt;1. 查看磁盘空间&lt;/h3&gt;&lt;h4 id=&quot;1-命令格式：df-h&quot;&gt;&lt;a href=&quot;#1-命令格式：df-h&quot; class=&quot;headerlink&quot; title=&quot;1. 命令格式：df -h&quot;&gt;&lt;/a&gt;1. 命令格式：&lt;code&gt;df -h&lt;/code&gt;&lt;/h4&gt;&lt;blockquote&gt;
