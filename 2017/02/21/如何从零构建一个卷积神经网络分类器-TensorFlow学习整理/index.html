@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-bfpA60gUBjo/WKml0jD5eqI/AAAAAAAAAUQ/U_4EtRPZ88I/I/%25255BUNSET%25255D.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-vNuMu38aATc/WKmuEIr8_KI/AAAAAAAAAUs/o12aj7W4oUk/I/14875150953274.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-Q54gpCCUu-g/WKmuETFjm6I/AAAAAAAAAUw/cfJ_an92XNw/I/14875151258687.jpg">
-<meta property="og:updated_time" content="2017-02-21T07:01:52.000Z">
+<meta property="og:updated_time" content="2017-02-21T07:09:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理">
 <meta name="twitter:description" content="&amp;emsp;">
@@ -274,23 +274,6 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <p>&emsp;<a id="more"></a></p>
-<div class="toc">
-
-<h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#yi-shen-du-xue-xi"><span class="toc-text">一 深度学习"#"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#er-tensorflow"><span class="toc-text">二 TensorFlow"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#yi-tu-xiang-shu-ju-de-chuang-jian"><span class="toc-text">（一）图像数据的创建"#"</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#er-du-qu-tu-pian-bing-bao-cun-wei-tfrecords-wen-jian"><span class="toc-text">（二）读取图片并保存为tfrecords文件"#"</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#san-xun-lian-shi-shu-ju-de-du-qu"><span class="toc-text">（三）训练时数据的读取"#"</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#si-mo-xing-de-ding-yi"><span class="toc-text">（四）模型的定义"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-inference-zhong-yong-dao-de-zhu-yao-han-shu"><span class="toc-text">1 Inference中用到的主要函数"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#juan-ji-ceng"><span class="toc-text">卷积层"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#chi-hua-ceng"><span class="toc-text">池化层"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#quan-lian-jie-ceng"><span class="toc-text">全连接层"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#dropout-ceng"><span class="toc-text">Dropout层"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#shu-chu-ceng"><span class="toc-text">输出层"#"</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-loss-logits-labels-zhong-yong-dao-de-zhu-yao-han-shu"><span class="toc-text">2 Loss(logits, labels)中用到的主要函数:"#"</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-training-loss-global-step-zhong-yong-dao-de-zhu-yao-han-shu"><span class="toc-text">3 Training(loss, global_step)中用到的主要函数"#"</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-evaluation-logits-labels-yu-ce-ping-gu-zhong-yong-dao-de-zhu-yao-han-shu"><span class="toc-text">4 Evaluation(logits, labels) 预测评估中用到的主要函数"#"</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wu-mo-xing-yun-xing"><span class="toc-text">（五）模型运行"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-tensorflow-de-ji-ge-chong-yao-yuan-su"><span class="toc-text">1 TensorFlow的几个重要元素"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bian-liang-he-cao-zuo"><span class="toc-text">变量和操作"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#xiang-guan-han-shu"><span class="toc-text">相关函数"#"</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-tensorboard"><span class="toc-text">2 Tensorboard"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#xiang-guan-han-shu"><span class="toc-text">相关函数"#"</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-mo-xing-bao-cun-yu-jia-zai"><span class="toc-text">3 模型保存与加载"#"</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bao-cun-mo-xing"><span class="toc-text">保存模型"#"</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#jia-zai-mo-xing"><span class="toc-text">加载模型"#"</span></a></li></ol></li></ol></li></ol></li></ol>
-<ul>
-<li><a href="#yi-shen-du-xue-xi">一 深度学习</a></li>
-<li><a href="#er-tensorflow">二 TensorFlow</a><ul>
-<li><a href="#yi-tu-xiang-shu-ju-de-chuang-jian">（一）图像数据的创建</a></li>
-<li><a href="#er-du-qu-tu-pian-bing-bao-cun-wei-tfrecords-wen-jian">（二）读取图片并保存为tfrecords文件</a></li>
-<li><a href="#san-xun-lian-shi-shu-ju-de-du-qu">（三）训练时数据的读取</a></li>
-<li><a href="#si-mo-xing-de-ding-yi">（四）模型的定义</a></li>
-<li><a href="#wu-mo-xing-yun-xing">（五）模型运行</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-</div>
-
 <h2 id="yi-shen-du-xue-xi"><a href="#一-深度学习" class="headerlink" title="一 深度学习"></a>一 深度学习<a href="yi-shen-du-xue-xi" class="header-anchor">"#"</a></h2><blockquote>
 <p>参考Deep Learning Tutorial</p>
 </blockquote>
@@ -467,7 +450,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+                <a class="post-action-btn btn btn--default" href="#">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -549,7 +532,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+                <a class="post-action-btn btn btn--default" href="#">
             
                 <i class="fa fa-list"></i>
             </a>
