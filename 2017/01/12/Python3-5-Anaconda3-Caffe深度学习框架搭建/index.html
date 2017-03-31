@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-h8acahv-hqU/WHcb0jz0EpI/AAAAAAAAATo/zOInspf24BE/I/14842000687384.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg">
-<meta property="og:updated_time" content="2017-01-12T09:23:41.000Z">
+<meta property="og:updated_time" content="2017-03-31T08:38:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3.5 Anaconda3 Caffe深度学习框架搭建">
 <meta name="twitter:description" content="一、前沿
@@ -383,7 +383,7 @@
 <p>如果一切都顺利的话，到这里Caffe以及Caffe的Python接口已经编译完成并可以使用了。最后把Caffe的Python库的路径添加到PYTHONPATH环境变量中，这样在python或者ipython程序中才能import进来：</p>
 <p><img src="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg" alt=""></p>
 <p>PS：修改.bashrc或.zshrc之后记得<code>source ~/.bashrc</code>或者<code>source  ~/.zshrc</code>一下才生效哦。</p>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>打开python或ipython已经可以正常使用caffe了。</p>
+<h2 id="四-运行"><a href="#四、运行" class="headerlink" title="四、运行"></a>四、运行</h2><p>打开python或ipython已经可以正常使用caffe了。</p>
 <p><img src="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg" alt=""></p>
 
       
@@ -396,7 +396,7 @@
         <p><span>本文标题:</span><a href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/">Python3.5 Anaconda3 Caffe深度学习框架搭建</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Choris Steve</a></p>
         <p><span>发布时间:</span>2017-01-12, 11:59:22</p>
-        <p><span>最后更新:</span>2017-01-12, 17:23:41</p>
+        <p><span>最后更新:</span>2017-03-31, 16:38:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/" title="Python3.5 Anaconda3 Caffe深度学习框架搭建">http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</a>
             <span class="copy-path" data-clipboard-text="原文: http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/　　作者: Choris Steve" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -432,7 +432,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-前沿"><span class="toc-number">1.</span> <span class="toc-text">一、前沿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-准备环境"><span class="toc-number">2.</span> <span class="toc-text">二、准备环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ubuntu1404系统"><span class="toc-number">2.1.</span> <span class="toc-text">1. ubuntu14.04系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-显卡驱动与cuda安装"><span class="toc-number">2.2.</span> <span class="toc-text">2. 显卡驱动与CUDA安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-blas安装与配置"><span class="toc-number">2.3.</span> <span class="toc-text">3. BLAS安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装相关依赖包"><span class="toc-number">2.4.</span> <span class="toc-text">4. 安装相关依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#protobuf安装"><span class="toc-number">2.5.</span> <span class="toc-text">protobuf安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#libboost安装"><span class="toc-number">2.6.</span> <span class="toc-text">libboost安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-anaconda3以及caffe的编译和安装"><span class="toc-number">3.</span> <span class="toc-text">三、Anaconda3以及Caffe的编译和安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-anaconda3安装"><span class="toc-number">4.</span> <span class="toc-text">1. Anaconda3安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-caffe的编译和安装"><span class="toc-number">5.</span> <span class="toc-text">2. Caffe的编译和安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运行"><span class="toc-number"></span> <span class="toc-text">运行</span></a>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-前沿"><span class="toc-number">1.</span> <span class="toc-text">一、前沿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-准备环境"><span class="toc-number">2.</span> <span class="toc-text">二、准备环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ubuntu1404系统"><span class="toc-number">2.1.</span> <span class="toc-text">1. ubuntu14.04系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-显卡驱动与cuda安装"><span class="toc-number">2.2.</span> <span class="toc-text">2. 显卡驱动与CUDA安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-blas安装与配置"><span class="toc-number">2.3.</span> <span class="toc-text">3. BLAS安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装相关依赖包"><span class="toc-number">2.4.</span> <span class="toc-text">4. 安装相关依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#protobuf安装"><span class="toc-number">2.5.</span> <span class="toc-text">protobuf安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#libboost安装"><span class="toc-number">2.6.</span> <span class="toc-text">libboost安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-anaconda3以及caffe的编译和安装"><span class="toc-number">3.</span> <span class="toc-text">三、Anaconda3以及Caffe的编译和安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-anaconda3安装"><span class="toc-number">4.</span> <span class="toc-text">1. Anaconda3安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-caffe的编译和安装"><span class="toc-number">5.</span> <span class="toc-text">2. Caffe的编译和安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-运行"><span class="toc-number">6.</span> <span class="toc-text">四、运行</span></a></li></ol>
         
     </div>
     <style>

@@ -159,7 +159,7 @@
     <link href="http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
     <id>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</id>
     <published>2017-01-12T03:59:22.000Z</published>
-    <updated>2017-01-12T09:23:41.000Z</updated>
+    <updated>2017-03-31T08:38:55.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一-前沿"><a href="#一、前沿" class="headerlink" title="一、前沿"></a>一、前沿</h2><blockquote>
 <p>&emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。<br>&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。<br>&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：</p>
@@ -225,7 +225,7 @@
 <p>如果一切都顺利的话，到这里Caffe以及Caffe的Python接口已经编译完成并可以使用了。最后把Caffe的Python库的路径添加到PYTHONPATH环境变量中，这样在python或者ipython程序中才能import进来：</p>
 <p><img src="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg" alt=""></p>
 <p>PS：修改.bashrc或.zshrc之后记得<code>source ~/.bashrc</code>或者<code>source  ~/.zshrc</code>一下才生效哦。</p>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>打开python或ipython已经可以正常使用caffe了。</p>
+<h2 id="四-运行"><a href="#四、运行" class="headerlink" title="四、运行"></a>四、运行</h2><p>打开python或ipython已经可以正常使用caffe了。</p>
 <p><img src="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg" alt=""></p>
 ]]></content>
     
