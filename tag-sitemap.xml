@@ -30,20 +30,6 @@
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/tags/Anaconda/</loc>
-        <lastmod>2017-03-31T09:05:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://stevechoris.github.io/tags/Conda/</loc>
-        <lastmod>2017-03-31T09:05:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://stevechoris.github.io/tags/Stack/</loc>
         <lastmod>2017-03-31T09:05:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,13 +58,6 @@
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/tags/Python/</loc>
-        <lastmod>2017-03-31T09:06:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://stevechoris.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
         <lastmod>2017-03-31T09:07:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,13 +66,6 @@
 
     <url>
         <loc>http://stevechoris.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-03-31T09:07:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://stevechoris.github.io/tags/TensorFlow/</loc>
         <lastmod>2017-03-31T09:07:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -114,8 +86,36 @@
     </url>
 
     <url>
+        <loc>http://stevechoris.github.io/tags/TensorFlow/</loc>
+        <lastmod>2017-03-31T14:32:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/Python/</loc>
+        <lastmod>2017-03-31T14:32:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/Anaconda/</loc>
+        <lastmod>2017-03-31T14:32:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/Conda/</loc>
+        <lastmod>2017-03-31T14:32:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://stevechoris.github.io/tags/Linux%E5%91%BD%E4%BB%A4/</loc>
-        <lastmod>2017-03-31T14:32:56.000Z</lastmod>
+        <lastmod>2017-03-31T14:37:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

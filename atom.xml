@@ -278,7 +278,7 @@
     <link href="http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2016/12/28/Linux常用命令整理/</id>
     <published>2016-12-28T07:52:12.000Z</published>
-    <updated>2017-03-31T14:32:56.000Z</updated>
+    <updated>2017-03-31T14:37:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><h3 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h3><h4 id="命令格式df-h"><a href="#命令格式：df-h" class="headerlink" title="命令格式：df -h"></a>命令格式：<code>df -h</code></h4><blockquote>
@@ -438,7 +438,7 @@
     <link href="http://stevechoris.github.io/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>http://stevechoris.github.io/2016/09/15/用Anaconda安装配置Jupyter-Notebook和TensorFlow开发环境/</id>
     <published>2016-09-15T11:02:18.000Z</published>
-    <updated>2017-03-31T09:05:44.000Z</updated>
+    <updated>2017-03-31T14:32:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="anaconda安装"><a href="#Anaconda安装" class="headerlink" title="Anaconda安装"></a>Anaconda安装</h1><p>在<a href="https://www.continuum.io/downloads" target="_blank" rel="external">Anaconda官网</a>下载并按照指令安装。</p>
