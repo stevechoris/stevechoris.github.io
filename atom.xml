@@ -314,10 +314,9 @@
     <link href="http://stevechoris.github.io/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
     <id>http://stevechoris.github.io/2016/12/21/经典面试题-最长回文子串/</id>
     <published>2016-12-21T08:21:52.000Z</published>
-    <updated>2017-03-31T09:05:26.000Z</updated>
+    <updated>2017-03-31T09:09:30.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
-<blockquote>
+    <content type="html"><![CDATA[<blockquote>
 <p>本文主要参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
 </a>整理而成，在此特别感谢。</p>
 </blockquote>
@@ -333,7 +332,7 @@
 <p>Input: “cbbd”</p>
 <p>Output: “bb”</p>
 </blockquote>
-<p>&emsp;<!-- more --></p>
+<p>&emsp;<a id="more"></a></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1. 暴力解法"></a>1. 暴力解法</h3><p>在外层使用2重循环找出所有子串，内层循环判断当前子串是否为回文子串。</p>
 <blockquote>
 <p>时间复杂度为$O(n^3)$，空间复杂度为$O(1)$</p>
@@ -363,9 +362,23 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;本文主要参考&lt;a href=&quot;http://mp.weixin.qq.com/s?src=3&amp;amp;timestamp=1482308889&amp;amp;ver=1&amp;amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==&quot;&gt;微信公众号(待字闺中)推文”【经典面试题】最长回文”
+&lt;/a&gt;整理而成，在此特别感谢。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/longest-palindromic-substring/&quot;&gt;LeetCode 5. Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本文主要参考&lt;a href=&quot;http://mp.weixin.qq.com/s?src=3&amp;amp;timestamp=1482308889&amp;amp;ver=1&amp;amp;signature=WTl9NE2n3M
+&lt;p&gt;Input: “babad”&lt;/p&gt;
+&lt;p&gt;Output: “bab”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Note: “aba” is also a valid answer.&lt;br&gt;Example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Input: “cbbd”&lt;/p&gt;
+&lt;p&gt;Output: “bb”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;emsp;
     
     </summary>
     
