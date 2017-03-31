@@ -19,7 +19,7 @@
     <entry>
       <title><![CDATA[Linux常用命令整理]]></title>
       <url>%2F2016%2F12%2F28%2FLinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%2F</url>
-      <content type="text"><![CDATA[&emsp; 一. 磁盘信息1. 查看磁盘空间1. 命令格式：df -h 以磁盘分区为单位查看文件系统 二. 查看进程1. 查看占用特定端口的进程命令格式：lsof -i:6006 其中6006为想要查看的端口 2. 根据进程号KILL特定进程命令格式：kill -KILL 738 其中738为想要kill的进程的进程号]]></content>
+      <content type="text"><![CDATA[&emsp; 磁盘信息查看磁盘空间命令格式：df -h 以磁盘分区为单位查看文件系统 查看进程查看占用特定端口的进程命令格式：lsof -i:6006 其中6006为想要查看的端口 根据进程号KILL特定进程命令格式：kill -KILL 738 其中738为想要kill的进程的进程号]]></content>
     </entry>
 
     
