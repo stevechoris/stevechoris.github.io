@@ -278,20 +278,20 @@
     <link href="http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2016/12/28/Linux常用命令整理/</id>
     <published>2016-12-28T07:52:12.000Z</published>
-    <updated>2017-03-31T14:22:51.000Z</updated>
+    <updated>2017-03-31T14:32:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><h3 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h3><h4 id="命令格式df-h"><a href="#命令格式：df-h" class="headerlink" title="命令格式：df -h"></a>命令格式：<code>df -h</code></h4><blockquote>
 <p>以磁盘分区为单位查看文件系统</p>
 </blockquote>
 <p><img src="../../../../images/14829116578841.jpg" alt=""></p>
-<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><h3 id="查看占用特定端口的进程"><a href="#查看占用特定端口的进程" class="headerlink" title="查看占用特定端口的进程"></a>查看占用特定端口的进程</h3><p>命令格式：<code>lsof -i:6006</code></p>
-<blockquote>
+<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><h3 id="查看占用特定端口的进程"><a href="#查看占用特定端口的进程" class="headerlink" title="查看占用特定端口的进程"></a>查看占用特定端口的进程</h3><blockquote>
+<p>命令格式：<code>lsof -i:6006</code></p>
 <p>其中6006为想要查看的端口</p>
 </blockquote>
 <p><img src="../../../../images/14829118493300.jpg" alt=""></p>
-<h3 id="根据进程号kill特定进程"><a href="#根据进程号KILL特定进程" class="headerlink" title="根据进程号KILL特定进程"></a>根据进程号KILL特定进程</h3><p>命令格式：<code>kill -KILL 738</code></p>
-<blockquote>
+<h3 id="根据进程号kill特定进程"><a href="#根据进程号KILL特定进程" class="headerlink" title="根据进程号KILL特定进程"></a>根据进程号KILL特定进程</h3><blockquote>
+<p>命令格式：<code>kill -KILL 738</code></p>
 <p>其中738为想要kill的进程的进程号</p>
 </blockquote>
 ]]></content>
