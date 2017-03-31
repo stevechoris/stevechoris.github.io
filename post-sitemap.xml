@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</loc>
+        <lastmod>2017-03-31T08:59:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/</loc>
         <lastmod>2017-03-31T08:58:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -113,14 +121,6 @@
     <url>
         <loc>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/</loc>
         <lastmod>2017-03-31T08:52:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</loc>
-        <lastmod>2017-03-31T08:52:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
