@@ -15,14 +15,12 @@
 
 
 
-<meta name="description" content="前沿
-&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比">
+<meta name="description" content="&amp;emsp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3.5 Anaconda3 Caffe深度学习框架搭建">
 <meta property="og:url" content="http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/index.html">
 <meta property="og:site_name" content="Choris Steve's Blog">
-<meta property="og:description" content="前沿
-&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比">
+<meta property="og:description" content="&amp;emsp;">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-Vncx38SBlJE/WHcbuYf-cWI/AAAAAAAAATQ/wmEHr89ss68/I/14841947936350.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-OhWgjF1km4g/WHcbu7kdDiI/AAAAAAAAATU/PmQooA_z6fA/I/14841982449906.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-I1_TDKgfPFw/WHcbvBGCXLI/AAAAAAAAATY/wgxyPm_C7Mc/I/14841986461841.jpg">
@@ -32,11 +30,10 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-h8acahv-hqU/WHcb0jz0EpI/AAAAAAAAATo/zOInspf24BE/I/14842000687384.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg">
-<meta property="og:updated_time" content="2017-03-31T09:05:15.000Z">
+<meta property="og:updated_time" content="2017-03-31T14:46:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3.5 Anaconda3 Caffe深度学习框架搭建">
-<meta name="twitter:description" content="前沿
-&amp;emsp;&amp;emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&amp;emsp;&amp;emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&amp;emsp;&amp;emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比">
+<meta name="twitter:description" content="&amp;emsp;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -319,7 +316,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h2><blockquote>
+        <p>&emsp;<a id="more"></a></p>
+<h2 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h2><blockquote>
 <p>&emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。<br>&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。<br>&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：</p>
 <ol>
 <li><a href="http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/" target="_blank" rel="external">在 python3.5 下使用 Caffe Using Caffe with Python3.5</a></li>
@@ -328,7 +326,6 @@
 <li><a href="https://yangcha.github.io/Caffe-Conda/" target="_blank" rel="external">Install Caffe With Anaconda</a></li>
 </ol>
 </blockquote>
-<p>&emsp;<a id="more"></a></p>
 <h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><h3 id="ubuntu1404系统"><a href="#ubuntu14-04系统" class="headerlink" title="ubuntu14.04系统"></a>ubuntu14.04系统</h3><p>可以输入<code>cat /etc/issue</code>查看ubuntu的版本</p>
 <p><img src="https://lh3.googleusercontent.com/-Vncx38SBlJE/WHcbuYf-cWI/AAAAAAAAATQ/wmEHr89ss68/I/14841947936350.jpg" alt=""></p>
 <h3 id="显卡驱动与cuda安装"><a href="#显卡驱动与CUDA安装" class="headerlink" title="显卡驱动与CUDA安装"></a>显卡驱动与CUDA安装</h3><p>主要参考博客1上的步骤，Nvidia显卡驱动安装可以参考<a href="https://github.com/saiprashanths/dl-setup#nvidia-drivers" target="_blank" rel="external">Nvidia Drivers安装步骤</a>，CUDA安装可以参考<a href="https://github.com/saiprashanths/dl-setup#cuda" target="_blank" rel="external">CUDA安装步骤</a>，cuDNN安装可以参考<a href="https://github.com/saiprashanths/dl-setup#cudnn" target="_blank" rel="external">cuDNN安装步骤</a></p>
@@ -396,7 +393,7 @@
         <p><span>本文标题:</span><a href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/">Python3.5 Anaconda3 Caffe深度学习框架搭建</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Choris Steve</a></p>
         <p><span>发布时间:</span>2017-01-12, 11:59:22</p>
-        <p><span>最后更新:</span>2017-03-31, 17:05:15</p>
+        <p><span>最后更新:</span>2017-03-31, 22:46:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/" title="Python3.5 Anaconda3 Caffe深度学习框架搭建">http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</a>
             <span class="copy-path" data-clipboard-text="原文: http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/　　作者: Choris Steve" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
