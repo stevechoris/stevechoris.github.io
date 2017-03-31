@@ -118,7 +118,7 @@ button::-moz-focus-inner {
   padding: 0;
 }
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 body {
   font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
@@ -543,6 +543,9 @@ a {
   #container .ua {
     display: none !important;
   }
+  #container .github-text {
+    display: none;
+  }
   #container .copyright {
     font-size: 16px;
   }
@@ -557,7 +560,7 @@ a {
   text-align: center;
   margin: 13px 0;
   font-family: Times, Georgia, serif;
-  font-size: 30px;
+  font-size: 32px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -578,8 +581,8 @@ a {
   border: 5px solid #fff;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  width: 128px;
-  height: 128px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -759,14 +762,14 @@ a {
   font-family: Arial;
 }
 #header .header-nav .social a {
-  width: 37px;
-  height: 37px;
+  width: 39px;
+  height: 39px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin: 0 2px 6px;
   vertical-align: middle;
-  font-size: 24.42px;
-  line-height: 37px;
+  font-size: 25.740000000000002px;
+  line-height: 39px;
   text-align: center;
   color: #fff;
   background: #6f7170;
@@ -1088,6 +1091,37 @@ color
 .post-list li:hover a {
   color: #88acdb;
 }
+.article-entry .github-widget h3::after {
+  content: none;
+}
+.article-entry .github-widget .github-box {
+  font-size: 0.8125rem;
+}
+.article-entry .github-widget .github-box .github-box-title h3 {
+  font-size: 1rem;
+}
+.article-entry .github-widget .github-box .github-box-title .github-stats {
+  font-size: 0.6875rem;
+}
+.article-entry .github-widget .github-box .updated {
+  font-size: 0.6875rem;
+}
+.article-entry .github-widget .github-box .download {
+  font-size: 0.75rem;
+}
+.ui-tooltip {
+  padding: 6px;
+  max-width: 30em;
+  -webkit-box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
+  box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
+  color: #fff;
+  font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 0.9em;
+  background: rgba(0,0,0,0.65);
+}
+body .ui-tooltip {
+  border: 1px solid #fff;
+}
 .pace .pace-progress {
   background: #77b6ff;
   -webkit-box-shadow: 0 0 10px rgba(119,182,255,0.7);
@@ -1220,7 +1254,7 @@ color
   color: #999;
   position: relative;
   margin-right: 10px;
-  font: 16px FontAwesome;
+  font: 18px FontAwesome;
 }
 .archive-article-inner .article-meta .article-category:before {
   float: left;
@@ -1711,7 +1745,7 @@ li:hover {
   bottom: 1em;
   left: 0;
   margin-left: 0;
-  padding: 6px 10px 10px 50px;
+  padding: 6px 10px 10px 46px;
   -webkit-border-radius: 2.8%;
   border-radius: 2.8%;
   overflow: auto;
@@ -2077,7 +2111,7 @@ aside.comment-bar:active {
   color: #999;
   position: relative;
   margin-right: 10px;
-  font: 16px FontAwesome;
+  font: 18px FontAwesome;
 }
 .archive-article-inner .article-meta .article-category:before {
   float: left;
@@ -2863,7 +2897,7 @@ pre .javascript .function {
 .article-category::before {
   float: left;
   color: #999;
-  font: 16px FontAwesome;
+  font: 18px FontAwesome;
   margin-right: 5px;
   margin-top: 0.333333333333333rem;
 }
@@ -2880,7 +2914,7 @@ pre .javascript .function {
 .article-pop-out:before {
   color: #999;
   content: "\f08d";
-  font: 16px FontAwesome;
+  font: 18px FontAwesome;
   float: left;
   margin-right: 5px;
   margin-top: 0.333333333333333rem;
@@ -3123,4 +3157,43 @@ p.no-result {
   color: #808080;
   font-family: Times, Georgia serif;
   border-bottom: 2px solid #d3d3d3;
+}
+body {
+  background: #d3d3d3;
+}
+#container .left-col {
+  background: #fff;
+}
+.article {
+  background: #fff;
+}
+.article .article-inner {
+  margin-bottom: 1em;
+}
+.article .article-more-link a {
+  opacity: 0.9;
+}
+.tagcloud a {
+  opacity: 0.9;
+}
+#header .header-nav .social li {
+  opacity: 0.8;
+}
+.archives-wrap {
+  background: #fff;
+}
+.scroll a .fa {
+  color: #fff;
+}
+.post-nav-button {
+  background: #ececec;
+}
+#post-nav-button a {
+  background: rgba(215,216,215,0.5);
+}
+.post-list {
+  background: #fff;
+}
+#article-nav {
+  background: rgba(158,188,226,0.9);
 }
