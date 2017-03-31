@@ -37,20 +37,6 @@
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-        <lastmod>2017-02-23T03:42:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://stevechoris.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-02-23T03:42:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://stevechoris.github.io/tags/%E6%A8%A1%E6%9D%BF/</loc>
         <lastmod>2017-03-30T13:18:48.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,13 +72,6 @@
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/tags/TensorFlow/</loc>
-        <lastmod>2017-03-30T13:21:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://stevechoris.github.io/tags/Conda/</loc>
         <lastmod>2017-03-30T13:21:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -116,6 +95,27 @@
     <url>
         <loc>http://stevechoris.github.io/tags/Anaconda/</loc>
         <lastmod>2017-03-31T08:40:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+        <lastmod>2017-03-31T08:51:11.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-03-31T08:51:11.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://stevechoris.github.io/tags/TensorFlow/</loc>
+        <lastmod>2017-03-31T08:51:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
