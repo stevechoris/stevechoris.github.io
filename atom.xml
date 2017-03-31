@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-03-31T08:59:59.000Z</updated>
+  <updated>2017-03-31T09:02:31.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/</id>
     <published>2017-02-21T06:40:42.000Z</published>
-    <updated>2017-03-31T08:59:59.000Z</updated>
+    <updated>2017-03-31T09:02:31.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
-<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><blockquote>
+    <content type="html"><![CDATA[<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><blockquote>
 <p>参考Deep Learning Tutorial</p>
 </blockquote>
 <h2 id="tensorflow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><blockquote>
@@ -41,6 +40,7 @@
 </ul>
 <p>接下来我将结合如何从零开始构建一个卷积神经网络图像分类器来介绍并总结TensorFlow的使用经验</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="图像数据的创建"><a href="#图像数据的创建" class="headerlink" title="图像数据的创建"></a>图像数据的创建</h3><p><img src="https://lh3.googleusercontent.com/-bfpA60gUBjo/WKml0jD5eqI/AAAAAAAAAUQ/U_4EtRPZ88I/I/%25255BUNSET%25255D.png" alt="数据获取与组织"></p>
 <h3 id="读取图片并保存为tfrecords文件"><a href="#读取图片并保存为tfrecords文件" class="headerlink" title="读取图片并保存为tfrecords文件"></a>读取图片并保存为tfrecords文件</h3><blockquote>
 <p>.tfrecords文件为TensorFlow特有的序列化，保存数据的文件。便于后续的大数据的读取。</p>
@@ -139,10 +139,24 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;深度学习&quot;&gt;&lt;a href=&quot;#深度学习&quot; class=&quot;headerlink&quot; title=&quot;深度学习&quot;&gt;&lt;/a&gt;深度学习&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;h2 id=&quot;深度学习&quot;&gt;&lt;a href=&quot;#深度学习&quot; class=&quot;headerlink&quot; title=&quot;深度学习&quot;&gt;&lt;/a&gt;深度学习&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;参考Deep Learning Tutorial&lt;/p&gt;
-&lt;/
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;TensorFlow&quot;&gt;&lt;a href=&quot;#TensorFlow&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow&quot;&gt;&lt;/a&gt;TensorFlow&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;TensorFlow是一个基于数据流图的深度学习框架&lt;/li&gt;
+&lt;li&gt;图中的节点表示数学运算，而图边表示在它们之间传递的张量（多维数组）&lt;/li&gt;
+&lt;li&gt;TensorFlow的优点是架构非常灵活，允许你通过&lt;strong&gt;单一的API&lt;/strong&gt;将计算部署到PC机，服务器或移动设备的一个或多个CPU或GPU&lt;/li&gt;
+&lt;li&gt;目前的版本是1.0，基于8GPU对Inception V3实现了7.3倍加速，以及基于64GPU对分布式Inception V3训练实现58倍加速。主要引入了以下新的特点：&lt;ul&gt;
+&lt;li&gt;提供Java和Go的实验API&lt;/li&gt;
+&lt;li&gt;引入了高级API模块：&lt;code&gt;tf.contrib.learn&lt;/code&gt;，还包含一个全新的&lt;code&gt;tf.keras&lt;/code&gt;模块，能够与高级神经网络库Keras完全兼容&lt;/li&gt;
+&lt;li&gt;发布了面向CPU和GPU的TensorFlow图形的特定领域编译器XLA的实验版本&lt;/li&gt;
+&lt;li&gt;生成TensorFlow Debugger(tfdbg)，一个用于调试实时TensorFlow程序的命令行界面和API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接下来我将结合如何从零开始构建一个卷积神经网络图像分类器来介绍并总结TensorFlow的使用经验&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
