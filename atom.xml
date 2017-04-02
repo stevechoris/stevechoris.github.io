@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-04-02T05:20:47.000Z</updated>
+  <updated>2017-04-02T05:27:07.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://stevechoris.github.io/2017/04/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/</id>
     <published>2017-04-02T05:18:59.000Z</published>
-    <updated>2017-04-02T05:20:47.000Z</updated>
+    <updated>2017-04-02T05:27:07.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
-<h1 id="机器学习和数据挖掘常用算法整理"><a href="#机器学习和数据挖掘常用算法整理" class="headerlink" title="机器学习和数据挖掘常用算法整理"></a>机器学习和数据挖掘常用算法整理</h1><blockquote>
+<blockquote>
 <p>本文目录主要参考《机器学习实战》(Peter Harrington著) 一书。</p>
 </blockquote>
 <ul>
@@ -40,7 +40,7 @@
 <h3 id="logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><blockquote>
 <p><a href="http://tech.meituan.com/intro_to_logistic_regression.html" target="_blank" rel="external">美团 - 逻辑回归简介</a></p>
 </blockquote>
-<p><img src="media/14879015909399/Logistic%20Regression%20%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B%20-.png" alt="Logistic Regression 模型简介 -"></p>
+<p><img src="https://lh3.googleusercontent.com/-Cg4C45Qff2E/WOCLJsAlbEI/AAAAAAAAAZg/wC7V5IyR4js/I/Logistic%252520Regression.png" alt="Logistic Regression 模型简介 -"></p>
 <h3 id="k-近邻算法"><a href="#k-近邻算法" class="headerlink" title="k-近邻算法"></a><em><em>k-近邻算法</em></em></h3><p>对预测数据，找到最近k个实例，根据k个实例的距离和属性获取预测值。</p>
 <h4 id="1-三要素"><a href="#1-三要素：" class="headerlink" title="1 三要素："></a>1 三要素：</h4><p>距离的度量（常见的距离度量有欧式距离，马氏距离等）<br>k值的选择<br>分类决策规则 （多数表决规则）</p>
 <h4 id="2-k值的选择"><a href="#2-k值的选择" class="headerlink" title="2 k值的选择"></a>2 k值的选择</h4><p>k值越小,模型越复杂，容易过拟合；k值越大，模型越简单，如k=N</p>
@@ -52,7 +52,7 @@
 <h4 id="4-kd树"><a href="#4-KD树" class="headerlink" title="4 KD树"></a>4 KD树</h4><blockquote>
 <p><a href="http://www.cnblogs.com/eyeszjwang/articles/2429382.html" target="_blank" rel="external">k-d tree算法</a></p>
 </blockquote>
-<p><img src="media/14879015909399/k-d%20tree%E7%AE%97%E6%B3%95%20-%20J_Outsider%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD.png" alt="k-d tree算法 - J_Outsider - 博客园-w1281">====</p>
+<p><img src="https://lh3.googleusercontent.com/-7RUNJ2dXRus/WOCLNnoL2pI/AAAAAAAAAZk/B8quAXwPYuI/I/k-d%252520tree.png" alt="k-d tree算法 - J_Outsider - 博客园-w1281">====</p>
 <h5 id="kd树进行knn查找"><a href="#KD树进行KNN查找" class="headerlink" title="KD树进行KNN查找"></a>KD树进行KNN查找</h5><p>通过KD树的搜索找到与搜索目标最近的点，这样KNN的搜索就可以被限制在空间的局部区域上了，可以大大增加效率。</p>
 <h5 id="kd树搜索的复杂度"><a href="#KD树搜索的复杂度" class="headerlink" title="KD树搜索的复杂度"></a>KD树搜索的复杂度</h5><p>当实例随机分布的时候，搜索的复杂度为log(N)，N为实例的个数<br>KD树更加适用于实例数量远大于空间维度的KNN搜索，如果实例的个数与空间维度差不多时，它的效率基于等于线性扫描。</p>
 <h3 id="dt决策树"><a href="#DT决策树" class="headerlink" title="DT决策树"></a><em><em>DT决策树</em></em></h3><blockquote>
@@ -72,7 +72,7 @@
 <li>然后继续对每个子节点进行递归，直到每个集合只有一个类别</li>
 </ol>
 <blockquote>
-<p><strong>信息熵：</strong><br><img src="media/14879015909399/14900671554970.jpg" alt=""><br><strong>整个属性的熵:</strong><br><img src="media/14879015909399/14900671777619.jpg" alt=""><br>为各个分支的比例与各自熵的加权求和<br><strong>信息增益:</strong><br><img src="media/14879015909399/14900672121660.jpg" alt=""><br>表示分类目标的熵减去当前属性的熵，增益越大，分类能力越强</p>
+<p><strong>信息熵：</strong><br><img src="https://lh3.googleusercontent.com/-bk50PuUgFoc/WOCLN25FeUI/AAAAAAAAAZo/TKWNetYSAQ0/I/14900671554970.jpg" alt=""><br><strong>整个属性的熵:</strong><br><img src="https://lh3.googleusercontent.com/-wnG3s7I5yyk/WOCLOE2kwZI/AAAAAAAAAZs/u67MecnzeVY/I/14900671777619.jpg" alt=""><br>为各个分支的比例与各自熵的加权求和<br><strong>信息增益:</strong><br><img src="https://lh3.googleusercontent.com/-woNzpZIHfZc/WOCLOfFj9nI/AAAAAAAAAZw/rZ2eKekgxQQ/I/14900672121660.jpg" alt=""><br>表示分类目标的熵减去当前属性的熵，增益越大，分类能力越强</p>
 </blockquote>
 <p>(这里前者叫做经验熵，表示数据集分类C的不确定性，后者就是经验条件熵，表示在给定A的条件下对数据集分类C的不确定性，两者相减叫做互信息，决策树的增益等价于互信息)</p>
 <p>损失函数:<br>设树的叶子节点个数为T，t为其中一个叶子节点，该叶子节点有$N<em>t$个样本，其中k类的样本有$N</em>{t_k}$个，H(t)为叶子节点上的经验熵，则损失函数定义为<br>$$C<em>t(T)=\sum(Nt*H(t))+ \lambda|T|$$<br>其中$H(t)=\sum(\frac{N</em>{t_k}}{N<em>t}*log(\frac{N</em>{t_k}}{N_t}))$<br>代入可以得到$C_t(T)=\sum(N<em>t*\sum(N</em>{t<em>k}*log(\frac{N</em>{t_k}}{N_t}))+\lambda|T|$<br>最终有$C_t(T)=C(T)+ \lambda|T|$<br><strong>$\lambda|T|$为正则化项，$\lambda$是用于调节比率<br>决策树的生成只考虑了信息增益</strong></p>
@@ -134,11 +134,11 @@
 </blockquote>
 <p><img src="https://lh3.googleusercontent.com/-dtKFDZYm478/WM30aSqSsDI/AAAAAAAAAXI/19PRY5aqtoo/I/14898912014231.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-YbcQpi7Kq9A/WM30a9jmfWI/AAAAAAAAAXM/YLucouKio8E/I/14898912419811.jpg" alt=""></p>
 <h3 id="gbdt"><a href="#GBDT" class="headerlink" title="GBDT"></a><em><em>GBDT</em></em></h3><p><a href="http://blog.csdn.net/w28971023/article/details/8240756" target="_blank" rel="external">GBDT（MART） 迭代决策树入门教程 | 简介 - w28971023的专栏 - 博客频道 - CSDN.NET</a></p>
-<p><img src="media/14879015909399/14900942558950.jpg" alt=""></p>
+<p><img src="https://lh3.googleusercontent.com/-TE_b6LENoes/WOCLXUnfx-I/AAAAAAAAAZ0/UqtP0vygOHw/I/14900942558950.jpg" alt=""></p>
 <h3 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a><em><em>随机森林</em></em></h3><blockquote>
 <p><strong>随机森林原理介绍：</strong></p>
 </blockquote>
-<p><img src="media/14879015909399/14900951336902.jpg" alt=""></p>
+<p><img src="https://lh3.googleusercontent.com/-LkB4EfuBFJI/WOCLcVes8-I/AAAAAAAAAZ4/U9BqE7gO2vs/I/14900951336902.jpg" alt=""></p>
 <h4 id="预测过程"><a href="#预测过程" class="headerlink" title="预测过程"></a>预测过程</h4><p>将预测样本输入到K颗树分别进行预测<br>如果是分类问题，直接使用投票的方式选择分类频次最高的类别<br>如果是回归问题，使用分类之后的均值作为结果</p>
 <h4 id="参数问题"><a href="#参数问题" class="headerlink" title="参数问题"></a>参数问题</h4><ol>
 <li>一般取m=sqrt(M)</li>
