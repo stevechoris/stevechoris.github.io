@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Choris Steve" />
+
+
+
+<meta name="description" content="&amp;emsp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习和数据挖掘常用算法整理">
+<meta property="og:url" content="http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/index.html">
+<meta property="og:site_name" content="Choris Steve's Blog">
+<meta property="og:description" content="&amp;emsp;">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/Logistic%20Regression%20%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B%20-.png">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/k-d%20tree%E7%AE%97%E6%B3%95%20-%20J_Outsider%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-yCwYZzpxlXw/WM30Y8PypMI/AAAAAAAAAWw/WLu2pYAVurM/I/14882722983991.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-RaZ069NPE4w/WM30ZCj-mDI/AAAAAAAAAW0/RdOS7Jw85FI/I/14882719423416.jpg">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/14900671554970.jpg">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/14900671777619.jpg">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/14900672121660.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-iHwpYLsBBQA/WM30ZW_1FoI/AAAAAAAAAW4/YO7B3o7ciI0/I/14882720149994.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-vSW1_ZxSL9E/WM30ZtrOvAI/AAAAAAAAAW8/LsPeA_2OYBc/I/14898896114111.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-9nyxjA88V3k/WM30Z4Osv9I/AAAAAAAAAXA/nOGNvnocYNk/I/14898907114716.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/--zdAP7V8quo/WM30aQlBvvI/AAAAAAAAAXE/tkd5A9xxa_U/I/14898909643672.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-dtKFDZYm478/WM30aSqSsDI/AAAAAAAAAXI/19PRY5aqtoo/I/14898912014231.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-YbcQpi7Kq9A/WM30a9jmfWI/AAAAAAAAAXM/YLucouKio8E/I/14898912419811.jpg">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/14900942558950.jpg">
+<meta property="og:image" content="http://stevechoris.github.io/media/14879015909399/14900951336902.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-TgVIrgo9MIg/WM30b-Nq7NI/AAAAAAAAAXQ/31EkQisMw2k/I/%25255BUNSET%25255D.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-DsKnIcmHGX4/WM30cle5-jI/AAAAAAAAAXU/9F9GoVfJXOw/I/%25255BUNSET%25255D.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-UFq0TtHhl2o/WM30doVh7ZI/AAAAAAAAAXY/U-t-9d_iY4s/I/%25255BUNSET%25255D.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-E-L28ABwcag/WM30ejjDhfI/AAAAAAAAAXc/RIAHVO_GBj8/I/%25255BUNSET%25255D.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-cER8MwQ6oak/WM30fo2pvRI/AAAAAAAAAXg/4HMNCFQO8PY/I/%25255BUNSET%25255D.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-f7u4zKxY_1o/WM30f6tpViI/AAAAAAAAAXk/6vIBwhP9KXk/I/14882716973219.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-YLmLV0HjEMc/WM30gILNW_I/AAAAAAAAAXo/kLylOK833PY/I/14890615105039.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-1btQAyvubmI/WM30gesiH6I/AAAAAAAAAXs/B_LQQB8Wlpw/I/14890624939031.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-434adCtUXN8/WM30gkvWsuI/AAAAAAAAAXw/HBGk6jNhV-Y/I/14890635236498.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-8Sth-Q22ln8/WM30hCvpHjI/AAAAAAAAAX0/D5_NPcjpBKs/I/14890639674352.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-e_O6ScGnEn0/WM30heNlRpI/AAAAAAAAAX4/_6dJHau8baQ/I/14891164334358.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-T8Z4wHhpOI0/WM30hlO-XRI/AAAAAAAAAX8/zqOvyFDDEf8/I/14891178335364.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-NalYQwHqU4I/WM30iA3gLXI/AAAAAAAAAYA/HCjr32l-BIQ/I/14891139688717.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-EXb3an3HNz4/WM30ilwLGnI/AAAAAAAAAYE/0XKtREK6e38/I/14891180492872.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-IbMw2VfkuxI/WM30igqOMFI/AAAAAAAAAYI/7dcpdW2Csn8/I/14891181768319.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-0r1YDEIDqGg/WM30jBIaE5I/AAAAAAAAAYM/lEBVrRTGjOg/I/14891183274424.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ZLGq2WuEWvU/WM30jfrgF6I/AAAAAAAAAYQ/Me1D9DPuYJk/I/14891183420538.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-dcBrEnFl2MA/WM30jmOzYJI/AAAAAAAAAYU/uUGPyWMKKyo/I/14892852325911.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-nQCqnH4xMBc/WM30juRZUhI/AAAAAAAAAYY/8Lf22zbtqlI/I/14896630590582.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-QDBDv1PN854/WM30j_GFpmI/AAAAAAAAAYc/2cFAV2iama4/I/14894912474064.jpg">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-AKz6_ag6K4w/WM30kJYu85I/AAAAAAAAAYg/z3PvfY0LKpQ/I/%25255BUNSET%25255D.png">
+<meta property="og:updated_time" content="2017-04-02T05:20:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习和数据挖掘常用算法整理">
+<meta name="twitter:description" content="&amp;emsp;">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Choris Steve&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>机器学习和数据挖掘常用算法整理 | Choris Steve&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+</head>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Choris Steve</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:stevechoris@gmail.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/stevechoris" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/stevechoris" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Conda/">Conda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux命令/">Linux命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stack/">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文/">中文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试/">面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试整理/">面试整理</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://ying_xd.leanote.com/">Ying_xd</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">逆风飞翔</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Choris Steve</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Choris Steve</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:stevechoris@gmail.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/stevechoris" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/stevechoris" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-机器学习和数据挖掘常用算法整理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/02/机器学习和数据挖掘常用算法整理/" class="article-date">
+      <time datetime="2017-04-02T05:18:59.000Z" itemprop="datePublished">2017-04-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习和数据挖掘常用算法整理
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试整理/">面试整理</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>&emsp;<a id="more"></a></p>
+<h1 id="机器学习和数据挖掘常用算法整理"><a href="#机器学习和数据挖掘常用算法整理" class="headerlink" title="机器学习和数据挖掘常用算法整理"></a>机器学习和数据挖掘常用算法整理</h1><blockquote>
+<p>本文目录主要参考《机器学习实战》(Peter Harrington著) 一书。</p>
+</blockquote>
+<ul>
+<li>[ ] 计算广告学</li>
+<li>[ ] SVD、PCA、LDA</li>
+</ul>
+<h2 id="一-分类"><a href="#一-分类" class="headerlink" title="一 分类"></a>一 分类</h2><h3 id="naive-bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a><em><em>Naive Bayes</em></em></h3><p>$$P(A∩B)=P(A)<em>P(B|A)=P(B)</em>P(A|B) =&gt; $$<br>$$P(A|B)=P(B|A)<em>P(A)/P(B)$$<br>对于给出的待分类项，求解在此项出现的条件下各个目标类别出现的条件概率，哪个最大，就认为此待分类项属于哪个类别。<br>假设样本$x=(a_1,a_2,a_3,…a_n)$(特征独立)，分类目标$Y={y_1,y_2,y_3,y_4..y_n}$，通过$max(P(y_1|x),P(y_2|x),P(y_3|x)..P(y_n|x))$分类。<br>而根据贝叶斯公式：<br>$$P(y_i|x)=p(x|y_i)</em>P(y_i)/P(x) =&gt; max(P(x|y_i)<em>p(y_i))$$<br>$$P(x|y_i)</em>p(y_i)=p(y_i)*\prod{P(ai|y_i)}$$</p>
+<h4 id="属性特征"><a href="#属性特征" class="headerlink" title="属性特征"></a>属性特征</h4><p>特征为离散值时直接统计即可（表示统计概率）<br>特征为连续值的时候假定特征符合高斯分布:g(x,n,u) p(ak|y_i)=g(xk,ni,ui)</p>
+<h4 id="laplace校准拉普拉斯校验"><a href="#Laplace校准-拉普拉斯校验" class="headerlink" title="Laplace校准(拉普拉斯校验)"></a>Laplace校准(拉普拉斯校验)</h4><p>当某个类别下某个特征划分没有出现时，会有P(a|y)=0，就是导致分类器质量降低，所以此时引入Laplace校验，就是<strong>对每类别下所有划分的计数加1</strong>。</p>
+<h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：模型所需估计的参数很少，具有<strong>稳定的计算效率</strong>，对<strong>小规模的数据表现很好</strong>。<strong>对缺失数据不敏感</strong>，<strong>适合多分类任务</strong>，<strong>适合增量式训练</strong>。<br>缺点：NBC前提是<strong>假设属性之间相互独立</strong>，但在实际应用中往往不满足。<br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/17/naive-bayesian-classifier.html" target="_blank" rel="external">算法杂货铺——分类算法之朴素贝叶斯分类(Naive Bayesian classification)</a></p>
+<h4 id="遇到特征之间不独立问题"><a href="#遇到特征之间不独立问题" class="headerlink" title="遇到特征之间不独立问题"></a>遇到特征之间不独立问题</h4><ul>
+<li>[ ] 参考改进的贝叶斯网络，使用DAG来进行概率图的描述</li>
+</ul>
+<h3 id="logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><blockquote>
+<p><a href="http://tech.meituan.com/intro_to_logistic_regression.html" target="_blank" rel="external">美团 - 逻辑回归简介</a></p>
+</blockquote>
+<p><img src="media/14879015909399/Logistic%20Regression%20%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B%20-.png" alt="Logistic Regression 模型简介 -"></p>
+<h3 id="k-近邻算法"><a href="#k-近邻算法" class="headerlink" title="k-近邻算法"></a><em><em>k-近邻算法</em></em></h3><p>对预测数据，找到最近k个实例，根据k个实例的距离和属性获取预测值。</p>
+<h4 id="1-三要素"><a href="#1-三要素：" class="headerlink" title="1 三要素："></a>1 三要素：</h4><p>距离的度量（常见的距离度量有欧式距离，马氏距离等）<br>k值的选择<br>分类决策规则 （多数表决规则）</p>
+<h4 id="2-k值的选择"><a href="#2-k值的选择" class="headerlink" title="2 k值的选择"></a>2 k值的选择</h4><p>k值越小,模型越复杂，容易过拟合；k值越大，模型越简单，如k=N</p>
+<blockquote>
+<p>一般k会取一个较小的值，然后用过交叉验证来确定：将样本划分一部分出来为预测样本，比如95%训练，5%预测，然后k分别取1，2，3，4，5之类的，进行预测，计算最后的分类误差，选择误差最小的k</p>
+</blockquote>
+<h4 id="3-优缺点"><a href="#3-优缺点" class="headerlink" title="3 优缺点"></a>3 优缺点</h4><p>优点: <strong>思想简单，理论成熟</strong>，<strong>既可以用来做分类也可以用来做回归</strong>；<strong>可用于非线性分类</strong>；<strong>训练时间复杂度为O(n)</strong>；<strong>准确度高</strong>，对数据没有假设，<strong>对outlier不敏感</strong>；</p>
+<p>缺点: <strong>计算量大</strong>；<strong>样本不平衡问题</strong>（即有些类别的样本数量很多，而其它样本的数量很少）;<strong>需要大量的内存</strong>；</p>
+<h4 id="4-kd树"><a href="#4-KD树" class="headerlink" title="4 KD树"></a>4 KD树</h4><blockquote>
+<p><a href="http://www.cnblogs.com/eyeszjwang/articles/2429382.html" target="_blank" rel="external">k-d tree算法</a></p>
+</blockquote>
+<p><img src="media/14879015909399/k-d%20tree%E7%AE%97%E6%B3%95%20-%20J_Outsider%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD.png" alt="k-d tree算法 - J_Outsider - 博客园-w1281">====</p>
+<h5 id="kd树进行knn查找"><a href="#KD树进行KNN查找" class="headerlink" title="KD树进行KNN查找"></a>KD树进行KNN查找</h5><p>通过KD树的搜索找到与搜索目标最近的点，这样KNN的搜索就可以被限制在空间的局部区域上了，可以大大增加效率。</p>
+<h5 id="kd树搜索的复杂度"><a href="#KD树搜索的复杂度" class="headerlink" title="KD树搜索的复杂度"></a>KD树搜索的复杂度</h5><p>当实例随机分布的时候，搜索的复杂度为log(N)，N为实例的个数<br>KD树更加适用于实例数量远大于空间维度的KNN搜索，如果实例的个数与空间维度差不多时，它的效率基于等于线性扫描。</p>
+<h3 id="dt决策树"><a href="#DT决策树" class="headerlink" title="DT决策树"></a><em><em>DT决策树</em></em></h3><blockquote>
+<p><a href="http://www.csuldw.com/2015/05/08/2015-05-08-decision%20tree/" target="_blank" rel="external">机器学习算法-决策树理论</a></p>
+</blockquote>
+<h4 id="id3"><a href="#ID3" class="headerlink" title="ID3"></a>ID3</h4><blockquote>
+<p><strong>熵和信息增益</strong>的概念：</p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-yCwYZzpxlXw/WM30Y8PypMI/AAAAAAAAAWw/WLu2pYAVurM/I/14882722983991.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-RaZ069NPE4w/WM30ZCj-mDI/AAAAAAAAAW0/RdOS7Jw85FI/I/14882719423416.jpg" alt=""></p>
+<blockquote>
+<p><strong>算法步骤</strong>：</p>
+</blockquote>
+<ol>
+<li>针对当前的集合，计算每个特征的信息增益</li>
+<li>然后选择信息增益最大的特征作为当前节点的决策特征</li>
+<li>根据决策特征，把集合样本划分到不同的子节点</li>
+<li>然后继续对每个子节点进行递归，直到每个集合只有一个类别</li>
+</ol>
+<blockquote>
+<p><strong>信息熵：</strong><br><img src="media/14879015909399/14900671554970.jpg" alt=""><br><strong>整个属性的熵:</strong><br><img src="media/14879015909399/14900671777619.jpg" alt=""><br>为各个分支的比例与各自熵的加权求和<br><strong>信息增益:</strong><br><img src="media/14879015909399/14900672121660.jpg" alt=""><br>表示分类目标的熵减去当前属性的熵，增益越大，分类能力越强</p>
+</blockquote>
+<p>(这里前者叫做经验熵，表示数据集分类C的不确定性，后者就是经验条件熵，表示在给定A的条件下对数据集分类C的不确定性，两者相减叫做互信息，决策树的增益等价于互信息)</p>
+<p>损失函数:<br>设树的叶子节点个数为T，t为其中一个叶子节点，该叶子节点有$N<em>t$个样本，其中k类的样本有$N</em>{t_k}$个，H(t)为叶子节点上的经验熵，则损失函数定义为<br>$$C<em>t(T)=\sum(Nt*H(t))+ \lambda|T|$$<br>其中$H(t)=\sum(\frac{N</em>{t_k}}{N<em>t}*log(\frac{N</em>{t_k}}{N_t}))$<br>代入可以得到$C_t(T)=\sum(N<em>t*\sum(N</em>{t<em>k}*log(\frac{N</em>{t_k}}{N_t}))+\lambda|T|$<br>最终有$C_t(T)=C(T)+ \lambda|T|$<br><strong>$\lambda|T|$为正则化项，$\lambda$是用于调节比率<br>决策树的生成只考虑了信息增益</strong></p>
+<h4 id="c45"><a href="#C4-5" class="headerlink" title="C4.5"></a>C4.5</h4><blockquote>
+<p>信息增益律的概念</p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-iHwpYLsBBQA/WM30ZW_1FoI/AAAAAAAAAW4/YO7B3o7ciI0/I/14882720149994.jpg" alt=""></p>
+<p>优缺点：<br>它是在ID3基础上的一个改进，<strong>准确率高</strong>，但是子构造树的过程中需要进行<strong>多次的扫描和排序</strong>，所以它的运算效率较低</p>
+<h4 id="基尼指数gini-index"><a href="#基尼指数Gini-index" class="headerlink" title="基尼指数Gini index"></a>基尼指数Gini index</h4><p><strong>基尼指数主要在CART算法中用到，随机森林中用到的属性划分标准也是它</strong>。Gini index划分是二元的，它度量的是数据分区或训练元组集D的不纯度，表示的是一个随机选中的样本在子集中被分错的可能性。计算方式如下：</p>
+<p>$$ Gini(D)=1−\Sigma p^2_i，其中，pi是D中元组数以Ci类的概率，对m个类计算和。$$</p>
+<p>Gini指数越大，不纯度越大，越不容易区分。假设A有v个不同的值出现在特征D中，它的二元划分有$2^v−2$种（除去自己和空集）。当考虑二元划分裂时，计算每个结果分区的不纯度加权和。比如A有两个值，则特征D被划分成D1和D2,这时Gini指数为：</p>
+<p>$$Gini_A(D) = \frac{D_1}{D} Gini(D_1) + \frac{D_2}{D} Gini(D_2)$$</p>
+<p>上面的式子表示的是不确定性的大小。对于每个属性，考虑每种可能的二元划分，对于离散值属性，选择该属性产生最小Gini指数的自己作为它的分裂信息。</p>
+<h3 id="adaboost元算法提高分类性能"><a href="#AdaBoost元算法提高分类性能" class="headerlink" title="AdaBoost元算法提高分类性能"></a><em><em>AdaBoost元算法提高分类性能</em></em></h3><blockquote>
+<p>boosting是一种跟bagging很类似的技术。不论是在boosting还是bagging当中，<strong>所使用的多个分类器类型都是一致的</strong>。但是在前者当中，<strong>不同的分类器是通过串行训练而获得的，每个新分类器都根据已训练出的分类器的性能来进行训练</strong>。<strong>boosting是通过集中关注被已有分类器错分的那些数据来获得新的分类器</strong>。<br>由于boosting分类的结果是基于所有分类器的加权求和结果的，因此boosting与bagging不太一样。bagging中的分类器权重是相等的，而<strong>boosting中的分类器权重并不相等，每个权重代表的是对应分类器在上一轮迭代中的成功度</strong>。</p>
+</blockquote>
+<h4 id="集成算法ensemble-algorithms"><a href="#集成算法（Ensemble-algorithms）" class="headerlink" title="集成算法（Ensemble algorithms）"></a>集成算法（Ensemble algorithms）</h4><p>集成方法是由多个较弱的模型集成模型组，其中的模型可以单独进行训练，并且它们的预测能以某种方式结合起来去做出一个总体预测。</p>
+<p>该算法主要的问题是要<strong>找出哪些较弱的模型可以结合起来</strong>，以及<strong>结合的方法</strong>。这是一个非常强大的技术集，因此广受欢迎。</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><ul>
+<li>Bagging：Bootstrapped Aggregation）<ul>
+<li>随机森林（Random Forest）</li>
+</ul>
+</li>
+<li>Boosting：<ul>
+<li>AdaBoost</li>
+<li>梯度提升回归树（Gradient Boosted Regression Trees，GBRT）</li>
+</ul>
+</li>
+</ul>
+<h4 id="优缺点"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h4><p><strong>优点：</strong>当先最先进的预测几乎都使用了算法集成。它比使用单个模型预测出来的结果要精确的多**</p>
+<p><strong>缺点：</strong>需要大量的维护工作</p>
+<h4 id="bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h4><ol>
+<li>从N样本中有放回的采样N个样本</li>
+<li>对这N个样本在全属性上建立分类器(CART,SVM)</li>
+<li>重复上面(1,2)的步骤，建立m个分类器</li>
+<li>预测的时候使用投票的方法得到结果</li>
+</ol>
+<h4 id="boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h4><p>boosting在训练的时候会给样本加一个权重，然后<strong>使loss function尽量去考虑那些分错类的样本</strong>（比如给分错类的样本的权重值加大），<strong>根据当前分类器在数据集上面的预测准确率，给当前分类器分配一个权重$\alpha$</strong>。</p>
+<h4 id="adaboost"><a href="#AdaBoost" class="headerlink" title="AdaBoost"></a>AdaBoost</h4><blockquote>
+<p>参考机器学习实战第七章</p>
+</blockquote>
+<p>能否使用弱分类器和多个实例来构建一个强分类器？这是一个非常有趣的理论问题。这里的“弱”意味着分类器的性能比随机猜测略好，但是也不会好太多。这就是说，在二分类情况下弱分类器的错误率会高于50%，而“强”分类器的错误率将会低很多。AdaBoost算法即脱胎于上述理论问题。</p>
+<p>AdaBoost是adaptive boosting (自适应boosting）的缩写，其运行过程如下：训练数据中的每一个样本，并赋予其一个权重，这些权重构成了向量D。一开始，这些权重都初始化成相等值。首先在训练数据上训练出一个弱分类器并计算该分类器的错误率，然后在同一数据集上再次训练弱分类器。在分类器的第二次训练当中，将会重新调整每个样本的权重，其中第一次分队的样本的权重将会降低，而第一次分错的样本的权重将会提高。为了从所有弱分类器中得到最终的分类结果，AdaBoost为每个分类器都分配了一个权重alpha，这些alpha值是基于每个弱分类器的错误率进行计算的。其中，错误率$\varepsilon $的定义为：<br>    $$\varepsilon=\frac{未正确分类的样本数目}{所有样本数目} $$<br>而alpha的计算公式如下：<br>$$\alpha=\frac{1}{2}\ln{\frac{1-\varepsilon}{\varepsilon}}$$</p>
+<blockquote>
+<p>AdaBoost算法的流程如图所示：</p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-vSW1_ZxSL9E/WM30ZtrOvAI/AAAAAAAAAW8/LsPeA_2OYBc/I/14898896114111.jpg" alt=""></p>
+<p>计算出alpha值之后，可以对权重向量进行D进行更新，以使得那些正确分类的样本的权重降低而错分样本的权重升高。D的计算方法如下。<br>如果某个样本被正确分类，那么该样本的权重更改为：<br>$$D<em>{i}^{t+1}=\frac{D</em>{i}^{(t)}e^{-\alpha}}{Sum(D)}$$<br>而如果一个样本被错分，那么该样本的权重更改为：<br>$$D<em>{i}^{t+1}=\frac{D</em>{i}^{(t)}e^{\alpha}}{Sum(D)}$$<br>在计算出D之后，AdaBoost又开始进入下一轮迭代。AdaBoost算法会不断地重复训练和调整权重的过程，直到训练错误率为0或者分类器的树木达到用户的指定值为止。<br>下面学习一个基于单层决策树的AdaBoost算法代码，并绘制AdaBoost算法流程：</p>
+<blockquote>
+<p><strong>构建单层决策树伪代码：</strong></p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-9nyxjA88V3k/WM30Z4Osv9I/AAAAAAAAAXA/nOGNvnocYNk/I/14898907114716.jpg" alt=""></p>
+<blockquote>
+<p><strong>构建单层决策树代码：</strong></p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/--zdAP7V8quo/WM30aQlBvvI/AAAAAAAAAXE/tkd5A9xxa_U/I/14898909643672.jpg" alt=""></p>
+<blockquote>
+<p><strong>完整AdaBoost伪代码：</strong></p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-dtKFDZYm478/WM30aSqSsDI/AAAAAAAAAXI/19PRY5aqtoo/I/14898912014231.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-YbcQpi7Kq9A/WM30a9jmfWI/AAAAAAAAAXM/YLucouKio8E/I/14898912419811.jpg" alt=""></p>
+<h3 id="gbdt"><a href="#GBDT" class="headerlink" title="GBDT"></a><em><em>GBDT</em></em></h3><p><a href="http://blog.csdn.net/w28971023/article/details/8240756" target="_blank" rel="external">GBDT（MART） 迭代决策树入门教程 | 简介 - w28971023的专栏 - 博客频道 - CSDN.NET</a></p>
+<p><img src="media/14879015909399/14900942558950.jpg" alt=""></p>
+<h3 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a><em><em>随机森林</em></em></h3><blockquote>
+<p><strong>随机森林原理介绍：</strong></p>
+</blockquote>
+<p><img src="media/14879015909399/14900951336902.jpg" alt=""></p>
+<h4 id="预测过程"><a href="#预测过程" class="headerlink" title="预测过程"></a>预测过程</h4><p>将预测样本输入到K颗树分别进行预测<br>如果是分类问题，直接使用投票的方式选择分类频次最高的类别<br>如果是回归问题，使用分类之后的均值作为结果</p>
+<h4 id="参数问题"><a href="#参数问题" class="headerlink" title="参数问题"></a>参数问题</h4><ol>
+<li>一般取m=sqrt(M)</li>
+<li>关于树的个数K，一般都需要成百上千，但是也有具体的样本有关（比如特征数量）</li>
+<li>树的最大深度，（太深可能可能导致过拟合？？）</li>
+<li>节点上的最小样本数、最小信息增益</li>
+</ol>
+<h4 id="泛化误差估计"><a href="#泛化误差估计" class="headerlink" title="泛化误差估计"></a>泛化误差估计</h4><p>使用oob（out-of-bag）进行泛化误差的估计，将各个树的未采样样本作为预测样本（大约有36.8%），使用已经建立好的森林对各个预测样本进行预测，预测完之后最后统计误分得个数占总预测样本的比率作为RF的oob误分率。</p>
+<h3 id="svm支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a><em><em>SVM支持向量机</em></em></h3><blockquote>
+<p>参考：</p>
+<ol>
+<li><a href="evernote:///view/233243447/s10/93142c01-7748-43c7-9c55-357f875bb3d9/93142c01-7748-43c7-9c55-357f875bb3d9/" target="_blank" rel="external">最优化理论与KTT条件</a><br><a href="evernote:///view/233243447/s10/2de548d8-89d7-46f6-accd-9631c2d52f92/2de548d8-89d7-46f6-accd-9631c2d52f92/" target="_blank" rel="external">2. 支持向量机：Duality</a></li>
+</ol>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-TgVIrgo9MIg/WM30b-Nq7NI/AAAAAAAAAXQ/31EkQisMw2k/I/%25255BUNSET%25255D.jpg" alt="机器学习_周志华 第121 - 125页_页面_1_图像_0001"><br><img src="https://lh3.googleusercontent.com/-DsKnIcmHGX4/WM30cle5-jI/AAAAAAAAAXU/9F9GoVfJXOw/I/%25255BUNSET%25255D.jpg" alt="机器学习_周志华 第121 - 125页_页面_2_图像_0001"><br><img src="https://lh3.googleusercontent.com/-UFq0TtHhl2o/WM30doVh7ZI/AAAAAAAAAXY/U-t-9d_iY4s/I/%25255BUNSET%25255D.jpg" alt="机器学习_周志华 第121 - 125页_页面_3_图像_0001"><br><img src="https://lh3.googleusercontent.com/-E-L28ABwcag/WM30ejjDhfI/AAAAAAAAAXc/RIAHVO_GBj8/I/%25255BUNSET%25255D.jpg" alt="机器学习_周志华 第121 - 125页_页面_4_图像_0001"><br><img src="https://lh3.googleusercontent.com/-cER8MwQ6oak/WM30fo2pvRI/AAAAAAAAAXg/4HMNCFQO8PY/I/%25255BUNSET%25255D.jpg" alt="机器学习_周志华 第121 - 125页_页面_5_图像_0001"></p>
+<h4 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h4><p>经验损失函数:$sigma(1-y_i(w*x_i+b))$ (注意，如果该值小于0时直接取0即可)<br>合页损失函数：$\sigma(1-y_i(wi+b)) + lambda||w||^2$ 后面的是L2正则项</p>
+<h4 id="为什么要引入对偶算法"><a href="#为什么要引入对偶算法" class="headerlink" title="为什么要引入对偶算法"></a>为什么要引入对偶算法</h4><p><strong>对偶问题往往更加容易求解</strong>(结合拉格朗日和kkt条件)<br><strong>可以很自然的引用核函数</strong>（拉格朗日表达式里面有内积，而核函数也是通过内积进行映射的）</p>
+<h4 id="核函数"><a href="#核函数" class="headerlink" title="核函数"></a>核函数</h4><p>将输入特征x（线性不可分）映射到高维特征R空间，可以在R空间上让SVM进行线性可以变，这就是核函数的作用<br>多项式核函数:$K(x,z)=(x*z+1)^p$<br>高斯核函数:$K(x,z)=exp(-(x-z)^2/a^2)$ a为均值<br>字符串核函数：好像用于文本匹配、检索之类的，不懂</p>
+<h4 id="svm优缺点"><a href="#SVM优缺点" class="headerlink" title="SVM优缺点"></a>SVM优缺点</h4><blockquote>
+<p><strong>优点：</strong></p>
+</blockquote>
+<p>使用核函数可以向高维空间进行映射<br>使用核函数可以解决非线性的分类<br>分类思想很简单，就是将样本与决策面的间隔最大化<br>分类效果较好</p>
+<blockquote>
+<p><strong>缺点：</strong></p>
+</blockquote>
+<p>对大规模数据训练比较困难，因为它是用二次规划来求解的<br>无法直接支持多分类，但是可以使用间接的方法来做</p>
+<h4 id="smo"><a href="#SMO" class="headerlink" title="SMO"></a>SMO</h4><p>SMO是用于快速求解SVM的<br>它选择凸二次规划的两个变量，其他的变量保持不变，然后根据这两个变量构建一个二次规划问题，这个二次规划关于这两个变量解会更加的接近原始二次规划的解，通过这样的子问题划分可以大大增加整个算法的计算速度，关于这两个变量：<br>其中一个是严重违反KKT条件的一个变量<br>另一个变量是根据自由约束确定，好像是求剩余变量的最大化来确定的。</p>
+<h4 id="svm多分类问题"><a href="#SVM多分类问题" class="headerlink" title="SVM多分类问题"></a>SVM多分类问题</h4><ol>
+<li>直接法: 直接在目标函数上进行修改，将多个分类面的参数求解合并到一个最优化问题中，通过求解该优化就可以实现多分类（计算复杂度很高，实现起来较为困难）</li>
+<li>间接法:<ul>
+<li>一对多<br>其中某个类为一类，其余n-1个类为另一个类,这方式共需要训练n个分类器，最后在测试的时候将测试样本经过这4个分类器f1(x),f2(x),f3(x)和 f4(x),取其最大值为分类器(这种方式由于是1对M分类，会存在偏置，很不实用)</li>
+<li>一对一(libsvm实现的方式)<br>任意两个类都训练一个分类器，那么n个类就需要n*(n-1)/2个svm分类器。在预测的将测试样 本通过这些分类器之后进行投票选择最终结果。（这种方法虽好，但是需要n*(n-1)/2个分类器代价太大，不过有好像使用循环图来进行改进）</li>
+</ul>
+</li>
+</ol>
+<h2 id="二-回归利用回归预测数值型数据"><a href="#二-回归：利用回归预测数值型数据" class="headerlink" title="二 回归：利用回归预测数值型数据"></a>二 回归：利用回归预测数值型数据</h2><h3 id="预测数值型数据回归"><a href="#预测数值型数据：回归" class="headerlink" title="预测数值型数据：回归"></a>预测数值型数据：回归</h3><h4 id="lr逻辑回归和线性回归"><a href="#LR逻辑回归和线性回归" class="headerlink" title="LR逻辑回归和线性回归"></a>LR逻辑回归和线性回归</h4><p>逻辑回归是一个线性的二分类模型，主要是计算在某个样本特征下事件发生的概率，比如根据用户的浏览购买情况作为特征来计算它是否会购买这个商品，抑或是它是否会点击这个商品。</p>
+<p>由一个线性和函数与一个sigmod函数组成，训练LR就是训练线性和函数的各个权重值w。</p>
+<p>一般使用最大似然法来估计，比如y_i=1的概率是pi,则y_i=0的概率是1-pi，那么观测概率为$p(y_i)=pi^y_i<em> (1-pi)^(1-y_i)$<br>最大似然函数为$（hw(x_i)^y_i</em>(1-hw(x_i))^(1-y_i)）$连乘，对这个似然函数取对数之后就会得到 的表达式<br>$L(w)=sigma(y_i<em>log(hw(x_i))-(1-y_i)log(1-hw(x_i)))=sigma(y_i</em>(w<em>x_i)- log(1+exp(w</em>x_i)))$<br>估计这个L(w)的极大值就可以得到w的估计值。<br>最大似然函数的最优化问题，通常采用随机梯度下降法和拟牛顿迭代法来进行优化</p>
+<blockquote>
+<p>hw为lr函数，y_i为二分类结果0或1，x_i为特征向量</p>
+</blockquote>
+<h4 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><p>如果$hw(x)=1/(1-e^(-w<em>x))$，<br>则$cost function=-1/m</em> sigma(y_i<em>log(hw(x_i)+(1-y_i)</em>log(1-hw(x_i)))=j(w)$<br>这里就成了就$min(j(w))$<br>所以更新w的过程为<br>$w:=w-lamea<em>j(w)’ (求导)$ =&gt; $w:=w-lamea</em> 1/m*sigma<a href="hw(x_i">m</a>-y_i)*x_i)$<br>直到j(w)不能再的时候停止</p>
+<p>最大问题: 会陷入局部最优，并且每次在对当前样本计算cost的时候都需要去遍历全部样本才能得到cost值，这样计算速度就会慢很多（虽然在计算的时候可以转为矩阵乘法去更新整个w值）<br>所以现在好多框架（mahout）中一般使用随机梯度下降法，它在计算cost的时候只计算当前的代价，最终cost是在全部样本迭代一遍之求和得出，还有他在更新当前的参数w的时候并不是依次遍历样本，而是从所有的样本中随机选择一条进行计算，它方法收敛速度快（一般是使用最大迭代次数），并且还可以避免局部最优，并且还很容易并行（使用参数服务器的方式进行并行）<br>这里SGD可以改进的地方就是使用动态的梯度值alpha=0.04*(1.0+n+i)+Rate</p>
+<h4 id="其他优化方法"><a href="#其他优化方法" class="headerlink" title="其他优化方法"></a>其他优化方法</h4><p>拟牛顿法（记得是需要使用Hessian矩阵和cholesky分解）<br>BFGS<br>L-BFGS</p>
+<blockquote>
+<p>优缺点：无需选择学习率α，更快，但是更复杂</p>
+</blockquote>
+<h4 id="过拟合问题"><a href="#过拟合问题" class="headerlink" title="过拟合问题"></a>过拟合问题</h4><ol>
+<li>减少feature个数（人工定义留多少个feature、算法选取这些feature）</li>
+<li>正则化（留下所有的feature，但对于部分feature定义其parameter非常小），在cost上加$lamea(sigma(w^2))$，同时w的更新变为$w:=w-rate<em> 1/m\</em>sigma<a href="hw(x_i">m</a>-y_i)<em>x_i+ （lamea/m)</em>w$。注意：这里的w0不受正则化影响</li>
+</ol>
+<h4 id="正则化算法regularization-algorithms"><a href="#正则化算法（Regularization-Algorithms）" class="headerlink" title="正则化算法（Regularization Algorithms）"></a>正则化算法（Regularization Algorithms）</h4><p>它是另一种方法（通常是回归方法）的拓展，这种方法会基于模型复杂性对其进行惩罚，它喜欢相对简单能够更好的泛化的模型。</p>
+<h5 id="例子"><a href="#例子：" class="headerlink" title="例子："></a>例子：</h5><p>岭回归（Ridge Regression）<br>最小绝对收缩与选择算子（LASSO）<br>GLASSO<br>弹性网络（Elastic Net）<br>最小角回归（Least-Angle Regression）</p>
+<h5 id="优缺点"><a href="#优缺点-2" class="headerlink" title="优缺点"></a>优缺点</h5><p>其惩罚会减少过拟合<br>总会有解决方法</p>
+<p>惩罚会造成欠拟合<br>很难校准</p>
+<h4 id="多分类softmax"><a href="#多分类softmax" class="headerlink" title="多分类softmax"></a>多分类softmax</h4><p>softmax: 假设离散型随机变量Y的取值集合是{1,2,..,k},则多分类的LR为<br>$P(Y=a|x)=exp(wa<em>x)/(1-1到k求和(wk</em>x)) 1&lt;a&lt;k$<br>这里会输出当前样本下属于哪一类的概率，并且满足全部概率加起来=1</p>
+<p>关于softmax和k个LR的选择</p>
+<ol>
+<li>类别之间是否互斥（比如音乐只能属于古典音乐、乡村音乐、摇滚月的一种），用softmax</li>
+<li>类别之间有联系（比如一首歌曲可能有影视原声，也可能包含人声，或者是舞曲），用k个LR更为合适</li>
+</ol>
+<h4 id="优缺点"><a href="#优缺点-3" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：实现简单；分类时计算量非常小，速度很快，存储资源低；<br>缺点：容易欠拟合，一般准确度不太高。只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；<br><a href="http://www.cnblogs.com/biyeymyhjob/archive/2012/07/18/2595410.html" target="_blank" rel="external">Logistic Regression–逻辑回归算法汇总</a><br><a href="http://blog.csdn.net/abcjennifer/article/details/7716281" target="_blank" rel="external">Stanford机器学习—第三讲. 逻辑回归和过拟合问题的解决 logistic Regression &amp; Regularization</a><br><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">Softmax回归</a></p>
+<h3 id="cart分类回归树"><a href="#Cart分类回归树" class="headerlink" title="Cart分类回归树"></a><em><em>Cart分类回归树</em></em></h3><p><img src="https://lh3.googleusercontent.com/-f7u4zKxY_1o/WM30f6tpViI/AAAAAAAAAXk/6vIBwhP9KXk/I/14882716973219.jpg" alt=""></p>
+<blockquote>
+<p>线性回归包含了一些强大的方法，但这些方法创建的模型<strong>需要拟合所有的样本点</strong>（局部加权线性回归除外）。当<strong>数据拥有众多特征并且特征之间关系十分复杂时</strong>，构建全局模型的想法就显得太难了，也略显笨拙。<br>一种可行的方法是<strong>将数据集切分成多份易建模的数据，然后利用线性回归技术建模</strong>。如果首次切分后仍然难以拟合线性模型就继续切分。<strong>在这种切分方式下，树结构和回归法就相当有用</strong>。</p>
+</blockquote>
+<p><strong>树回归优点：</strong>可以对复杂和非线性的数据建模<br><strong>缺点：</strong>结果不易理解<br><strong>适用数据类型：</strong>数值型和标称型数据</p>
+<h4 id="1-与id3算法的比较"><a href="#1-与ID3算法的比较" class="headerlink" title="1 与ID3算法的比较"></a>1 与ID3算法的比较</h4><ul>
+<li><strong>切分方式过于迅速：</strong>ID3的做法是<strong>每次选取当前最佳的特征来分割数据</strong>，并<strong>按照特征的所有可能取值来切分</strong>。也就是说，如果一个特征有4种取值，那么数据将被切成4份。一旦按某个特征切分后，<strong>该特征在之后的算法执行过程中将不会再起作用</strong>，所以有观点认为<strong>这种切分方式过于迅速</strong>。另外一种方法是<strong>二元切分法，即每次把数据集切成两份</strong>。<strong>如果数据的某特征值等于切分所要求的值，那么这些数据就进入树的左子树，反之则进入树的右子树</strong>。</li>
+<li><strong>处理连续值特征：</strong>，<strong>ID3算法</strong>还存在另一个问题，它<strong>不能直接处理连续型特征值</strong>。只有事先将连续型特征转换成离散型，才能在ID3算法中使用。但<strong>这种转换过程会破坏连续型变量的内在性质</strong>。而使用<strong>二元切分法</strong>则易于对树构建过程进行调整以处理连续型特征。具体处理方法是：<strong>如果特征值大于给定值就走左子树，否则就走右子树</strong>。</li>
+<li><strong>节省时间：</strong>二元切分法节省了树的构建时间。但这点意义也不是特别大，因为这些树构建一般是离线完成，时间并非需要重点关注的因素。</li>
+</ul>
+<h4 id="2-构建cart回归树"><a href="#2-构建CART回归树" class="headerlink" title="2 构建CART回归树"></a>2 构建CART回归树</h4><blockquote>
+<p>回归树与分类树的思路类似，但也节点的数据类型不是离散型，而是连续型。</p>
+</blockquote>
+<p><strong>树节点存储结构：</strong></p>
+<ul>
+<li>待切分的特征</li>
+<li>待切分的特征值</li>
+<li>右子树。当不再需要切分的时候，也可以是单个值。</li>
+<li>左子树。与右子树类似。</li>
+</ul>
+<p><strong>Pyton定义：</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-YLmLV0HjEMc/WM30gILNW_I/AAAAAAAAAXo/kLylOK833PY/I/14890615105039.jpg" alt=""></p>
+<blockquote>
+<p>后面将介绍两种树的构建：第一种是回归树（regression tree），其每个叶节点包含单个值；第二种是模型树（model tree），其每个也节点包含一个线性方程。</p>
+</blockquote>
+<p>先给出两种树构建算法中的一些共用代码。<br><strong>函数createTree()的伪代码大致如下：</strong></p>
+<ul>
+<li>找到最佳的待切分特征</li>
+<li>如果该节点不能再分，将该节点存为叶节点</li>
+<li>执行二元切分</li>
+<li>在右子树调用createTree()方法</li>
+<li>在左子树调用createTree()方法</li>
+</ul>
+<p><strong>binSplitDataSet切分函数和createTree创建树函数代码：</strong><br><img src="https://lh3.googleusercontent.com/-1btQAyvubmI/WM30gesiH6I/AAAAAAAAAXs/B_LQQB8Wlpw/I/14890624939031.jpg" alt=""></p>
+<p>回归树中，假设叶节点是常数值，这种策略认为数据中的复杂关系可以用树结构来概括。那为成功构建以分段常数为叶节点的树，需要度量出数据的一致性。这里涉及到<strong>如何像分类树一样计算连续型数值的混乱度呢</strong>？实际的做法就是<strong>计算总方差</strong>。总方差可以通过均方差乘以数据集中样本点的个数来得到。</p>
+<p><em><em>chooseBestSplit()函数</em></em><br>这个函数<strong>对于给定的某个误差计算方法</strong>，<strong>可以找到数据集上最佳的二元切分方式</strong>。另外，该函数<strong>还要确定什么时候停止切分</strong>，<strong>一旦停止切分会生成一个叶节点</strong>。因此，函数chooseBestSplit()只需完成两件事：<strong>用最佳方式切分数据集和生成相应的叶节点</strong>。</p>
+<p><strong>伪代码：</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-434adCtUXN8/WM30gkvWsuI/AAAAAAAAAXw/HBGk6jNhV-Y/I/14890635236498.jpg" alt=""></p>
+<p><strong>代码：</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-8Sth-Q22ln8/WM30hCvpHjI/AAAAAAAAAX0/D5_NPcjpBKs/I/14890639674352.jpg" alt=""></p>
+<p>这样就可以构建一棵完整的回归树了。</p>
+<h4 id="4-模型树"><a href="#4-模型树" class="headerlink" title="4 模型树"></a>4 模型树</h4><blockquote>
+<p>下面将重用部分已有的树构建代码来创建一种新的树。该树仍然采用二元切分，但叶节点不再是简单的数值，取而代之的是一些线性模型。</p>
+</blockquote>
+<p>用树来对数据建模，除了把叶节点简单地设定为常数值之外，还有一种方法是把叶节点设定为<strong>分段线性函数</strong>。</p>
+<p><img src="https://lh3.googleusercontent.com/-e_O6ScGnEn0/WM30heNlRpI/AAAAAAAAAX4/_6dJHau8baQ/I/14891164334358.jpg" alt=""></p>
+<p>如上图所示，使用两条直线拟合的效果显然比一条直线的效果好，因此可以采用分段线性模型。</p>
+<p>决策树相比于其他机器学习算法的优势之一在于结果更易理解。很显然，<strong>两条直线比很多节点组成一颗大叔更容易解释</strong>。<strong>模型树的可解释性</strong>是它优于回归树的特点之一。另外，模型树也<strong>具有更高的预测准确度</strong>。</p>
+<p>对于前面回归树的代码，需要修改<strong>两个地方</strong>。第一个是<strong>在叶节点生成线性模型而不是常数值</strong>。第二个是每次切分，误差的估计函数，这里稍加变化。对于给定数据集，应该<strong>先用线性的模型来对它进行拟合，然后计算真实的目标值与模型预测值间的差值</strong>。最后<strong>将这些差值的平方求和就得到了所需的误差</strong>。</p>
+<p><strong>模型树的叶节点生成函数</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-T8Z4wHhpOI0/WM30hlO-XRI/AAAAAAAAAX8/zqOvyFDDEf8/I/14891178335364.jpg" alt=""></p>
+<h4 id="3-树剪枝"><a href="#3-树剪枝" class="headerlink" title="3 树剪枝"></a>3 树剪枝</h4><p>一棵树如果节点过多，表明该模型可能对数据进行了“过拟合”，通<strong>过降低决策树的复杂度来避免过拟合的过程称为剪枝（pruning）</strong>。在前面chooseBestSplit()中的提前<strong>终止条件，实际上是在进行一种所谓的预剪枝(prepruning)操作</strong>。另一种形式的剪枝需要使<strong>用测试集和训练集，交叉验证来发现过拟合，称作后剪枝(postpruning)</strong>。</p>
+<h5 id="预剪枝"><a href="#预剪枝" class="headerlink" title="预剪枝"></a>预剪枝</h5><p>树构建算法其实对输入的参数tolS和tolN非常敏感，如果使用其他值将不太容易达到这么好的效果。然后，通过不断修改停止条件来得到合理结果并不是很好的办法。事实上，我们尝尝甚至不确定到底需要寻找什么样的结果。这正是机器学习所关注的内容，计算机应该可以给出总体的概貌。</p>
+<p>还有一种称为后剪枝的方法，可以利用测试集来对树进行剪枝。<strong>由于不需要用户指定参数，后剪枝是一种更理想化的剪枝方法</strong>。</p>
+<h5 id="后剪枝"><a href="#后剪枝" class="headerlink" title="后剪枝"></a>后剪枝</h5><p>使用后剪枝方法需要将数据集分成测试集和训练集。首先指定参数，使得构建出的树足够大，足够复杂，便于剪枝。接下来从上而下找到叶子节点，<strong>用测试集来判断将这些叶节点合并是否能降低测试误差。如果是的话就合并</strong>。</p>
+<p><strong>伪代码：</strong></p>
+<ul>
+<li>基于已有的树切分测试数据</li>
+<li>如果存在任意子集是一棵树，则在该子集上递归剪枝过程</li>
+<li>左右子集都剪枝完了之后，判断一下左右两边是否都已经是叶子结点了（可能原来就是，或者剪枝完了塌陷成叶子结点）<ul>
+<li>计算合并或者不合并的误差</li>
+<li>如果合并会降低误差的话，就将叶节点合并*</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/-NalYQwHqU4I/WM30iA3gLXI/AAAAAAAAAYA/HCjr32l-BIQ/I/14891139688717.jpg" alt=""></p>
+<h4 id="5-示例树回归与标准回归的比较"><a href="#5-示例树回归与标准回归的比较" class="headerlink" title="5 示例树回归与标准回归的比较"></a>5 示例树回归与标准回归的比较</h4><p><strong>预测代码：</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-EXb3an3HNz4/WM30ilwLGnI/AAAAAAAAAYE/0XKtREK6e38/I/14891180492872.jpg" alt=""></p>
+<p><strong>比较：</strong></p>
+<p><img src="https://lh3.googleusercontent.com/-IbMw2VfkuxI/WM30igqOMFI/AAAAAAAAAYI/7dcpdW2Csn8/I/14891181768319.jpg" alt=""></p>
+<p>对于以上数据构建三个模型，<strong>回归树、模型树以及简单线性回归</strong>，并比较相关性系数。</p>
+<p><img src="https://lh3.googleusercontent.com/-0r1YDEIDqGg/WM30jBIaE5I/AAAAAAAAAYM/lEBVrRTGjOg/I/14891183274424.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-ZLGq2WuEWvU/WM30jfrgF6I/AAAAAAAAAYQ/Me1D9DPuYJk/I/14891183420538.jpg" alt=""></p>
+<p>可以看出该方法在R2值上面的表现不如两种树回归方法。所以，<strong>树回归在预测复杂数据时会比简单的线性模型更有效。</strong></p>
+<h4 id="6-总结"><a href="#6-总结" class="headerlink" title="6 总结"></a>6 总结</h4><ol>
+<li>Cart可以通过特征的选择迭代建立一颗分类树，使得每次的分类平面能最好的将剩余数据分为两类</li>
+<li><p>$gini=1-\Sigma(pi^2)$，表示每个类别出现的概率和与1的差值<br>分类问题：argmax（Gini-GiniLeft-GiniRight）<br>回归问题：argmax(Var-VarLeft-VarRight)<br>查找最佳特征f已经最佳属性阈值th，小于th的在左边，大于th的在右边子树<br>分类回归树(Classification And Regression Tree)是一个决策二叉树，在通过递归的方式建立，每个节点在分裂的时候都是希望通过最好的方式将剩余的样本划分成两类，这里的分类指标：<br>分类树：基尼指数最小化<br>回归树：平方误差最小化</p>
+</li>
+<li><p>分类树：<br><img src="https://lh3.googleusercontent.com/-dcBrEnFl2MA/WM30jmOzYJI/AAAAAAAAAYU/uUGPyWMKKyo/I/14892852325911.jpg" alt=""><br>最终Cart<strong>选择GiniGain最小的特征</strong>作为划分特征</p>
+</li>
+<li><p>回归树：</p>
+</li>
+</ol>
+<p>以方差作为混乱程度，计算原始数据集D的方差Var(D)，更具某个特定特征以及特征值，将数据划分为左右两部分，样本在该特征上取值大于特征值的放到左边D1数据集，否则放到右边D2数据集，然后计算Var(D1)和Var(D2)。找出是的Var(D)-Var(D1)-Var(D2)最大的特征以及特征值。</p>
+<p>关于剪枝：用独立的验证数据集对训练集生长的树进行剪枝（事后剪枝）。</p>
+<ol>
+<li>能够<strong>处理大量特征的分类</strong>，并且还<strong>不用做特征选择</strong></li>
+<li>在训练完成之后<strong>能给出哪些feature的比较重要</strong></li>
+<li>训练速度很快</li>
+<li>容易并行</li>
+<li>实现相对简单</li>
+</ol>
+<h4 id="7-使用情况"><a href="#7-使用情况" class="headerlink" title="7 使用情况"></a>7 使用情况</h4><p>可以将连续的特征离散化<br>ID3算法：处理离散值的量<br>C45算法：处理连续值的量<br>Cart算法：离散和连续 两者都合适？</p>
+<h4 id="8-停止条件"><a href="#8-停止条件" class="headerlink" title="8 停止条件"></a>8 停止条件</h4><ol>
+<li>直到<strong>每个叶子节点都只有一种类型的记录时</strong>停止，（这种方式很容易过拟合）</li>
+<li>另一种是当<strong>叶子节点的记录树小于一定的阈值</strong>或者<strong>节点的信息增益小于一定的阈值</strong>时停止</li>
+</ol>
+<h4 id="9-决策树的分类与回归"><a href="#9-决策树的分类与回归" class="headerlink" title="9 决策树的分类与回归"></a>9 决策树的分类与回归</h4><p>分类树 输出叶子节点中所属类别最多的那一类<br>回归树 输出叶子节点中各个样本值的平均值<br>模型树  输出每个叶子节点的线性回归模型</p>
+<h4 id="10-理想的决策树"><a href="#10-理想的决策树" class="headerlink" title="10 理想的决策树"></a>10 理想的决策树</h4><p>叶子节点数尽量少/深度尽量小(避免过拟合)</p>
+<h4 id="11-解决决策树的过拟合"><a href="#11-解决决策树的过拟合" class="headerlink" title="11 解决决策树的过拟合"></a>11 解决决策树的过拟合</h4><ol>
+<li><p>剪枝</p>
+<ul>
+<li>前置剪枝：在分裂节点的时候设计比较苛刻的条件，如不满足则直接停止分裂（这样干决策树无法到最优，也无法得到比较好的效果）</li>
+<li>（交叉验证）后置剪枝：在树建立完之后，用单个节点代替子树，节点的分类采用子树中主要的分类（这种方法比较浪费前面的建立过程）</li>
+</ul>
+</li>
+<li><p>随机森林</p>
+</li>
+</ol>
+<h4 id="12-优缺点"><a href="#12-优缺点" class="headerlink" title="12 优缺点"></a>12 优缺点</h4><p>优点：<strong>计算量简单，可解释性强</strong>，比较适合<strong>处理有缺失属性值的样本</strong>，<strong>能够处理不相关的特征</strong>。<br>缺点：<strong>单颗决策树分类能力弱，并且对连续值变量难以处理</strong>；<strong>容易过拟合。</strong>（后续出现了随机森林，减小了过拟合现象）。</p>
+<h2 id="三-无监督学习"><a href="#三-无监督学习" class="headerlink" title="三 无监督学习"></a>三 无监督学习</h2><h3 id="利用k-均值聚类算法对未标注数据分组"><a href="#利用K-均值聚类算法对未标注数据分组" class="headerlink" title="利用K-均值聚类算法对未标注数据分组"></a><em><em>利用K-均值聚类算法对未标注数据分组</em></em></h3><h3 id="使用apriori算法进行关联分析"><a href="#使用Apriori算法进行关联分析" class="headerlink" title="使用Apriori算法进行关联分析"></a><a href="evernote:///view/233243447/s10/bb20d230-b917-4e15-b276-59497e5ae8a0/bb20d230-b917-4e15-b276-59497e5ae8a0/" target="_blank" rel="external"><em>使用Apriori算法进行关联分析</em></a></h3><h3 id="使用fp-growth算法来高效发现频繁项集"><a href="#使用FP-growth算法来高效发现频繁项集" class="headerlink" title="使用FP-growth算法来高效发现频繁项集"></a><a href="evernote:///view/233243447/s10/e2a26938-6bdb-412e-97df-b01a7a0abbf8/e2a26938-6bdb-412e-97df-b01a7a0abbf8/" target="_blank" rel="external"><em>使用FP-growth算法来高效发现频繁项集</em></a></h3><blockquote>
+<p>参考机器学习实战第12章                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>
+</blockquote>
+<p><strong>优点：</strong>一般比Apriori要快<br><strong>缺点：</strong>实现比较困难，在某些数据集上性能会下降<br><strong>适用数据类型：</strong>标称类数据</p>
+<h3 id="em最大期望算法"><a href="#EM最大期望算法" class="headerlink" title="EM最大期望算法"></a><em><em>EM最大期望算法</em></em></h3><p>EM用于隐含变量的概率模型的极大似然估计，它一般分为两步：第一步求期望(E),第二步求极大(M)，<br>如果概率模型的变量都是观测变量，那么给定数据之后就可以直接使用极大似然法或者贝叶斯估计模型参数。<br>但是当模型含有隐含变量的时候就不能简单的用这些方法来估计，EM就是一种含有隐含变量的概率模型参数的极大似然估计法。<br>应用到的地方：混合高斯模型、混合朴素贝叶斯模型、因子分析模型</p>
+<h3 id="pagerank"><a href="#PageRank" class="headerlink" title="PageRank"></a><em><em>PageRank</em></em></h3><h2 id="四-其他工具"><a href="#四-其他工具" class="headerlink" title="四 其他工具"></a>四 其他工具</h2><h3 id="利用pca来简化数据"><a href="#利用PCA来简化数据" class="headerlink" title="利用PCA来简化数据"></a>利用PCA来简化数据</h3><h4 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h4><p><strong>矩阵分解的概念：</strong><br>原始数据集$X\in R^{mxn}$<br>可以分解成两个小的矩阵$U\in R^{mxk}$和$V\in ^{kxn}$使得$UV=X$<br>那么我们可以找到一个矩阵$\Sigma\in R^{kxk}$,使得$U\Sigma\Sigma^{-1}V=X$，即<strong>将V矩阵的每一列都单位化</strong>，此时$U\Sigma V=X$<br>然后，我们取$UV=\hat{X}\approx X$，就是X的近似了。<br>并且它与原始数据X的距离$\left| X-UV \right|^2_F $最小化。</p>
+<p><strong>矩阵分解的作用：</strong></p>
+<ul>
+<li>数据<strong>恢复</strong>：矩阵是稀疏的、低秩的，因此不同维度数据之间是有关联的。</li>
+<li>数据<strong>去噪</strong>：分解的另一个作用是可以只抽取其中信息量最多的特征，因为剩余特征往往是无用的噪声。</li>
+<li>数据<strong>降维</strong>：矩阵分解之后得到更小的矩阵，可以在保留原有信息的同时，降低数据的存储空间。</li>
+<li>发现<strong>数据内部隐含结构</strong>：通过矩阵分解之后，数据可以到达新的特征空间，在新的空间中往往具有更显著、高区分度的特征。</li>
+</ul>
+<h3 id="利用svd简化数据"><a href="#利用SVD简化数据" class="headerlink" title="利用SVD简化数据"></a>利用SVD简化数据</h3><ul>
+<li>[ ]  ToDo</li>
+</ul>
+<h3 id="lda"><a href="#LDA" class="headerlink" title="LDA"></a>LDA</h3><ul>
+<li>[ ]  ToDo</li>
+</ul>
+<h3 id="大数据和mapreduce"><a href="#大数据和MapReduce" class="headerlink" title="大数据和MapReduce"></a>大数据和MapReduce</h3><h2 id="五-编程语言和数学"><a href="#五-编程语言和数学" class="headerlink" title="五 编程语言和数学"></a>五 编程语言和数学</h2><h3 id="python入门"><a href="#Python入门" class="headerlink" title="Python入门"></a>Python入门</h3><h3 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h3><h4 id="1-连续-可导与可微的关系"><a href="#1-连续、可导与可微的关系" class="headerlink" title="1 连续、可导与可微的关系"></a>1 连续、可导与可微的关系</h4><p>偏导数连续是函数可微的充分条件，函数可微是函数可导和函数连续的充分条件，函数可导和函数连续无必然联系。</p>
+<p><img src="https://lh3.googleusercontent.com/-nQCqnH4xMBc/WM30juRZUhI/AAAAAAAAAYY/8Lf22zbtqlI/I/14896630590582.jpg" alt=""></p>
+<blockquote>
+<p>参考：<a href="http://zhihu.com/question/23468713/answer/26043048" target="_blank" rel="external">函数可导与可微的直观联系</a></p>
+</blockquote>
+<h3 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h3><h3 id="概率论复习"><a href="#概率论复习" class="headerlink" title="概率论复习"></a>概率论复习</h3><h4 id="1-高斯分布"><a href="#1-高斯分布" class="headerlink" title="1 高斯分布"></a>1 高斯分布</h4><p><strong>多维高斯概率密度函数：</strong><br><img src="https://lh3.googleusercontent.com/-QDBDv1PN854/WM30j_GFpmI/AAAAAAAAAYc/2cFAV2iama4/I/14894912474064.jpg" alt=""></p>
+<blockquote>
+<p>参考：机器学习-周志华-附录</p>
+</blockquote>
+<h3 id="机器学习算法分类图"><a href="#机器学习算法分类图" class="headerlink" title="机器学习算法分类图"></a>机器学习算法分类图</h3><p><img src="https://lh3.googleusercontent.com/-AKz6_ag6K4w/WM30kJYu85I/AAAAAAAAAYg/z3PvfY0LKpQ/I/%25255BUNSET%25255D.png" alt="机器学习算法分类"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/04/02/机器学习和数据挖掘常用算法整理/">机器学习和数据挖掘常用算法整理</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Choris Steve</a></p>
+        <p><span>发布时间:</span>2017-04-02, 13:18:59</p>
+        <p><span>最后更新:</span>2017-04-02, 13:20:47</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/02/机器学习和数据挖掘常用算法整理/" title="机器学习和数据挖掘常用算法整理">http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/　　作者: Choris Steve" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/">
+                    如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#机器学习和数据挖掘常用算法整理"><span class="toc-number">1.</span> <span class="toc-text">机器学习和数据挖掘常用算法整理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-分类"><span class="toc-number">1.1.</span> <span class="toc-text">一 分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#naive-bayes"><span class="toc-number">1.1.1.</span> <span class="toc-text">Naive Bayes</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#属性特征"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">属性特征</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#laplace校准拉普拉斯校验"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">Laplace校准(拉普拉斯校验)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优缺点"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#遇到特征之间不独立问题"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">遇到特征之间不独立问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#logistic回归"><span class="toc-number">1.1.2.</span> <span class="toc-text">Logistic回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#k-近邻算法"><span class="toc-number">1.1.3.</span> <span class="toc-text">k-近邻算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-三要素"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1 三要素：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-k值的选择"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">2 k值的选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-优缺点"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3 优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-kd树"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">4 KD树</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#kd树进行knn查找"><span class="toc-number">1.1.3.4.1.</span> <span class="toc-text">KD树进行KNN查找</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#kd树搜索的复杂度"><span class="toc-number">1.1.3.4.2.</span> <span class="toc-text">KD树搜索的复杂度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dt决策树"><span class="toc-number">1.1.4.</span> <span class="toc-text">DT决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#id3"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">ID3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c45"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">C4.5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基尼指数gini-index"><span class="toc-number">1.1.4.3.</span> <span class="toc-text">基尼指数Gini index</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#adaboost元算法提高分类性能"><span class="toc-number">1.1.5.</span> <span class="toc-text">AdaBoost元算法提高分类性能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#集成算法ensemble-algorithms"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">集成算法（Ensemble algorithms）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优缺点"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bagging"><span class="toc-number">1.1.5.4.</span> <span class="toc-text">Bagging</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#boosting"><span class="toc-number">1.1.5.5.</span> <span class="toc-text">Boosting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#adaboost"><span class="toc-number">1.1.5.6.</span> <span class="toc-text">AdaBoost</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gbdt"><span class="toc-number">1.1.6.</span> <span class="toc-text">GBDT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机森林"><span class="toc-number">1.1.7.</span> <span class="toc-text">随机森林</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#预测过程"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">预测过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数问题"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">参数问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#泛化误差估计"><span class="toc-number">1.1.7.3.</span> <span class="toc-text">泛化误差估计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#svm支持向量机"><span class="toc-number">1.1.8.</span> <span class="toc-text">SVM支持向量机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#损失函数"><span class="toc-number">1.1.8.1.</span> <span class="toc-text">损失函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么要引入对偶算法"><span class="toc-number">1.1.8.2.</span> <span class="toc-text">为什么要引入对偶算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#核函数"><span class="toc-number">1.1.8.3.</span> <span class="toc-text">核函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#svm优缺点"><span class="toc-number">1.1.8.4.</span> <span class="toc-text">SVM优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#smo"><span class="toc-number">1.1.8.5.</span> <span class="toc-text">SMO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#svm多分类问题"><span class="toc-number">1.1.8.6.</span> <span class="toc-text">SVM多分类问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-回归利用回归预测数值型数据"><span class="toc-number">1.2.</span> <span class="toc-text">二 回归：利用回归预测数值型数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#预测数值型数据回归"><span class="toc-number">1.2.1.</span> <span class="toc-text">预测数值型数据：回归</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lr逻辑回归和线性回归"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">LR逻辑回归和线性回归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#梯度下降法"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">梯度下降法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他优化方法"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">其他优化方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#过拟合问题"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">过拟合问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则化算法regularization-algorithms"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">正则化算法（Regularization Algorithms）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#例子"><span class="toc-number">1.2.1.5.1.</span> <span class="toc-text">例子：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#优缺点"><span class="toc-number">1.2.1.5.2.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多分类softmax"><span class="toc-number">1.2.1.6.</span> <span class="toc-text">多分类softmax</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优缺点"><span class="toc-number">1.2.1.7.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cart分类回归树"><span class="toc-number">1.2.2.</span> <span class="toc-text">Cart分类回归树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-与id3算法的比较"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">1 与ID3算法的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-构建cart回归树"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">2 构建CART回归树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-模型树"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">4 模型树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-树剪枝"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">3 树剪枝</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#预剪枝"><span class="toc-number">1.2.2.4.1.</span> <span class="toc-text">预剪枝</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#后剪枝"><span class="toc-number">1.2.2.4.2.</span> <span class="toc-text">后剪枝</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-示例树回归与标准回归的比较"><span class="toc-number">1.2.2.5.</span> <span class="toc-text">5 示例树回归与标准回归的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-总结"><span class="toc-number">1.2.2.6.</span> <span class="toc-text">6 总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-使用情况"><span class="toc-number">1.2.2.7.</span> <span class="toc-text">7 使用情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-停止条件"><span class="toc-number">1.2.2.8.</span> <span class="toc-text">8 停止条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-决策树的分类与回归"><span class="toc-number">1.2.2.9.</span> <span class="toc-text">9 决策树的分类与回归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-理想的决策树"><span class="toc-number">1.2.2.10.</span> <span class="toc-text">10 理想的决策树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-解决决策树的过拟合"><span class="toc-number">1.2.2.11.</span> <span class="toc-text">11 解决决策树的过拟合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-优缺点"><span class="toc-number">1.2.2.12.</span> <span class="toc-text">12 优缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-无监督学习"><span class="toc-number">1.3.</span> <span class="toc-text">三 无监督学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用k-均值聚类算法对未标注数据分组"><span class="toc-number">1.3.1.</span> <span class="toc-text">利用K-均值聚类算法对未标注数据分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用apriori算法进行关联分析"><span class="toc-number">1.3.2.</span> <span class="toc-text">使用Apriori算法进行关联分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用fp-growth算法来高效发现频繁项集"><span class="toc-number">1.3.3.</span> <span class="toc-text">使用FP-growth算法来高效发现频繁项集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#em最大期望算法"><span class="toc-number">1.3.4.</span> <span class="toc-text">EM最大期望算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pagerank"><span class="toc-number">1.3.5.</span> <span class="toc-text">PageRank</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-其他工具"><span class="toc-number">1.4.</span> <span class="toc-text">四 其他工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用pca来简化数据"><span class="toc-number">1.4.1.</span> <span class="toc-text">利用PCA来简化数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵分解"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">矩阵分解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用svd简化数据"><span class="toc-number">1.4.2.</span> <span class="toc-text">利用SVD简化数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lda"><span class="toc-number">1.4.3.</span> <span class="toc-text">LDA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大数据和mapreduce"><span class="toc-number">1.4.4.</span> <span class="toc-text">大数据和MapReduce</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五-编程语言和数学"><span class="toc-number">1.5.</span> <span class="toc-text">五 编程语言和数学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python入门"><span class="toc-number">1.5.1.</span> <span class="toc-text">Python入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高等数学"><span class="toc-number">1.5.2.</span> <span class="toc-text">高等数学</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-连续-可导与可微的关系"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">1 连续、可导与可微的关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性代数"><span class="toc-number">1.5.3.</span> <span class="toc-text">线性代数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#概率论复习"><span class="toc-number">1.5.4.</span> <span class="toc-text">概率论复习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-高斯分布"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">1 高斯分布</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机器学习算法分类图"><span class="toc-number">1.5.5.</span> <span class="toc-text">机器学习算法分类图</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"机器学习和数据挖掘常用算法整理　| Choris Steve's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/';
+            this.page.identifier = '2017/04/02/机器学习和数据挖掘常用算法整理/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//http-stevechoris-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/" title="下一篇: 如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/02/机器学习和数据挖掘常用算法整理/">机器学习和数据挖掘常用算法整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/">如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/">Python3.5 Anaconda3 Caffe深度学习框架搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/28/Linux常用命令整理/">Linux常用命令整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/经典面试题-最长回文子串/">[经典面试题] 最长回文子串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/LeetCode-Template/">[LeetCode] Template</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/15/用Anaconda安装配置Jupyter-Notebook和TensorFlow开发环境/">用Anaconda安装配置Jupyter Notebook和TensorFlow开发环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/">[LeetCode] 32. Longest Valid Parentheses</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/11/LeetCode-312-Burst-Balloons/">[LeetCode] 312. Burst Balloons</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/">[LeetCode] 354. Russian Doll Envelopes</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/11/LeetCode-174-Dungeon-Game/">[LeetCode] 174. Dungeon Game</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/LeetCode-解题报告/">LeetCode 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/Post-with-cover-image/">天使的模样</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/LeetCode-377-Combination-Sum/">[LeetCode] 377. Combination Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/09/图片博客模板/">图片博客模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/Jupyter-Notebook-安装扩展插件/">Jupyter Notebook 安装扩展插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/25/文字博客模板/">文字博客模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/25/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2017 Choris Steve
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js" type="text/javascript"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 6;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-83979301-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
