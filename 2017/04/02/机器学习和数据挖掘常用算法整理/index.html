@@ -57,7 +57,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-nQCqnH4xMBc/WM30juRZUhI/AAAAAAAAAYY/8Lf22zbtqlI/I/14896630590582.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-QDBDv1PN854/WM30j_GFpmI/AAAAAAAAAYc/2cFAV2iama4/I/14894912474064.jpg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-AKz6_ag6K4w/WM30kJYu85I/AAAAAAAAAYg/z3PvfY0LKpQ/I/%25255BUNSET%25255D.png">
-<meta property="og:updated_time" content="2017-04-02T05:27:07.000Z">
+<meta property="og:updated_time" content="2017-04-02T06:56:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习和数据挖掘常用算法整理">
 <meta name="twitter:description" content="&amp;emsp;">
@@ -355,7 +355,7 @@
 <li>[ ] 计算广告学</li>
 <li>[ ] SVD、PCA、LDA</li>
 </ul>
-<h2 id="一-分类"><a href="#一-分类" class="headerlink" title="一 分类"></a>一 分类</h2><h3 id="naive-bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a><em><em>Naive Bayes</em></em></h3><p>$$P(A∩B)=P(A)<em>P(B|A)=P(B)</em>P(A|B) =&gt; $$<br>$$P(A|B)=P(B|A)<em>P(A)/P(B)$$<br>对于给出的待分类项，求解在此项出现的条件下各个目标类别出现的条件概率，哪个最大，就认为此待分类项属于哪个类别。<br>假设样本$x=(a_1,a_2,a_3,…a_n)$(特征独立)，分类目标$Y={y_1,y_2,y_3,y_4..y_n}$，通过$max(P(y_1|x),P(y_2|x),P(y_3|x)..P(y_n|x))$分类。<br>而根据贝叶斯公式：<br>$$P(y_i|x)=p(x|y_i)</em>P(y_i)/P(x) =&gt; max(P(x|y_i)<em>p(y_i))$$<br>$$P(x|y_i)</em>p(y_i)=p(y_i)*\prod{P(ai|y_i)}$$</p>
+<h2 id="一-分类"><a href="#一-分类" class="headerlink" title="一 分类"></a>一 分类</h2><h3 id="naive-bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h3><p>$$P(A∩B)=P(A)<em>P(B|A)=P(B)</em>P(A|B) =&gt; $$<br>$$P(A|B)=P(B|A)<em>P(A)/P(B)$$<br>对于给出的待分类项，求解在此项出现的条件下各个目标类别出现的条件概率，哪个最大，就认为此待分类项属于哪个类别。<br>假设样本$x=(a_1,a_2,a_3,…a_n)$(特征独立)，分类目标$Y={y_1,y_2,y_3,y_4..y_n}$，通过$max(P(y_1|x),P(y_2|x),P(y_3|x)..P(y_n|x))$分类。<br>而根据贝叶斯公式：<br>$$P(y_i|x)=p(x|y_i)</em>P(y_i)/P(x) =&gt; max(P(x|y_i)<em>p(y_i))$$<br>$$P(x|y_i)</em>p(y_i)=p(y_i)*\prod{P(ai|y_i)}$$</p>
 <h4 id="属性特征"><a href="#属性特征" class="headerlink" title="属性特征"></a>属性特征</h4><p>特征为离散值时直接统计即可（表示统计概率）<br>特征为连续值的时候假定特征符合高斯分布:g(x,n,u) p(ak|y_i)=g(xk,ni,ui)</p>
 <h4 id="laplace校准拉普拉斯校验"><a href="#Laplace校准-拉普拉斯校验" class="headerlink" title="Laplace校准(拉普拉斯校验)"></a>Laplace校准(拉普拉斯校验)</h4><p>当某个类别下某个特征划分没有出现时，会有P(a|y)=0，就是导致分类器质量降低，所以此时引入Laplace校验，就是<strong>对每类别下所有划分的计数加1</strong>。</p>
 <h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：模型所需估计的参数很少，具有<strong>稳定的计算效率</strong>，对<strong>小规模的数据表现很好</strong>。<strong>对缺失数据不敏感</strong>，<strong>适合多分类任务</strong>，<strong>适合增量式训练</strong>。<br>缺点：NBC前提是<strong>假设属性之间相互独立</strong>，但在实际应用中往往不满足。<br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/17/naive-bayesian-classifier.html" target="_blank" rel="external">算法杂货铺——分类算法之朴素贝叶斯分类(Naive Bayesian classification)</a></p>
@@ -366,7 +366,7 @@
 <p><a href="http://tech.meituan.com/intro_to_logistic_regression.html" target="_blank" rel="external">美团 - 逻辑回归简介</a></p>
 </blockquote>
 <p><img src="https://lh3.googleusercontent.com/-Cg4C45Qff2E/WOCLJsAlbEI/AAAAAAAAAZg/wC7V5IyR4js/I/Logistic%252520Regression.png" alt="Logistic Regression 模型简介 -"></p>
-<h3 id="k-近邻算法"><a href="#k-近邻算法" class="headerlink" title="k-近邻算法"></a><em><em>k-近邻算法</em></em></h3><p>对预测数据，找到最近k个实例，根据k个实例的距离和属性获取预测值。</p>
+<h3 id="k-近邻算法"><a href="#k-近邻算法" class="headerlink" title="k-近邻算法"></a>k-近邻算法</h3><p>对预测数据，找到最近k个实例，根据k个实例的距离和属性获取预测值。</p>
 <h4 id="1-三要素"><a href="#1-三要素：" class="headerlink" title="1 三要素："></a>1 三要素：</h4><p>距离的度量（常见的距离度量有欧式距离，马氏距离等）<br>k值的选择<br>分类决策规则 （多数表决规则）</p>
 <h4 id="2-k值的选择"><a href="#2-k值的选择" class="headerlink" title="2 k值的选择"></a>2 k值的选择</h4><p>k值越小,模型越复杂，容易过拟合；k值越大，模型越简单，如k=N</p>
 <blockquote>
@@ -380,7 +380,7 @@
 <p><img src="https://lh3.googleusercontent.com/-7RUNJ2dXRus/WOCLNnoL2pI/AAAAAAAAAZk/B8quAXwPYuI/I/k-d%252520tree.png" alt="k-d tree算法 - J_Outsider - 博客园-w1281">====</p>
 <h5 id="kd树进行knn查找"><a href="#KD树进行KNN查找" class="headerlink" title="KD树进行KNN查找"></a>KD树进行KNN查找</h5><p>通过KD树的搜索找到与搜索目标最近的点，这样KNN的搜索就可以被限制在空间的局部区域上了，可以大大增加效率。</p>
 <h5 id="kd树搜索的复杂度"><a href="#KD树搜索的复杂度" class="headerlink" title="KD树搜索的复杂度"></a>KD树搜索的复杂度</h5><p>当实例随机分布的时候，搜索的复杂度为log(N)，N为实例的个数<br>KD树更加适用于实例数量远大于空间维度的KNN搜索，如果实例的个数与空间维度差不多时，它的效率基于等于线性扫描。</p>
-<h3 id="dt决策树"><a href="#DT决策树" class="headerlink" title="DT决策树"></a><em><em>DT决策树</em></em></h3><blockquote>
+<h3 id="dt决策树"><a href="#DT决策树" class="headerlink" title="DT决策树"></a>DT决策树</h3><blockquote>
 <p><a href="http://www.csuldw.com/2015/05/08/2015-05-08-decision%20tree/" target="_blank" rel="external">机器学习算法-决策树理论</a></p>
 </blockquote>
 <h4 id="id3"><a href="#ID3" class="headerlink" title="ID3"></a>ID3</h4><blockquote>
@@ -411,7 +411,7 @@
 <p>Gini指数越大，不纯度越大，越不容易区分。假设A有v个不同的值出现在特征D中，它的二元划分有$2^v−2$种（除去自己和空集）。当考虑二元划分裂时，计算每个结果分区的不纯度加权和。比如A有两个值，则特征D被划分成D1和D2,这时Gini指数为：</p>
 <p>$$Gini_A(D) = \frac{D_1}{D} Gini(D_1) + \frac{D_2}{D} Gini(D_2)$$</p>
 <p>上面的式子表示的是不确定性的大小。对于每个属性，考虑每种可能的二元划分，对于离散值属性，选择该属性产生最小Gini指数的自己作为它的分裂信息。</p>
-<h3 id="adaboost元算法提高分类性能"><a href="#AdaBoost元算法提高分类性能" class="headerlink" title="AdaBoost元算法提高分类性能"></a><em><em>AdaBoost元算法提高分类性能</em></em></h3><blockquote>
+<h3 id="adaboost元算法提高分类性能"><a href="#AdaBoost元算法提高分类性能" class="headerlink" title="AdaBoost元算法提高分类性能"></a>AdaBoost元算法提高分类性能</h3><blockquote>
 <p>boosting是一种跟bagging很类似的技术。不论是在boosting还是bagging当中，<strong>所使用的多个分类器类型都是一致的</strong>。但是在前者当中，<strong>不同的分类器是通过串行训练而获得的，每个新分类器都根据已训练出的分类器的性能来进行训练</strong>。<strong>boosting是通过集中关注被已有分类器错分的那些数据来获得新的分类器</strong>。<br>由于boosting分类的结果是基于所有分类器的加权求和结果的，因此boosting与bagging不太一样。bagging中的分类器权重是相等的，而<strong>boosting中的分类器权重并不相等，每个权重代表的是对应分类器在上一轮迭代中的成功度</strong>。</p>
 </blockquote>
 <h4 id="集成算法ensemble-algorithms"><a href="#集成算法（Ensemble-algorithms）" class="headerlink" title="集成算法（Ensemble algorithms）"></a>集成算法（Ensemble algorithms）</h4><p>集成方法是由多个较弱的模型集成模型组，其中的模型可以单独进行训练，并且它们的预测能以某种方式结合起来去做出一个总体预测。</p>
@@ -458,9 +458,9 @@
 <p><strong>完整AdaBoost伪代码：</strong></p>
 </blockquote>
 <p><img src="https://lh3.googleusercontent.com/-dtKFDZYm478/WM30aSqSsDI/AAAAAAAAAXI/19PRY5aqtoo/I/14898912014231.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-YbcQpi7Kq9A/WM30a9jmfWI/AAAAAAAAAXM/YLucouKio8E/I/14898912419811.jpg" alt=""></p>
-<h3 id="gbdt"><a href="#GBDT" class="headerlink" title="GBDT"></a><em><em>GBDT</em></em></h3><p><a href="http://blog.csdn.net/w28971023/article/details/8240756" target="_blank" rel="external">GBDT（MART） 迭代决策树入门教程 | 简介 - w28971023的专栏 - 博客频道 - CSDN.NET</a></p>
+<h3 id="gbdt"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h3><p><a href="http://blog.csdn.net/w28971023/article/details/8240756" target="_blank" rel="external">GBDT（MART） 迭代决策树入门教程 | 简介 - w28971023的专栏 - 博客频道 - CSDN.NET</a></p>
 <p><img src="https://lh3.googleusercontent.com/-TE_b6LENoes/WOCLXUnfx-I/AAAAAAAAAZ0/UqtP0vygOHw/I/14900942558950.jpg" alt=""></p>
-<h3 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a><em><em>随机森林</em></em></h3><blockquote>
+<h3 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h3><blockquote>
 <p><strong>随机森林原理介绍：</strong></p>
 </blockquote>
 <p><img src="https://lh3.googleusercontent.com/-LkB4EfuBFJI/WOCLcVes8-I/AAAAAAAAAZ4/U9BqE7gO2vs/I/14900951336902.jpg" alt=""></p>
@@ -472,7 +472,7 @@
 <li>节点上的最小样本数、最小信息增益</li>
 </ol>
 <h4 id="泛化误差估计"><a href="#泛化误差估计" class="headerlink" title="泛化误差估计"></a>泛化误差估计</h4><p>使用oob（out-of-bag）进行泛化误差的估计，将各个树的未采样样本作为预测样本（大约有36.8%），使用已经建立好的森林对各个预测样本进行预测，预测完之后最后统计误分得个数占总预测样本的比率作为RF的oob误分率。</p>
-<h3 id="svm支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a><em><em>SVM支持向量机</em></em></h3><blockquote>
+<h3 id="svm支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a>SVM支持向量机</h3><blockquote>
 <p>参考：</p>
 <ol>
 <li><a href="evernote:///view/233243447/s10/93142c01-7748-43c7-9c55-357f875bb3d9/93142c01-7748-43c7-9c55-357f875bb3d9/" target="_blank" rel="external">最优化理论与KTT条件</a><br><a href="evernote:///view/233243447/s10/2de548d8-89d7-46f6-accd-9631c2d52f92/2de548d8-89d7-46f6-accd-9631c2d52f92/" target="_blank" rel="external">2. 支持向量机：Duality</a></li>
@@ -526,7 +526,7 @@
 <li>类别之间有联系（比如一首歌曲可能有影视原声，也可能包含人声，或者是舞曲），用k个LR更为合适</li>
 </ol>
 <h4 id="优缺点"><a href="#优缺点-3" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：实现简单；分类时计算量非常小，速度很快，存储资源低；<br>缺点：容易欠拟合，一般准确度不太高。只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；<br><a href="http://www.cnblogs.com/biyeymyhjob/archive/2012/07/18/2595410.html" target="_blank" rel="external">Logistic Regression–逻辑回归算法汇总</a><br><a href="http://blog.csdn.net/abcjennifer/article/details/7716281" target="_blank" rel="external">Stanford机器学习—第三讲. 逻辑回归和过拟合问题的解决 logistic Regression &amp; Regularization</a><br><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">Softmax回归</a></p>
-<h3 id="cart分类回归树"><a href="#Cart分类回归树" class="headerlink" title="Cart分类回归树"></a><em><em>Cart分类回归树</em></em></h3><p><img src="https://lh3.googleusercontent.com/-f7u4zKxY_1o/WM30f6tpViI/AAAAAAAAAXk/6vIBwhP9KXk/I/14882716973219.jpg" alt=""></p>
+<h3 id="cart分类回归树"><a href="#Cart分类回归树" class="headerlink" title="Cart分类回归树"></a>Cart分类回归树</h3><p><img src="https://lh3.googleusercontent.com/-f7u4zKxY_1o/WM30f6tpViI/AAAAAAAAAXk/6vIBwhP9KXk/I/14882716973219.jpg" alt=""></p>
 <blockquote>
 <p>线性回归包含了一些强大的方法，但这些方法创建的模型<strong>需要拟合所有的样本点</strong>（局部加权线性回归除外）。当<strong>数据拥有众多特征并且特征之间关系十分复杂时</strong>，构建全局模型的想法就显得太难了，也略显笨拙。<br>一种可行的方法是<strong>将数据集切分成多份易建模的数据，然后利用线性回归技术建模</strong>。如果首次切分后仍然难以拟合线性模型就继续切分。<strong>在这种切分方式下，树结构和回归法就相当有用</strong>。</p>
 </blockquote>
@@ -635,12 +635,12 @@
 </li>
 </ol>
 <h4 id="12-优缺点"><a href="#12-优缺点" class="headerlink" title="12 优缺点"></a>12 优缺点</h4><p>优点：<strong>计算量简单，可解释性强</strong>，比较适合<strong>处理有缺失属性值的样本</strong>，<strong>能够处理不相关的特征</strong>。<br>缺点：<strong>单颗决策树分类能力弱，并且对连续值变量难以处理</strong>；<strong>容易过拟合。</strong>（后续出现了随机森林，减小了过拟合现象）。</p>
-<h2 id="三-无监督学习"><a href="#三-无监督学习" class="headerlink" title="三 无监督学习"></a>三 无监督学习</h2><h3 id="利用k-均值聚类算法对未标注数据分组"><a href="#利用K-均值聚类算法对未标注数据分组" class="headerlink" title="利用K-均值聚类算法对未标注数据分组"></a><em><em>利用K-均值聚类算法对未标注数据分组</em></em></h3><h3 id="使用apriori算法进行关联分析"><a href="#使用Apriori算法进行关联分析" class="headerlink" title="使用Apriori算法进行关联分析"></a><a href="evernote:///view/233243447/s10/bb20d230-b917-4e15-b276-59497e5ae8a0/bb20d230-b917-4e15-b276-59497e5ae8a0/" target="_blank" rel="external"><em>使用Apriori算法进行关联分析</em></a></h3><h3 id="使用fp-growth算法来高效发现频繁项集"><a href="#使用FP-growth算法来高效发现频繁项集" class="headerlink" title="使用FP-growth算法来高效发现频繁项集"></a><a href="evernote:///view/233243447/s10/e2a26938-6bdb-412e-97df-b01a7a0abbf8/e2a26938-6bdb-412e-97df-b01a7a0abbf8/" target="_blank" rel="external"><em>使用FP-growth算法来高效发现频繁项集</em></a></h3><blockquote>
+<h2 id="三-无监督学习"><a href="#三-无监督学习" class="headerlink" title="三 无监督学习"></a>三 无监督学习</h2><h3 id="利用k-均值聚类算法对未标注数据分组"><a href="#利用K-均值聚类算法对未标注数据分组" class="headerlink" title="利用K-均值聚类算法对未标注数据分组"></a>利用K-均值聚类算法对未标注数据分组</h3><h3 id="使用apriori算法进行关联分析"><a href="#使用Apriori算法进行关联分析" class="headerlink" title="使用Apriori算法进行关联分析"></a><a href="evernote:///view/233243447/s10/bb20d230-b917-4e15-b276-59497e5ae8a0/bb20d230-b917-4e15-b276-59497e5ae8a0/" target="_blank" rel="external">使用Apriori算法进行关联分析</a></h3><h3 id="使用fp-growth算法来高效发现频繁项集"><a href="#使用FP-growth算法来高效发现频繁项集" class="headerlink" title="使用FP-growth算法来高效发现频繁项集"></a><a href="evernote:///view/233243447/s10/e2a26938-6bdb-412e-97df-b01a7a0abbf8/e2a26938-6bdb-412e-97df-b01a7a0abbf8/" target="_blank" rel="external">使用FP-growth算法来高效发现频繁项集</a></h3><blockquote>
 <p>参考机器学习实战第12章                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>
 </blockquote>
 <p><strong>优点：</strong>一般比Apriori要快<br><strong>缺点：</strong>实现比较困难，在某些数据集上性能会下降<br><strong>适用数据类型：</strong>标称类数据</p>
-<h3 id="em最大期望算法"><a href="#EM最大期望算法" class="headerlink" title="EM最大期望算法"></a><em><em>EM最大期望算法</em></em></h3><p>EM用于隐含变量的概率模型的极大似然估计，它一般分为两步：第一步求期望(E),第二步求极大(M)，<br>如果概率模型的变量都是观测变量，那么给定数据之后就可以直接使用极大似然法或者贝叶斯估计模型参数。<br>但是当模型含有隐含变量的时候就不能简单的用这些方法来估计，EM就是一种含有隐含变量的概率模型参数的极大似然估计法。<br>应用到的地方：混合高斯模型、混合朴素贝叶斯模型、因子分析模型</p>
-<h3 id="pagerank"><a href="#PageRank" class="headerlink" title="PageRank"></a><em><em>PageRank</em></em></h3><h2 id="四-其他工具"><a href="#四-其他工具" class="headerlink" title="四 其他工具"></a>四 其他工具</h2><h3 id="利用pca来简化数据"><a href="#利用PCA来简化数据" class="headerlink" title="利用PCA来简化数据"></a>利用PCA来简化数据</h3><h4 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h4><p><strong>矩阵分解的概念：</strong><br>原始数据集$X\in R^{mxn}$<br>可以分解成两个小的矩阵$U\in R^{mxk}$和$V\in ^{kxn}$使得$UV=X$<br>那么我们可以找到一个矩阵$\Sigma\in R^{kxk}$,使得$U\Sigma\Sigma^{-1}V=X$，即<strong>将V矩阵的每一列都单位化</strong>，此时$U\Sigma V=X$<br>然后，我们取$UV=\hat{X}\approx X$，就是X的近似了。<br>并且它与原始数据X的距离$\left| X-UV \right|^2_F $最小化。</p>
+<h3 id="em最大期望算法"><a href="#EM最大期望算法" class="headerlink" title="EM最大期望算法"></a>EM最大期望算法</h3><p>EM用于隐含变量的概率模型的极大似然估计，它一般分为两步：第一步求期望(E),第二步求极大(M)，<br>如果概率模型的变量都是观测变量，那么给定数据之后就可以直接使用极大似然法或者贝叶斯估计模型参数。<br>但是当模型含有隐含变量的时候就不能简单的用这些方法来估计，EM就是一种含有隐含变量的概率模型参数的极大似然估计法。<br>应用到的地方：混合高斯模型、混合朴素贝叶斯模型、因子分析模型</p>
+<h3 id="pagerank"><a href="#PageRank" class="headerlink" title="PageRank"></a>PageRank</h3><h2 id="四-其他工具"><a href="#四-其他工具" class="headerlink" title="四 其他工具"></a>四 其他工具</h2><h3 id="利用pca来简化数据"><a href="#利用PCA来简化数据" class="headerlink" title="利用PCA来简化数据"></a>利用PCA来简化数据</h3><h4 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h4><p><strong>矩阵分解的概念：</strong><br>原始数据集$X\in R^{mxn}$<br>可以分解成两个小的矩阵$U\in R^{mxk}$和$V\in ^{kxn}$使得$UV=X$<br>那么我们可以找到一个矩阵$\Sigma\in R^{kxk}$,使得$U\Sigma\Sigma^{-1}V=X$，即<strong>将V矩阵的每一列都单位化</strong>，此时$U\Sigma V=X$<br>然后，我们取$UV=\hat{X}\approx X$，就是X的近似了。<br>并且它与原始数据X的距离$\left| X-UV \right|^2_F $最小化。</p>
 <p><strong>矩阵分解的作用：</strong></p>
 <ul>
 <li>数据<strong>恢复</strong>：矩阵是稀疏的、低秩的，因此不同维度数据之间是有关联的。</li>
@@ -675,7 +675,7 @@
         <p><span>本文标题:</span><a href="/2017/04/02/机器学习和数据挖掘常用算法整理/">机器学习和数据挖掘常用算法整理</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Choris Steve</a></p>
         <p><span>发布时间:</span>2017-04-02, 13:18:59</p>
-        <p><span>最后更新:</span>2017-04-02, 13:27:07</p>
+        <p><span>最后更新:</span>2017-04-02, 14:56:57</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/04/02/机器学习和数据挖掘常用算法整理/" title="机器学习和数据挖掘常用算法整理">http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/</a>
             <span class="copy-path" data-clipboard-text="原文: http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/　　作者: Choris Steve" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
