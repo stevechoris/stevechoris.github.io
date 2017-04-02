@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-04-02T06:56:57.000Z</updated>
+  <updated>2017-04-02T06:59:22.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,17 +20,13 @@
     <link href="http://stevechoris.github.io/2017/04/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86/"/>
     <id>http://stevechoris.github.io/2017/04/02/机器学习和数据挖掘常用算法整理/</id>
     <published>2017-04-02T05:18:59.000Z</published>
-    <updated>2017-04-02T06:56:57.000Z</updated>
+    <updated>2017-04-02T06:59:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <blockquote>
 <p>本文目录主要参考《机器学习实战》(Peter Harrington著) 一书。</p>
 </blockquote>
-<ul>
-<li>[ ] 计算广告学</li>
-<li>[ ] SVD、PCA、LDA</li>
-</ul>
-<h2 id="一-分类"><a href="#一-分类" class="headerlink" title="一 分类"></a>一 分类</h2><h3 id="naive-bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h3><p>$$P(A∩B)=P(A)<em>P(B|A)=P(B)</em>P(A|B) =&gt; $$<br>$$P(A|B)=P(B|A)<em>P(A)/P(B)$$<br>对于给出的待分类项，求解在此项出现的条件下各个目标类别出现的条件概率，哪个最大，就认为此待分类项属于哪个类别。<br>假设样本$x=(a_1,a_2,a_3,…a_n)$(特征独立)，分类目标$Y={y_1,y_2,y_3,y_4..y_n}$，通过$max(P(y_1|x),P(y_2|x),P(y_3|x)..P(y_n|x))$分类。<br>而根据贝叶斯公式：<br>$$P(y_i|x)=p(x|y_i)</em>P(y_i)/P(x) =&gt; max(P(x|y_i)<em>p(y_i))$$<br>$$P(x|y_i)</em>p(y_i)=p(y_i)*\prod{P(ai|y_i)}$$</p>
+<h2 id="一-分类"><a href="#一-分类" class="headerlink" title="一 分类"></a>一 分类</h2><h3 id="naive-bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h3><p>$$ P(A∩B)=P(A)<em>P(B|A)=P(B)</em>P(A|B) =&gt; $$<br>$$ P(A|B)=P(B|A)<em>P(A)/P(B)$$<br>对于给出的待分类项，求解在此项出现的条件下各个目标类别出现的条件概率，哪个最大，就认为此待分类项属于哪个类别。<br>假设样本$x=(a_1,a_2,a_3,…a_n)$(特征独立)，分类目标$Y={y_1,y_2,y_3,y_4..y_n}$，通过$max(P(y_1|x),P(y_2|x),P(y_3|x)..P(y_n|x))$分类。<br>而根据贝叶斯公式：<br>$$P(y_i|x)=p(x|y_i)</em>P(y_i)/P(x) =&gt; max(P(x|y_i)<em>p(y_i))$$<br>$$P(x|y_i)</em>p(y_i)=p(y_i)*\prod{P(ai|y_i)}$$</p>
 <h4 id="属性特征"><a href="#属性特征" class="headerlink" title="属性特征"></a>属性特征</h4><p>特征为离散值时直接统计即可（表示统计概率）<br>特征为连续值的时候假定特征符合高斯分布:g(x,n,u) p(ak|y_i)=g(xk,ni,ui)</p>
 <h4 id="laplace校准拉普拉斯校验"><a href="#Laplace校准-拉普拉斯校验" class="headerlink" title="Laplace校准(拉普拉斯校验)"></a>Laplace校准(拉普拉斯校验)</h4><p>当某个类别下某个特征划分没有出现时，会有P(a|y)=0，就是导致分类器质量降低，所以此时引入Laplace校验，就是<strong>对每类别下所有划分的计数加1</strong>。</p>
 <h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：模型所需估计的参数很少，具有<strong>稳定的计算效率</strong>，对<strong>小规模的数据表现很好</strong>。<strong>对缺失数据不敏感</strong>，<strong>适合多分类任务</strong>，<strong>适合增量式训练</strong>。<br>缺点：NBC前提是<strong>假设属性之间相互独立</strong>，但在实际应用中往往不满足。<br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/17/naive-bayesian-classifier.html" target="_blank" rel="external">算法杂货铺——分类算法之朴素贝叶斯分类(Naive Bayesian classification)</a></p>
