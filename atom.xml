@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.yingshu.ink/"/>
+  <link href="http://stevechoris.github.io/"/>
   <updated>2016-05-25T13:49:35.000Z</updated>
-  <id>http://www.yingshu.ink/</id>
+  <id>http://stevechoris.github.io/</id>
   
   <author>
     <name>Choris Steve</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.yingshu.ink/2017/05/13/hello-world/"/>
-    <id>http://www.yingshu.ink/2017/05/13/hello-world/</id>
+    <link href="http://stevechoris.github.io/2017/05/13/hello-world/"/>
+    <id>http://stevechoris.github.io/2017/05/13/hello-world/</id>
     <published>2017-05-13T07:12:48.000Z</published>
     <updated>2016-05-25T13:49:35.000Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理</title>
-    <link href="http://www.yingshu.ink/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
-    <id>http://www.yingshu.ink/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/</id>
+    <link href="http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
+    <id>http://stevechoris.github.io/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/</id>
     <published>2017-02-21T06:40:42.000Z</published>
     <updated>2017-04-05T12:27:16.000Z</updated>
     
@@ -170,21 +170,21 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://www.yingshu.ink/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://stevechoris.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Machine Learning" scheme="http://www.yingshu.ink/tags/Machine-Learning/"/>
+      <category term="Machine Learning" scheme="http://stevechoris.github.io/tags/Machine-Learning/"/>
     
-      <category term="TensorFlow" scheme="http://www.yingshu.ink/tags/TensorFlow/"/>
+      <category term="TensorFlow" scheme="http://stevechoris.github.io/tags/TensorFlow/"/>
     
-      <category term="机器学习" scheme="http://www.yingshu.ink/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://stevechoris.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Python3.5 Anaconda3 Caffe深度学习框架搭建</title>
-    <link href="http://www.yingshu.ink/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
-    <id>http://www.yingshu.ink/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</id>
+    <link href="http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
+    <id>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/</id>
     <published>2017-01-12T03:59:22.000Z</published>
     <updated>2017-03-31T14:46:55.000Z</updated>
     
@@ -262,21 +262,21 @@
     
     </summary>
     
-      <category term="开发环境和操作系统" scheme="http://www.yingshu.ink/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="开发环境和操作系统" scheme="http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Anaconda" scheme="http://www.yingshu.ink/tags/Anaconda/"/>
+      <category term="Anaconda" scheme="http://stevechoris.github.io/tags/Anaconda/"/>
     
-      <category term="Caffe" scheme="http://www.yingshu.ink/tags/Caffe/"/>
+      <category term="Caffe" scheme="http://stevechoris.github.io/tags/Caffe/"/>
     
-      <category term="Python" scheme="http://www.yingshu.ink/tags/Python/"/>
+      <category term="Python" scheme="http://stevechoris.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Linux常用命令整理</title>
-    <link href="http://www.yingshu.ink/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
-    <id>http://www.yingshu.ink/2016/12/28/Linux常用命令整理/</id>
+    <link href="http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"/>
+    <id>http://stevechoris.github.io/2016/12/28/Linux常用命令整理/</id>
     <published>2016-12-28T07:52:12.000Z</published>
     <updated>2017-03-31T14:47:22.000Z</updated>
     
@@ -302,17 +302,17 @@
     
     </summary>
     
-      <category term="Linux命令" scheme="http://www.yingshu.ink/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+      <category term="Linux命令" scheme="http://stevechoris.github.io/categories/Linux%E5%91%BD%E4%BB%A4/"/>
     
     
-      <category term="Linux命令" scheme="http://www.yingshu.ink/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+      <category term="Linux命令" scheme="http://stevechoris.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>[经典面试题] 最长回文子串</title>
-    <link href="http://www.yingshu.ink/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
-    <id>http://www.yingshu.ink/2016/12/21/经典面试题-最长回文子串/</id>
+    <link href="http://stevechoris.github.io/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
+    <id>http://stevechoris.github.io/2016/12/21/经典面试题-最长回文子串/</id>
     <published>2016-12-21T08:21:52.000Z</published>
     <updated>2017-03-31T09:09:30.000Z</updated>
     
@@ -382,19 +382,19 @@
     
     </summary>
     
-      <category term="算法与数据结构" scheme="http://www.yingshu.ink/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="http://stevechoris.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="算法与数据结构" scheme="http://www.yingshu.ink/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="http://stevechoris.github.io/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="面试" scheme="http://www.yingshu.ink/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://stevechoris.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>[LeetCode] Template</title>
-    <link href="http://www.yingshu.ink/2016/12/17/LeetCode-Template/"/>
-    <id>http://www.yingshu.ink/2016/12/17/LeetCode-Template/</id>
+    <link href="http://stevechoris.github.io/2016/12/17/LeetCode-Template/"/>
+    <id>http://stevechoris.github.io/2016/12/17/LeetCode-Template/</id>
     <published>2016-12-17T03:10:08.000Z</published>
     <updated>2017-03-31T09:05:38.000Z</updated>
     
@@ -424,19 +424,19 @@
     
     </summary>
     
-      <category term="模板" scheme="http://www.yingshu.ink/categories/%E6%A8%A1%E6%9D%BF/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/%E6%A8%A1%E6%9D%BF/"/>
     
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
-      <category term="模板" scheme="http://www.yingshu.ink/tags/%E6%A8%A1%E6%9D%BF/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/tags/%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
   <entry>
     <title>用Anaconda安装配置Jupyter Notebook和TensorFlow开发环境</title>
-    <link href="http://www.yingshu.ink/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.yingshu.ink/2016/09/15/用Anaconda安装配置Jupyter-Notebook和TensorFlow开发环境/</id>
+    <link href="http://stevechoris.github.io/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    <id>http://stevechoris.github.io/2016/09/15/用Anaconda安装配置Jupyter-Notebook和TensorFlow开发环境/</id>
     <published>2016-09-15T11:02:18.000Z</published>
     <updated>2017-03-31T14:32:31.000Z</updated>
     
@@ -468,23 +468,23 @@
     
     </summary>
     
-      <category term="开发环境和操作系统" scheme="http://www.yingshu.ink/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="开发环境和操作系统" scheme="http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Anaconda" scheme="http://www.yingshu.ink/tags/Anaconda/"/>
+      <category term="Anaconda" scheme="http://stevechoris.github.io/tags/Anaconda/"/>
     
-      <category term="Conda" scheme="http://www.yingshu.ink/tags/Conda/"/>
+      <category term="Conda" scheme="http://stevechoris.github.io/tags/Conda/"/>
     
-      <category term="Python" scheme="http://www.yingshu.ink/tags/Python/"/>
+      <category term="Python" scheme="http://stevechoris.github.io/tags/Python/"/>
     
-      <category term="TensorFlow" scheme="http://www.yingshu.ink/tags/TensorFlow/"/>
+      <category term="TensorFlow" scheme="http://stevechoris.github.io/tags/TensorFlow/"/>
     
   </entry>
   
   <entry>
     <title>[LeetCode] 32. Longest Valid Parentheses</title>
-    <link href="http://www.yingshu.ink/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/"/>
-    <id>http://www.yingshu.ink/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/</id>
+    <link href="http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/"/>
+    <id>http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/</id>
     <published>2016-09-12T14:08:55.000Z</published>
     <updated>2017-03-31T09:05:49.000Z</updated>
     
@@ -508,23 +508,23 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="Dynamic Programming" scheme="http://www.yingshu.ink/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
-      <category term="Stack" scheme="http://www.yingshu.ink/tags/Stack/"/>
+      <category term="Stack" scheme="http://stevechoris.github.io/tags/Stack/"/>
     
-      <category term="String" scheme="http://www.yingshu.ink/tags/String/"/>
+      <category term="String" scheme="http://stevechoris.github.io/tags/String/"/>
     
   </entry>
   
   <entry>
     <title>[LeetCode] 312. Burst Balloons</title>
-    <link href="http://www.yingshu.ink/2016/09/11/LeetCode-312-Burst-Balloons/"/>
-    <id>http://www.yingshu.ink/2016/09/11/LeetCode-312-Burst-Balloons/</id>
+    <link href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/"/>
+    <id>http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/</id>
     <published>2016-09-11T14:16:07.000Z</published>
     <updated>2017-03-31T09:06:02.000Z</updated>
     
@@ -549,19 +549,19 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="Dynamic Programming" scheme="http://www.yingshu.ink/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>[LeetCode] 354. Russian Doll Envelopes</title>
-    <link href="http://www.yingshu.ink/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"/>
-    <id>http://www.yingshu.ink/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</id>
+    <link href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/"/>
+    <id>http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</id>
     <published>2016-09-11T11:54:05.000Z</published>
     <updated>2017-03-31T09:05:56.000Z</updated>
     
@@ -583,19 +583,19 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="Dynamic Programming" scheme="http://www.yingshu.ink/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>[LeetCode] 174. Dungeon Game</title>
-    <link href="http://www.yingshu.ink/2016/09/11/LeetCode-174-Dungeon-Game/"/>
-    <id>http://www.yingshu.ink/2016/09/11/LeetCode-174-Dungeon-Game/</id>
+    <link href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/"/>
+    <id>http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/</id>
     <published>2016-09-11T10:00:53.000Z</published>
     <updated>2017-03-31T09:05:53.000Z</updated>
     
@@ -624,23 +624,23 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="Dynamic Programming" scheme="http://www.yingshu.ink/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
-      <category term="Stack" scheme="http://www.yingshu.ink/tags/Stack/"/>
+      <category term="Stack" scheme="http://stevechoris.github.io/tags/Stack/"/>
     
-      <category term="String" scheme="http://www.yingshu.ink/tags/String/"/>
+      <category term="String" scheme="http://stevechoris.github.io/tags/String/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 解题报告</title>
-    <link href="http://www.yingshu.ink/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    <id>http://www.yingshu.ink/2016/09/10/LeetCode-解题报告/</id>
+    <link href="http://stevechoris.github.io/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    <id>http://stevechoris.github.io/2016/09/10/LeetCode-解题报告/</id>
     <published>2016-09-10T15:20:55.000Z</published>
     <updated>2017-03-31T09:06:13.000Z</updated>
     
@@ -657,32 +657,32 @@
 <tbody>
 <tr>
 <td>32</td>
-<td><a href="http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/" target="_blank" rel="external">Longest Valid Parentheses</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a> <a href="http://stevechoris.github.io/all-tags/#Stack-list" target="_blank" rel="external">Stack</a> <a href="http://stevechoris.github.io/all-tags/#String-list" target="_blank" rel="external">String</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/">Longest Valid Parentheses</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a> <a href="http://stevechoris.github.io/all-tags/#Stack-list">Stack</a> <a href="http://stevechoris.github.io/all-tags/#String-list">String</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>174</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/" target="_blank" rel="external">Dungeon Game</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">Dungeon Game</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>312</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/" target="_blank" rel="external">Burst Balloons</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">Burst Balloons</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>354</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/" target="_blank" rel="external">Russian Doll Envelopes</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/">Russian Doll Envelopes</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>377</td>
-<td><a href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/" target="_blank" rel="external">Combination Sum</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/">Combination Sum</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
 <td>Medium</td>
 </tr>
 </tbody>
@@ -695,17 +695,17 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>天使的模样</title>
-    <link href="http://www.yingshu.ink/2016/09/10/Post-with-cover-image/"/>
-    <id>http://www.yingshu.ink/2016/09/10/Post-with-cover-image/</id>
+    <link href="http://stevechoris.github.io/2016/09/10/Post-with-cover-image/"/>
+    <id>http://stevechoris.github.io/2016/09/10/Post-with-cover-image/</id>
     <published>2016-09-10T13:29:21.000Z</published>
     <updated>2017-03-31T09:06:10.000Z</updated>
     
@@ -726,15 +726,15 @@
     
     </summary>
     
-      <category term="模板" scheme="http://www.yingshu.ink/categories/%E6%A8%A1%E6%9D%BF/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/%E6%A8%A1%E6%9D%BF/"/>
     
     
   </entry>
   
   <entry>
     <title>[LeetCode] 377. Combination Sum</title>
-    <link href="http://www.yingshu.ink/2016/09/10/LeetCode-377-Combination-Sum/"/>
-    <id>http://www.yingshu.ink/2016/09/10/LeetCode-377-Combination-Sum/</id>
+    <link href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/"/>
+    <id>http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/</id>
     <published>2016-09-10T08:33:28.000Z</published>
     <updated>2017-03-31T09:06:06.000Z</updated>
     
@@ -765,19 +765,19 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/categories/LeetCode/"/>
     
     
-      <category term="Dynamic Programming" scheme="http://www.yingshu.ink/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://stevechoris.github.io/tags/Dynamic-Programming/"/>
     
-      <category term="LeetCode" scheme="http://www.yingshu.ink/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://stevechoris.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>图片博客模板</title>
-    <link href="http://www.yingshu.ink/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
-    <id>http://www.yingshu.ink/2016/06/09/图片博客模板/</id>
+    <link href="http://stevechoris.github.io/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://stevechoris.github.io/2016/06/09/图片博客模板/</id>
     <published>2016-06-09T05:33:36.000Z</published>
     <updated>2016-12-22T03:45:23.000Z</updated>
     
@@ -790,19 +790,19 @@
     
     </summary>
     
-      <category term="模板" scheme="http://www.yingshu.ink/categories/%E6%A8%A1%E6%9D%BF/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/%E6%A8%A1%E6%9D%BF/"/>
     
     
-      <category term="markdown" scheme="http://www.yingshu.ink/tags/markdown/"/>
+      <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
     
-      <category term="中文" scheme="http://www.yingshu.ink/tags/%E4%B8%AD%E6%96%87/"/>
+      <category term="中文" scheme="http://stevechoris.github.io/tags/%E4%B8%AD%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>Jupyter Notebook 安装扩展插件</title>
-    <link href="http://www.yingshu.ink/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
-    <id>http://www.yingshu.ink/2016/05/29/Jupyter-Notebook-安装扩展插件/</id>
+    <link href="http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    <id>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-安装扩展插件/</id>
     <published>2016-05-29T07:54:37.000Z</published>
     <updated>2017-03-31T09:06:22.000Z</updated>
     
@@ -826,17 +826,17 @@
     
     </summary>
     
-      <category term="开发环境配置" scheme="http://www.yingshu.ink/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="开发环境配置" scheme="http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="Python" scheme="http://www.yingshu.ink/tags/Python/"/>
+      <category term="Python" scheme="http://stevechoris.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>文字博客模板</title>
-    <link href="http://www.yingshu.ink/2016/05/25/%E6%96%87%E5%AD%97%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
-    <id>http://www.yingshu.ink/2016/05/25/文字博客模板/</id>
+    <link href="http://stevechoris.github.io/2016/05/25/%E6%96%87%E5%AD%97%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://stevechoris.github.io/2016/05/25/文字博客模板/</id>
     <published>2016-05-25T15:26:46.000Z</published>
     <updated>2017-03-31T08:54:10.000Z</updated>
     
@@ -850,12 +850,12 @@
     
     </summary>
     
-      <category term="模板" scheme="http://www.yingshu.ink/categories/%E6%A8%A1%E6%9D%BF/"/>
+      <category term="模板" scheme="http://stevechoris.github.io/categories/%E6%A8%A1%E6%9D%BF/"/>
     
     
-      <category term="markdown" scheme="http://www.yingshu.ink/tags/markdown/"/>
+      <category term="markdown" scheme="http://stevechoris.github.io/tags/markdown/"/>
     
-      <category term="中文" scheme="http://www.yingshu.ink/tags/%E4%B8%AD%E6%96%87/"/>
+      <category term="中文" scheme="http://stevechoris.github.io/tags/%E4%B8%AD%E6%96%87/"/>
     
   </entry>
   
