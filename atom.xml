@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Choris Steve&#39;s Blog</title>
-  
+  <title>影书时光</title>
+  <subtitle>窗竹影摇书案上,野泉声入砚池中</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
@@ -9,7 +9,7 @@
   <id>http://stevechoris.github.io/</id>
   
   <author>
-    <name>Choris Steve</name>
+    <name>影书</name>
     
   </author>
   
