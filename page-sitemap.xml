@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://stevechoris.github.io</loc>
+        <loc>http://www.yingshu.ink</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/about/</loc>
+        <loc>http://www.yingshu.ink/about/</loc>
         <lastmod>2017-03-31T07:08:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/categories/</loc>
+        <loc>http://www.yingshu.ink/categories/</loc>
         <lastmod>2017-03-30T13:54:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/tags/</loc>
+        <loc>http://www.yingshu.ink/tags/</loc>
         <lastmod>2017-03-30T13:49:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/all-archives/</loc>
+        <loc>http://www.yingshu.ink/all-archives/</loc>
         <lastmod>2016-05-25T14:40:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/all-tags/</loc>
+        <loc>http://www.yingshu.ink/all-tags/</loc>
         <lastmod>2016-05-25T14:39:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://stevechoris.github.io/all-categories/</loc>
+        <loc>http://www.yingshu.ink/all-categories/</loc>
         <lastmod>2016-05-25T14:37:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

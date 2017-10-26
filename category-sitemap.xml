@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://stevechoris.github.io</loc>
+        <loc>http://www.yingshu.ink</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/%E6%A8%A1%E6%9D%BF/</loc>
+        <loc>http://www.yingshu.ink/categories/%E6%A8%A1%E6%9D%BF/</loc>
         <lastmod>2017-03-31T09:06:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/LeetCode/</loc>
+        <loc>http://www.yingshu.ink/categories/LeetCode/</loc>
         <lastmod>2017-03-31T09:06:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+        <loc>http://www.yingshu.ink/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
         <lastmod>2017-03-31T09:06:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+        <loc>http://www.yingshu.ink/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
         <lastmod>2017-03-31T09:09:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+        <loc>http://www.yingshu.ink/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
         <lastmod>2017-03-31T14:46:55.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/Linux%E5%91%BD%E4%BB%A4/</loc>
+        <loc>http://www.yingshu.ink/categories/Linux%E5%91%BD%E4%BB%A4/</loc>
         <lastmod>2017-03-31T14:47:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://stevechoris.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+        <loc>http://www.yingshu.ink/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
         <lastmod>2017-04-05T12:27:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
