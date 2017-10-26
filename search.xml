@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://stevechoris.github.io/2017/05/13/hello-world/</url>
+      <url>http://www.yingshu.ink/2017/05/13/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="quick-start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -22,7 +22,7 @@
     
     <entry>
       <title><![CDATA[如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理]]></title>
-      <url>http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</url>
+      <url>http://www.yingshu.ink/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><blockquote>
 <p>参考Deep Learning Tutorial</p>
@@ -159,7 +159,7 @@
     
     <entry>
       <title><![CDATA[Python3.5 Anaconda3 Caffe深度学习框架搭建]]></title>
-      <url>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/</url>
+      <url>http://www.yingshu.ink/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h2><blockquote>
 <p>&emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。<br>&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。<br>&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：</p>
@@ -249,7 +249,7 @@
     
     <entry>
       <title><![CDATA[Linux常用命令整理]]></title>
-      <url>http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</url>
+      <url>http://www.yingshu.ink/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><h3 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h3><h4 id="命令格式df-h"><a href="#命令格式：df-h" class="headerlink" title="命令格式：df -h"></a>命令格式：<code>df -h</code></h4><blockquote>
 <p>以磁盘分区为单位查看文件系统</p>
@@ -283,7 +283,7 @@
     
     <entry>
       <title><![CDATA[[经典面试题] 最长回文子串]]></title>
-      <url>http://stevechoris.github.io/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
+      <url>http://www.yingshu.ink/2016/12/21/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>本文主要参考<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1482308889&amp;ver=1&amp;signature=WTl9NE2n3M403BrLr2Xeh15hVeUNK1IGyrVBn7CDuy2Be1R46UBFS8xEZrf4-Z1GiWnRM6y4jCLhjXPaNUDUgWEkKV0jKFeG1xsC2co-k0RLqpqlfycUK4UV*pkIOQNSiDo4xEkL1FrlQnhslAFGVA==" target="_blank" rel="external">微信公众号(待字闺中)推文”【经典面试题】最长回文”
 </a>整理而成，在此特别感谢。</p>
@@ -347,7 +347,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] Template]]></title>
-      <url>http://stevechoris.github.io/2016/12/17/LeetCode-Template/</url>
+      <url>http://www.yingshu.ink/2016/12/17/LeetCode-Template/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <p>title: ‘[LeetCode] 174. Dungeon Game’<br>date: 2016-09-11 18:00:53<br>categories: LeetCode</p>
 <h2 id="tags-leetcode-dynamic-programming-string-stack"><a href="#tags-LeetCode-Dynamic-Programming-String-Stack" class="headerlink" title="tags: [LeetCode, Dynamic Programming, String, Stack]"></a>tags: [LeetCode, Dynamic Programming, String, Stack]</h2><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/dungeon-game/" target="_blank" rel="external">174. Dungeon Game</a><br>The demons had captured the princess (<em>P</em>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<em>K</em>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
@@ -387,7 +387,7 @@
     
     <entry>
       <title><![CDATA[用Anaconda安装配置Jupyter Notebook和TensorFlow开发环境]]></title>
-      <url>http://stevechoris.github.io/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+      <url>http://www.yingshu.ink/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="anaconda安装"><a href="#Anaconda安装" class="headerlink" title="Anaconda安装"></a>Anaconda安装</h1><p>在<a href="https://www.continuum.io/downloads" target="_blank" rel="external">Anaconda官网</a>下载并按照指令安装。</p>
 <blockquote>
@@ -433,7 +433,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] 32. Longest Valid Parentheses]]></title>
-      <url>http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/</url>
+      <url>http://www.yingshu.ink/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank" rel="external">32. Longest Valid Parentheses</a></p>
 <p>Given a string containing just the characters ‘(‘ and ‘)’, find the length of the longest valid (well-formed) parentheses substring.</p>
@@ -471,7 +471,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] 312. Burst Balloons]]></title>
-      <url>http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/</url>
+      <url>http://www.yingshu.ink/2016/09/11/LeetCode-312-Burst-Balloons/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="external">312. Burst Balloons</a><br>Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] <em> nums[i] </em> nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.</p>
 <p>Find the maximum coins you can collect by bursting the balloons wisely.</p>
@@ -506,7 +506,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] 354. Russian Doll Envelopes]]></title>
-      <url>http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</url>
+      <url>http://www.yingshu.ink/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/russian-doll-envelopes/" target="_blank" rel="external">354. Russian Doll Envelopes</a></p>
 <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.</p>
@@ -538,7 +538,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] 174. Dungeon Game]]></title>
-      <url>http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/</url>
+      <url>http://www.yingshu.ink/2016/09/11/LeetCode-174-Dungeon-Game/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/dungeon-game/" target="_blank" rel="external">174. Dungeon Game</a><br>The demons had captured the princess (<em>P</em>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<em>K</em>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
 <p>The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
@@ -581,7 +581,7 @@
     
     <entry>
       <title><![CDATA[LeetCode 解题报告]]></title>
-      <url>http://stevechoris.github.io/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/</url>
+      <url>http://www.yingshu.ink/2016/09/10/LeetCode-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <table>
 <thead>
@@ -595,32 +595,32 @@
 <tbody>
 <tr>
 <td>32</td>
-<td><a href="http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/">Longest Valid Parentheses</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a> <a href="http://stevechoris.github.io/all-tags/#Stack-list">Stack</a> <a href="http://stevechoris.github.io/all-tags/#String-list">String</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/12/LeetCode-32-Longest-Valid-Parentheses/" target="_blank" rel="external">Longest Valid Parentheses</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a> <a href="http://stevechoris.github.io/all-tags/#Stack-list" target="_blank" rel="external">Stack</a> <a href="http://stevechoris.github.io/all-tags/#String-list" target="_blank" rel="external">String</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>174</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/">Dungeon Game</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-174-Dungeon-Game/" target="_blank" rel="external">Dungeon Game</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>312</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/">Burst Balloons</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-312-Burst-Balloons/" target="_blank" rel="external">Burst Balloons</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>354</td>
-<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/">Russian Doll Envelopes</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/11/LeetCode-354-Russian-Doll-Envelopes/" target="_blank" rel="external">Russian Doll Envelopes</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
 <td>Hard</td>
 </tr>
 <tr>
 <td>377</td>
-<td><a href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/">Combination Sum</a></td>
-<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/">Dynamic Programming</a></td>
+<td><a href="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/" target="_blank" rel="external">Combination Sum</a></td>
+<td><a href="http://stevechoris.github.io/tags/Dynamic-Programming/" target="_blank" rel="external">Dynamic Programming</a></td>
 <td>Medium</td>
 </tr>
 </tbody>
@@ -644,7 +644,7 @@
     
     <entry>
       <title><![CDATA[天使的模样]]></title>
-      <url>http://stevechoris.github.io/2016/09/10/Post-with-cover-image/</url>
+      <url>http://www.yingshu.ink/2016/09/10/Post-with-cover-image/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <p>女孩的名叫海莉·福特，今年九岁，来自华盛顿州布雷默顿，与她小小的年龄不相称的是，她正举着钉枪，怀着大大的心意，在给流浪者建造庇护所。海莉说：“我觉得每个人都应该有一个住的地方，还有人无家可归，我得给他们建造房子。”目前，在妈妈和祖父的帮助下，海莉在社区里给无家可归的人们建造第一座木房子，希望能靠自己的努力来改变流浪汉们的生活。<br><img src="https://lh3.googleusercontent.com/Zp-gyIPPyW3_di9qyWkpmuzZLdo9_YUA_oh5aRVfbo4RCee-UbamG1Zul0P5b5cG5-XWFoIoK28jSTw5P0lMx2XPql28_nkAnY_Z900j9_tqdCwAMuJdebhxH0czigPyQtF5W2B3IjVHzkZfUak_QhyG0CV1NQseOIcx67l0LlSXM4NJDI91V2NwH3nx1qw9TmxavquFNVrHgHSZDu2-Q40-3HVBihqXB0BJ7ZVPnA88rqY9wlhy4AeySCXk9wOmEdSaah2DXcapBqM0QITdFt6EqqxATk_QFH7p0vW4oUYapnHCBtjKJTLJAfptKgeCMsa7-LRavFTfaCiBRHlesBznzic-_x7QP9f38h7TBGJtEYbJ68T019NEA59od-hVxBCpLKBthEWSjTDL9R-nwkFLCqgVPtomK1HzcP46h5jcSWjmd5-SEnCT0BtnPArmOrK38vSa3bkl_PTwII-KZcKkPXJgBJ76ppBraBrTJJbdVTpMqcIP_8Abdic5sowMz4DN2CuMoppxlTOc9Y2KSFdOX29bHaVPQQOnMdmm7XIexDno1Rwj6rcoVNxr2wk3aah5bjzRdervHQNK6QN4qMG5sMbLKhCZNDhFgfjsgbFxKMBR=w520-h356-no" alt="天使"></p>
 <p>海莉为流浪汉们做公益已经有四年的时间了。那还是四年前，她她与妈妈米兰达逛完杂货铺出来，遇到了在当地丢失工作的流浪汉爱德华，他坐在路边，目光呆滞，已经很多天没吃饱饭了，饿得奄奄一息，五岁的海莉动了恻隐之心，跟妈妈商量着给爱德华买了个三明治。爱德华高兴得当场落泪，多年的流浪生涯让他看透了人情冷暖，世态的炎凉，而这个小女孩给了他温暖的一天。</p>
@@ -667,7 +667,7 @@
     
     <entry>
       <title><![CDATA[[LeetCode] 377. Combination Sum]]></title>
-      <url>http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/</url>
+      <url>http://www.yingshu.ink/2016/09/10/LeetCode-377-Combination-Sum/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/combination-sum-iv/" target="_blank" rel="external">377. Combination Sum IV</a><br>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>
 <h2 id="example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><blockquote>
@@ -708,7 +708,7 @@
     
     <entry>
       <title><![CDATA[图片博客模板]]></title>
-      <url>http://stevechoris.github.io/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/</url>
+      <url>http://www.yingshu.ink/2016/06/09/%E5%9B%BE%E7%89%87%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/</url>
       <content type="html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/-Q-mL0R4-5xE/V9PJW_JCQYI/AAAAAAAAAL8/elGdM3Wd92I/I/12577849%25252C2560%25252C1600.jpg" alt="12577849,2560,1600"></p>
 ]]></content>
       
@@ -731,7 +731,7 @@
     
     <entry>
       <title><![CDATA[Jupyter Notebook 安装扩展插件]]></title>
-      <url>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/</url>
+      <url>http://www.yingshu.ink/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/</url>
       <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="更新pip"><a href="#更新pip" class="headerlink" title="更新pip"></a>更新pip</h2><blockquote>
 <p>最简单的安装方法是使用pip，首先将pip更新到最新版<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
@@ -763,7 +763,7 @@
     
     <entry>
       <title><![CDATA[文字博客模板]]></title>
-      <url>http://stevechoris.github.io/2016/05/25/%E6%96%87%E5%AD%97%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/</url>
+      <url>http://www.yingshu.ink/2016/05/25/%E6%96%87%E5%AD%97%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF/</url>
       <content type="html"><![CDATA[<p>This is a test template</p>
 ]]></content>
       
