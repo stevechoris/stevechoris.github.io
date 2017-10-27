@@ -17,13 +17,13 @@
 
 <meta name="description" content="&amp;emsp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[LeetCode] 377. Combination Sum">
-<meta property="og:url" content="http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/index.html">
+<meta property="og:title" content="tensorflow参数共享">
+<meta property="og:url" content="http://stevechoris.github.io/2017/10/27/tensorflow参数共享/index.html">
 <meta property="og:site_name" content="影书时光">
 <meta property="og:description" content="&amp;emsp;">
-<meta property="og:updated_time" content="2017-03-31T09:06:06.000Z">
+<meta property="og:updated_time" content="2017-10-27T07:58:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[LeetCode] 377. Combination Sum">
+<meta name="twitter:title" content="tensorflow参数共享">
 <meta name="twitter:description" content="&amp;emsp;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -54,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>[LeetCode] 377. Combination Sum | 影书时光</title>
+<title>tensorflow参数共享 | 影书时光</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +269,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode-377-Combination-Sum" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-tensorflow参数共享" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/10/LeetCode-377-Combination-Sum/" class="article-date">
-      <time datetime="2016-09-10T08:33:28.000Z" itemprop="datePublished">2016-09-10</time>
+      <a href="/2017/10/27/tensorflow参数共享/" class="article-date">
+      <time datetime="2017-10-27T07:54:23.000Z" itemprop="datePublished">2017-10-27</time>
 </a>
 
 
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      [LeetCode] 377. Combination Sum
+      tensorflow参数共享
     </h1>
   
 
@@ -297,13 +297,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a/">a</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/b/">b</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -314,24 +314,7 @@
       
           
         <p>&emsp;<a id="more"></a></p>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h1><p><a href="https://leetcode.com/problems/combination-sum-iv/" target="_blank" rel="external">377. Combination Sum IV</a><br>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>
-<h2 id="example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h2><blockquote>
-<p>nums = [1, 2, 3]<br>target = 4</p>
-<p>The possible combination ways are:<br>(1, 1, 1, 1)<br>(1, 1, 2)<br>(1, 2, 1)<br>(1, 3)<br>(2, 1, 1)<br>(2, 2)<br>(3, 1)</p>
-<p>Note that different sequences are counted as different combinations.</p>
-<p>Therefore the output is 7.</p>
-<h2 id="follow-up"><a href="#Follow-up" class="headerlink" title="Follow up:"></a>Follow up:</h2><p>What if negative numbers are allowed in the given array?<br>How does it change the problem?<br>What limitation we need to add to the question to allow negative numbers?</p>
-</blockquote>
-<h1 id="题目大意"><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h1><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
-<p>测试用例见题目描述。</p>
-<p>注意不同的序列顺序应当视为不同的组合。</p>
-<h2 id="进一步思考"><a href="#进一步思考：" class="headerlink" title="进一步思考："></a>进一步思考：</h2><p>给定一个无重复的正整数数组，计算得到一个目标正整数的所有可能组合方式的个数。</p>
-<p>测试用例见题目描述。</p>
-<p>注意不同的序列顺序应当视为不同的组合。</p>
-<h1 id="解题思路"><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>动态规划（Dynamic Programming）</p>
-<p>状态转移方程：dp[x + y] += dp[x]</p>
-<p>其中dp[x]表示生成数字x的所有可能的组合方式的个数。</p>
-<h1 id="python代码"><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):&#10;    def combinationSum4(self, nums, target):&#10;        &#34;&#34;&#34;&#10;        :type nums: List[int]&#10;        :type target: int&#10;        :rtype: int&#10;        &#34;&#34;&#34;&#10;        dp = [0] * (target + 1)&#10;        dp[0] = 1&#10;        for x in range(target + 1):&#10;            for y in nums:&#10;                if x + y &#60;= target:&#10;                    dp[x + y] += dp[x]&#10;        return dp[target]</span><br></pre></td></tr></table></figure>
+<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><p>abcdef</p>
 
       
     </div>
@@ -344,15 +327,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/09/10/Post-with-cover-image/">
-                    天使的模样
+                <a href="/2017/10/27/tensorflow参数共享/tensorflow参数共享/">
+                    tensorflow参数共享
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/09/图片博客模板/">
-                    图片博客模板
+                <a href="/2017/10/27/hello-world/">
+                    Hello World
                 </a>
             </div>
         
@@ -364,7 +347,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#example"><span class="toc-number">1.1.</span> <span class="toc-text">Example:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#follow-up"><span class="toc-number">1.2.</span> <span class="toc-text">Follow up:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#题目大意"><span class="toc-number">2.</span> <span class="toc-text">题目大意：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#进一步思考"><span class="toc-number">2.1.</span> <span class="toc-text">进一步思考：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解题思路"><span class="toc-number">3.</span> <span class="toc-text">解题思路：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python代码"><span class="toc-number">4.</span> <span class="toc-text">Python代码：</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#test"><span class="toc-number">1.</span> <span class="toc-text">test</span></a></li></ol>
         
     </div>
     <style>
@@ -400,7 +383,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"[LeetCode] 377. Combination Sum　| 影书时光　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"tensorflow参数共享　| 影书时光　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -419,8 +402,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://stevechoris.github.io/2016/09/10/LeetCode-377-Combination-Sum/';
-            this.page.identifier = '2016/09/10/LeetCode-377-Combination-Sum/';
+            this.page.url = 'http://stevechoris.github.io/2017/10/27/tensorflow参数共享/';
+            this.page.identifier = '2017/10/27/tensorflow参数共享/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -442,7 +425,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/09/10/Post-with-cover-image/" title="上一篇: 天使的模样">
+            <a href="/2017/10/27/tensorflow参数共享/tensorflow参数共享/" title="上一篇: tensorflow参数共享">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -450,7 +433,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/09/图片博客模板/" title="下一篇: 图片博客模板">
+            <a href="/2017/10/27/hello-world/" title="下一篇: Hello World">
                 <i class="fa fa-angle-right"></i>
             </a>
         
