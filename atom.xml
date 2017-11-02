@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-10-27T08:06:55.000Z</updated>
+  <updated>2017-11-02T06:30:00.000Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vim插件You Complete Me配置</title>
+    <link href="http://stevechoris.github.io/2017/11/02/Vim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE/"/>
+    <id>http://stevechoris.github.io/2017/11/02/Vim插件You-Complete-Me配置/</id>
+    <published>2017-11-02T06:06:48.000Z</published>
+    <updated>2017-11-02T06:30:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<blockquote>
+<p>You Complete Me是Vim上一款非常实用的插件，可以支持多种编程语言的代码自动补全，还有路径补全功能等。默认是支持Python语言等，如果你只需要Python语言的补全功能，那直接按照<a href="http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64" target="_blank" rel="external">官网的快速安装指南</a>操作即可。也可以配置其他语言，其中，C及C++的配置最为麻烦。本文展示了C及C++语言的配置方法，主要参考<a href="http://valloric.github.io/YouCompleteMe/#full-installation-guide" target="_blank" rel="external">官网的完全参考指南</a>：</p>
+</blockquote>
+<ol>
+<li>确保Vim的版本大于7.4.1578并且支持Python2 或 Python3脚本</li>
+<li>通过Vundle安装YCM插件（这一步其实是从github上下载YCM的project）</li>
+<li>下载llvm和clang（只有C及C++语言需要这一步骤）</li>
+<li>编译ycm_core（所有语言都需要这一步，就是说你可以用上述四个步骤安装所有语言支持）</li>
+</ol>
+<blockquote>
+<p>注意：如果你有安装anaconda，需要注释掉用系统自带的python(/usr/bin/python)</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;
+    
+    </summary>
+    
+      <category term="开发环境" scheme="http://stevechoris.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+      <category term="开发环境" scheme="http://stevechoris.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>tensorflow参数共享</title>
     <link href="http://stevechoris.github.io/2017/10/27/tensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB/"/>
     <id>http://stevechoris.github.io/2017/10/27/tensorflow参数共享/</id>
     <published>2017-10-27T07:54:23.000Z</published>
-    <updated>2017-10-27T08:06:55.000Z</updated>
+    <updated>2017-10-28T07:17:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2>]]></content>

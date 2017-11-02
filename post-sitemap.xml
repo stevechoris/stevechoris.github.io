@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://stevechoris.github.io/2017/11/02/Vim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE/</loc>
+        <lastmod>2017-11-02T06:30:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://stevechoris.github.io/2017/10/27/tensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB/</loc>
-        <lastmod>2017-10-27T08:06:55.000Z</lastmod>
+        <lastmod>2017-10-28T07:17:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

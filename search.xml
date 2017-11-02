@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Vim插件You Complete Me配置]]></title>
+      <url>%2F2017%2F11%2F02%2FVim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[&emsp; You Complete Me是Vim上一款非常实用的插件，可以支持多种编程语言的代码自动补全，还有路径补全功能等。默认是支持Python语言等，如果你只需要Python语言的补全功能，那直接按照官网的快速安装指南操作即可。也可以配置其他语言，其中，C及C++的配置最为麻烦。本文展示了C及C++语言的配置方法，主要参考官网的完全参考指南： 确保Vim的版本大于7.4.1578并且支持Python2 或 Python3脚本 通过Vundle安装YCM插件（这一步其实是从github上下载YCM的project） 下载llvm和clang（只有C及C++语言需要这一步骤） 编译ycm_core（所有语言都需要这一步，就是说你可以用上述四个步骤安装所有语言支持） 注意：如果你有安装anaconda，需要注释掉用系统自带的python(/usr/bin/python)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[tensorflow参数共享]]></title>
       <url>%2F2017%2F10%2F27%2Ftensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB%2F</url>
       <content type="text"><![CDATA[&emsp; test]]></content>
