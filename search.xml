@@ -1,69 +1,453 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   
+  
     
     <entry>
       <title><![CDATA[理解gan的原理]]></title>
-      <url>%2F2017%2F11%2F16%2F%E7%90%86%E8%A7%A3gan%E7%9A%84%E5%8E%9F%E7%90%86%2F</url>
-      <content type="text"><![CDATA[&emsp; 生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度理解gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解gan,也欢迎大家指正交流.注:本文主要参考了李宏毅老师的深度学习教学视频,李老师的讲解非常清晰、生动,在此表示感谢🙏.]]></content>
+      <url>http://stevechoris.github.io/2017/11/16/%E7%90%86%E8%A7%A3gan%E7%9A%84%E5%8E%9F%E7%90%86/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<blockquote>
+<p>生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.<br>最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度讲gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解,也欢迎大家指正交流.<br>注:本文主要参考了<a href="https://www.bilibili.com/video/av9770302/" target="_blank" rel="external">李宏毅老师的深度学习教学视频</a>,李老师的讲解非常清晰、生动,在此表示感谢🙏.</p>
+</blockquote>
+<h2 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h2><p>gan是一种生成模型,提到生成模型,不得不提最大似然估计. 生成模型的一个最典型的训练方式就是拟合数据的极大似然概率.通常的做法是我们先有一堆真实数据,比如一堆图片,如果把图片拉成一条向量,就可以当成高维空间中的一个点,自然就有了概率分布$P<em>{data}(x)$. 那生成模型是要去学得这个概率分布是怎么样的,以便于生成以假乱真的数据,那它的做法是也去模拟一个概率分布$P</em>{G}(x;\theta)$.这个生成器叫G,可以把它看作一个函数,$\theta$就是它的参数,输入一个数据点(比如一张图片)它可以输出一个概率密度.生成模型的最终目标是希望通过学习之后,得到的某个G可以产生与真实概率分布$P<em>{data}(x)$尽可能接近的概率分布$P</em>{G}(x;\theta)$.</p>
+<blockquote>
+<p>一句话总结: 生成模型的目的是学得某一个生成器G(概率密度函数)产生与真实数据分布$P<em>{data}(x)$接近的概率分布$P</em>{G}(x;\theta)$.</p>
+</blockquote>
+<p>那如何衡量接近的程度呢?<br>一种常见的做法就是计算最大似然概率,如果某一个生成器产生的似然概率最大,那这个生成器更接近真实的数据分布.具体的做法如下:</p>
+<ol>
+<li>从真实数据集中采样m个样本点,${x^1,x^2,…,x^m}$,对于每个样本点,可以得出当前生成器G下的概率$P<em>G{(x^i;\theta)}$,那整体上,从当前生成器中也采样出上述样本的概率是$L=\prod</em>{i=1}^{m}{p_G(x^i;\theta)}$</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 深度学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> gan </tag>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[Vim插件You Complete Me配置]]></title>
-      <url>%2F2017%2F11%2F02%2FVim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE%2F</url>
-      <content type="text"><![CDATA[&emsp; You Complete Me是Vim上一款非常实用的插件，可以支持多种编程语言的代码自动补全，还有路径补全功能等。默认是支持Python语言等，如果你只需要Python语言的补全功能，那直接按照官网的快速安装指南操作即可。也可以配置其他语言，其中，C及C++的配置最为麻烦。本文展示了C及C++语言的配置方法，主要参考官网的完全参考指南： 确保Vim的版本大于7.4.1578并且支持Python2 或 Python3脚本 通过Vundle安装YCM插件（这一步其实是从github上下载YCM的project） 下载llvm和clang（只有C及C++语言需要这一步骤） 编译ycm_core（所有语言都需要这一步，就是说你可以用上述四个步骤安装所有语言支持） 注意：如果你有安装anaconda，需要注释掉用系统自带的python(/usr/bin/python)]]></content>
+      <url>http://stevechoris.github.io/2017/11/02/Vim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<blockquote>
+<p>You Complete Me是Vim上一款非常实用的插件，可以支持多种编程语言的代码自动补全，还有路径补全功能等。默认是支持Python语言等，如果你只需要Python语言的补全功能，那直接按照<a href="http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64" target="_blank" rel="external">官网的快速安装指南</a>操作即可。也可以配置其他语言，其中，C及C++的配置最为麻烦。本文展示了C及C++语言的配置方法，主要参考<a href="http://valloric.github.io/YouCompleteMe/#full-installation-guide" target="_blank" rel="external">官网的完全参考指南</a>：</p>
+</blockquote>
+<ol>
+<li>确保Vim的版本大于7.4.1578并且支持Python2 或 Python3脚本</li>
+<li>通过Vundle安装YCM插件（这一步其实是从github上下载YCM的project）</li>
+<li>下载llvm和clang（只有C及C++语言需要这一步骤）</li>
+<li>编译ycm_core（所有语言都需要这一步，就是说你可以用上述四个步骤安装所有语言支持）</li>
+</ol>
+<blockquote>
+<p>注意：如果你有安装anaconda，需要注释掉用系统自带的python(/usr/bin/python)</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发环境 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 开发环境 </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[tensorflow参数共享]]></title>
-      <url>%2F2017%2F10%2F27%2Ftensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB%2F</url>
-      <content type="text"><![CDATA[&emsp; test]]></content>
+      <url>http://stevechoris.github.io/2017/10/27/tensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2>]]></content>
+      
+        <categories>
+            
+            <category> 机器学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> tensorflow </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F10%2F27%2Fhello-world%2F</url>
-      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <url>http://stevechoris.github.io/2017/10/27/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
+<h2 id="quick-start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理]]></title>
-      <url>%2F2017%2F02%2F21%2F%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86%2F</url>
-      <content type="text"><![CDATA[&emsp; 深度学习 参考Deep Learning Tutorial TensorFlow TensorFlow是一个基于数据流图的深度学习框架 图中的节点表示数学运算，而图边表示在它们之间传递的张量（多维数组） TensorFlow的优点是架构非常灵活，允许你通过单一的API将计算部署到PC机，服务器或移动设备的一个或多个CPU或GPU 目前的版本是1.0，基于8GPU对Inception V3实现了7.3倍加速，以及基于64GPU对分布式Inception V3训练实现58倍加速。主要引入了以下新的特点： 提供Java和Go的实验API 引入了高级API模块：tf.contrib.learn，还包含一个全新的tf.keras模块，能够与高级神经网络库Keras完全兼容 发布了面向CPU和GPU的TensorFlow图形的特定领域编译器XLA的实验版本 生成TensorFlow Debugger(tfdbg)，一个用于调试实时TensorFlow程序的命令行界面和API 接下来我将结合如何从零开始构建一个卷积神经网络图像分类器来介绍并总结TensorFlow的使用经验 图像数据的创建 读取图片并保存为tfrecords文件 .tfrecords文件为TensorFlow特有的序列化，保存数据的文件。便于后续的大数据的读取。 训练时数据的读取 模型的定义 到上一步为止，我们已经可以获得用于训练的一个batch的examples和labels，其本质为numpy数组。如果你直接有numpy数组数据，也可以直接用于训练或预测。Tensorflow运行需要两步：1. 定义图的结构 2. 将操作放到一个会话中(Session)中运行。因此，在TensorFlow可以运行之前，我们必须先定义Graph，它是整个模型的结构。 TensorFlow模型主要有三个部分，和机器学习算法的三个主要部分对应。 Inference: 定义神经网络的输入，输出，隐含层单元以及权重，对于一个batch的输入，可以通过前馈计算，输出一个batch的logits(可以理解为每一类的输出大小)。 Loss: 通过logits和labels计算出当前输出结果的预测值与实际值之间差距的大小。通常使用的是softmax_cross_entropy Training: 通常使用的AdamOptimizer（自适应的随机梯度下降方法）。涉及到权重衰减，自适应学习率和动量等，使得模型不断趋向于最优解。不会限于局部最优且不会过冲。 Inference中用到的主要函数卷积层 tf.get_variable # 定义卷积核与偏置的初始权值 tf.add_to_collection # 添加变量到字典中 tf.nn.conv2d # 卷积 tf.nn.bias_add # 偏置 池化层 tf.nn.max_pool 全连接层 tf.get_variable # 定义全连接和偏置的初始权值 tf.reshape # 可能需要将最后池化层结果拉长成一个向量 tf.nn.relu_layer # 添加ReLU非线性模块 Dropout层 tf.nn.dropout # 在最后全连接层后加入dropout 输出层 tf.get_variable # 定义全连接和偏置的初识权值 tf.add(tf.matmul()) # 最后全连接方式输出logits 注意当模型复杂化的时候可以使用tf.variable_scope和tf.name_scope函数来共享参数。其中tf.variable_scope主要影响变量的命名，但默认会调用tf.name_scope，而tf.name_scope只会影响ops的命名。 Loss(logits, labels)中用到的主要函数: tf.reshape # 将labels reshape为[batch_size, 1]大小 tf.concat # 与同样大小的tf.range(0, batch_size)连接 tf.sparse_to_dense # 稀疏矩阵转为稠密矩阵 tf.nn.softmax_cross_entropy_with_logits # 计算交叉熵 tf.reduce_mean # 计算平均值 Training(loss, global_step)中用到的主要函数 tf.train.exponential_decay # 权值衰减设置函数 optimizer=tf.train.AdamOptimizer # 自适应梯度优化器 train_op=optimizer.minimize(loss, global_step=global_step) Evaluation(logits, labels) 预测评估中用到的主要函数 tf.nn.in_top_k # 计算每个实例的labels是否在logits预测的前k个类别中 tf.reduce_sum # 计算预测正确的数量 模型运行TensorFlow的几个重要元素变量和操作 Variable Constant Placeholder 其他各种OPs Session 相关函数 tf.global_variables_initializer() # 用于初始化所有变量 input_pipeline() # 从tfrecords读取数据 placeholder_inputs() # 定义输入 inference() loss() training() evaluation() coord = tf.train.Coordinator() # 用于驱动tfrecords数据的读取 threads = tf.train.start_queue_runners(sess=sess, coord=coord) Session.run() Tensorboard Tensorboard用于训练过程中相关信息的记录，便于可视化的分析和监视训练过程 相关函数 tf.summary.scalar # 定义各种标量信息，例如当前step的Accuracy, Loss等 tf.summary.image # 保存当前batch的图片 tf.summary.merge_all() # 将所有summary汇总为一个操作 summary_writer = tf.summary.FileWriter(log_dir,graph_def=sess.graph_def) # 定义一个写summary的句柄 summary_str = sess.run([summary_op], feed_dict=summary_feed) # 生成summary字符串 summary_writer.add_summary(summary_str[0], step) # 将summary字符串用句柄写入文件 模型保存与加载保存模型 saver = tf.train.Saver(max_to_keep=30) # 定义一个模型保存器 checkpoint_path = os.path.join(checkpoint_dir, &#39;model.ckpt&#39;) # 设置保存的位置 saver.save(sess, checkpoint_path, global_step=step) # 保存模型（需要Session, 位置以及当前训练的步数） 加载模型 ckpt = tf.train.get_checkpoint_state(checkpoint_dir=checkpoint_dir) # （通过路径找到保存的模型） saver.restore(sess, ckpt.model_checkpoint_path) # 加载模型]]></content>
+      <url>http://stevechoris.github.io/2017/02/21/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E5%99%A8-TensorFlow%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><blockquote>
+<p>参考Deep Learning Tutorial</p>
+</blockquote>
+<h2 id="tensorflow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><blockquote>
+<ul>
+<li>TensorFlow是一个基于数据流图的深度学习框架</li>
+<li>图中的节点表示数学运算，而图边表示在它们之间传递的张量（多维数组）</li>
+<li>TensorFlow的优点是架构非常灵活，允许你通过<strong>单一的API</strong>将计算部署到PC机，服务器或移动设备的一个或多个CPU或GPU</li>
+<li>目前的版本是1.0，基于8GPU对Inception V3实现了7.3倍加速，以及基于64GPU对分布式Inception V3训练实现58倍加速。主要引入了以下新的特点：<ul>
+<li>提供Java和Go的实验API</li>
+<li>引入了高级API模块：<code>tf.contrib.learn</code>，还包含一个全新的<code>tf.keras</code>模块，能够与高级神经网络库Keras完全兼容</li>
+<li>发布了面向CPU和GPU的TensorFlow图形的特定领域编译器XLA的实验版本</li>
+<li>生成TensorFlow Debugger(tfdbg)，一个用于调试实时TensorFlow程序的命令行界面和API</li>
+</ul>
+</li>
+</ul>
+<p>接下来我将结合如何从零开始构建一个卷积神经网络图像分类器来介绍并总结TensorFlow的使用经验</p>
+</blockquote>
+<h3 id="图像数据的创建"><a href="#图像数据的创建" class="headerlink" title="图像数据的创建"></a>图像数据的创建</h3><p><img src="https://lh3.googleusercontent.com/-bfpA60gUBjo/WKml0jD5eqI/AAAAAAAAAUQ/U_4EtRPZ88I/I/%25255BUNSET%25255D.png" alt="数据获取与组织"></p>
+<h3 id="读取图片并保存为tfrecords文件"><a href="#读取图片并保存为tfrecords文件" class="headerlink" title="读取图片并保存为tfrecords文件"></a>读取图片并保存为tfrecords文件</h3><blockquote>
+<p>.tfrecords文件为TensorFlow特有的序列化，保存数据的文件。便于后续的大数据的读取。</p>
+</blockquote>
+<p><img src="https://lh3.googleusercontent.com/-vNuMu38aATc/WKmuEIr8_KI/AAAAAAAAAUs/o12aj7W4oUk/I/14875150953274.jpg" alt=""></p>
+<h3 id="训练时数据的读取"><a href="#训练时数据的读取" class="headerlink" title="训练时数据的读取"></a>训练时数据的读取</h3><p><img src="https://lh3.googleusercontent.com/-Q54gpCCUu-g/WKmuETFjm6I/AAAAAAAAAUw/cfJ_an92XNw/I/14875151258687.jpg" alt=""></p>
+<h3 id="模型的定义"><a href="#模型的定义" class="headerlink" title="模型的定义"></a>模型的定义</h3><blockquote>
+<p>到上一步为止，我们已经可以获得用于训练的一个batch的examples和labels，其本质为numpy数组。如果你直接有numpy数组数据，也可以直接用于训练或预测。<br>Tensorflow运行需要两步：1. 定义图的结构 2. 将操作放到一个会话中(Session)中运行。<br>因此，在TensorFlow可以运行之前，我们必须先定义Graph，它是整个模型的结构。 </p>
+</blockquote>
+<p>TensorFlow模型主要有三个部分，和机器学习算法的三个主要部分对应。</p>
+<ul>
+<li>Inference: 定义神经网络的输入，输出，隐含层单元以及权重，对于一个batch的输入，可以通过前馈计算，输出一个batch的logits(可以理解为每一类的输出大小)。</li>
+<li>Loss: 通过logits和labels计算出当前输出结果的预测值与实际值之间差距的大小。通常使用的是softmax_cross_entropy</li>
+<li>Training: 通常使用的AdamOptimizer（自适应的随机梯度下降方法）。涉及到权重衰减，自适应学习率和动量等，使得模型不断趋向于最优解。不会限于局部最优且不会过冲。</li>
+</ul>
+<h4 id="inference中用到的主要函数"><a href="#Inference中用到的主要函数" class="headerlink" title="Inference中用到的主要函数"></a>Inference中用到的主要函数</h4><h5 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h5><ul>
+<li><code>tf.get_variable</code> # 定义卷积核与偏置的初始权值</li>
+<li><code>tf.add_to_collection</code> # 添加变量到字典中</li>
+<li><code>tf.nn.conv2d</code> # 卷积</li>
+<li><code>tf.nn.bias_add</code> # 偏置</li>
+</ul>
+<h5 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h5><ul>
+<li><code>tf.nn.max_pool</code></li>
+</ul>
+<h5 id="全连接层"><a href="#全连接层" class="headerlink" title="全连接层"></a>全连接层</h5><ul>
+<li><code>tf.get_variable</code> # 定义全连接和偏置的初始权值</li>
+<li><code>tf.reshape</code> # 可能需要将最后池化层结果拉长成一个向量</li>
+<li><code>tf.nn.relu_layer</code> # 添加ReLU非线性模块</li>
+</ul>
+<h5 id="dropout层"><a href="#Dropout层" class="headerlink" title="Dropout层"></a>Dropout层</h5><ul>
+<li><code>tf.nn.dropout</code> # 在最后全连接层后加入dropout</li>
+</ul>
+<h5 id="输出层"><a href="#输出层" class="headerlink" title="输出层"></a>输出层</h5><ul>
+<li><code>tf.get_variable</code> # 定义全连接和偏置的初识权值</li>
+<li><code>tf.add(tf.matmul())</code> # 最后全连接方式输出logits</li>
+</ul>
+<blockquote>
+<p>注意当模型复杂化的时候可以使用<code>tf.variable_scope</code>和<code>tf.name_scope</code>函数来共享参数。<br>其中<code>tf.variable_scope</code>主要影响变量的命名，但默认会调用<code>tf.name_scope</code>，而<code>tf.name_scope</code>只会影响ops的命名。</p>
+</blockquote>
+<h4 id="losslogits-labels中用到的主要函数"><a href="#Loss-logits-labels-中用到的主要函数" class="headerlink" title="Loss(logits, labels)中用到的主要函数:"></a>Loss(logits, labels)中用到的主要函数:</h4><ul>
+<li><code>tf.reshape</code> # 将labels reshape为[batch_size, 1]大小</li>
+<li><code>tf.concat</code> # 与同样大小的tf.range(0, batch_size)连接</li>
+<li><code>tf.sparse_to_dense</code> # 稀疏矩阵转为稠密矩阵</li>
+<li><code>tf.nn.softmax_cross_entropy_with_logits</code> # 计算交叉熵</li>
+<li><code>tf.reduce_mean</code> # 计算平均值</li>
+</ul>
+<h4 id="trainingloss-global_step中用到的主要函数"><a href="#Training-loss-global-step-中用到的主要函数" class="headerlink" title="Training(loss, global_step)中用到的主要函数"></a>Training(loss, global_step)中用到的主要函数</h4><ul>
+<li><code>tf.train.exponential_decay</code> # 权值衰减设置函数</li>
+<li><code>optimizer=tf.train.AdamOptimizer</code> # 自适应梯度优化器</li>
+<li><code>train_op=optimizer.minimize(loss, global_step=global_step)</code></li>
+</ul>
+<h4 id="evaluationlogits-labels-预测评估中用到的主要函数"><a href="#Evaluation-logits-labels-预测评估中用到的主要函数" class="headerlink" title="Evaluation(logits, labels) 预测评估中用到的主要函数"></a>Evaluation(logits, labels) 预测评估中用到的主要函数</h4><ul>
+<li><code>tf.nn.in_top_k</code> # 计算每个实例的labels是否在logits预测的前k个类别中</li>
+<li><code>tf.reduce_sum</code> # 计算预测正确的数量</li>
+</ul>
+<h3 id="模型运行"><a href="#模型运行" class="headerlink" title="模型运行"></a>模型运行</h3><h4 id="tensorflow的几个重要元素"><a href="#TensorFlow的几个重要元素" class="headerlink" title="TensorFlow的几个重要元素"></a>TensorFlow的几个重要元素</h4><h5 id="变量和操作"><a href="#变量和操作" class="headerlink" title="变量和操作"></a>变量和操作</h5><ul>
+<li>Variable</li>
+<li>Constant</li>
+<li>Placeholder</li>
+<li>其他各种OPs</li>
+<li>Session</li>
+</ul>
+<h5 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h5><ul>
+<li><code>tf.global_variables_initializer()</code> # 用于初始化所有变量</li>
+<li><code>input_pipeline()</code> # 从tfrecords读取数据</li>
+<li><code>placeholder_inputs()</code> # 定义输入</li>
+<li><code>inference()</code></li>
+<li><code>loss()</code></li>
+<li><code>training()</code></li>
+<li><code>evaluation()</code></li>
+<li><code>coord = tf.train.Coordinator()</code> # 用于驱动tfrecords数据的读取</li>
+<li><code>threads = tf.train.start_queue_runners(sess=sess, coord=coord)</code></li>
+<li><code>Session.run()</code></li>
+</ul>
+<h4 id="tensorboard"><a href="#Tensorboard" class="headerlink" title="Tensorboard"></a>Tensorboard</h4><blockquote>
+<p>Tensorboard用于训练过程中相关信息的记录，便于可视化的分析和监视训练过程</p>
+</blockquote>
+<h5 id="相关函数"><a href="#相关函数-1" class="headerlink" title="相关函数"></a>相关函数</h5><ul>
+<li><code>tf.summary.scalar</code> # 定义各种标量信息，例如当前step的Accuracy, Loss等</li>
+<li><code>tf.summary.image</code> # 保存当前batch的图片</li>
+<li><code>tf.summary.merge_all()</code> # 将所有summary汇总为一个操作</li>
+<li><code>summary_writer = tf.summary.FileWriter(log_dir,graph_def=sess.graph_def)</code> # 定义一个写summary的句柄</li>
+<li><code>summary_str = sess.run([summary_op], feed_dict=summary_feed)</code> # 生成summary字符串</li>
+<li><code>summary_writer.add_summary(summary_str[0], step)</code> # 将summary字符串用句柄写入文件</li>
+</ul>
+<h4 id="模型保存与加载"><a href="#模型保存与加载" class="headerlink" title="模型保存与加载"></a>模型保存与加载</h4><h5 id="保存模型"><a href="#保存模型" class="headerlink" title="保存模型"></a>保存模型</h5><ul>
+<li><code>saver = tf.train.Saver(max_to_keep=30)</code> # 定义一个模型保存器</li>
+<li><code>checkpoint_path = os.path.join(checkpoint_dir, &#39;model.ckpt&#39;)</code> # 设置保存的位置</li>
+<li><code>saver.save(sess, checkpoint_path, global_step=step)</code> # 保存模型（需要Session, 位置以及当前训练的步数）</li>
+</ul>
+<h5 id="加载模型"><a href="#加载模型" class="headerlink" title="加载模型"></a>加载模型</h5><ul>
+<li><code>ckpt = tf.train.get_checkpoint_state(checkpoint_dir=checkpoint_dir)</code> # （通过路径找到保存的模型）</li>
+<li><code>saver.restore(sess, ckpt.model_checkpoint_path)</code> # 加载模型</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 机器学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+            <tag> TensorFlow </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[Python3.5 Anaconda3 Caffe深度学习框架搭建]]></title>
-      <url>%2F2017%2F01%2F12%2FPython3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%2F</url>
-      <content type="text"><![CDATA[&emsp; 前沿 &emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）： 在 python3.5 下使用 Caffe Using Caffe with Python3.5 Setting up a Deep Learning Machine from Scratch (Software) Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装 Install Caffe With Anaconda 准备环境ubuntu14.04系统可以输入cat /etc/issue查看ubuntu的版本 显卡驱动与CUDA安装主要参考博客1上的步骤，Nvidia显卡驱动安装可以参考Nvidia Drivers安装步骤，CUDA安装可以参考CUDA安装步骤，cuDNN安装可以参考cuDNN安装步骤 BLAS安装与配置BLAS（基础线性代数集合）是一个应用程序接口的标准。Caffe官网上推荐了三种实现：ATLAS, MKL, or OpenBLAS。其中atlas可以直接通过命令行安装（本文采用的就是这个），如果要使用intel的MKL库，可以参考博客2的中BLAS安装与配置步骤。 安装相关依赖包Caffe的编译依赖于很多C和C++的动态链接库，因此需要先用apt-get工具安装这些动态链接库。参考博客4主要步骤如下： 1sudo apt-get update&#10;&#10;sudo apt-get upgrade&#10;&#10;sudo apt-get install -y build-essential cmake git pkg-config&#10;&#10;sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev protobuf-compiler&#10;&#10;sudo apt-get install -y libatlas-base-dev &#10;&#10;sudo apt-get install -y --no-install-recommends libboost-all-dev&#10;&#10;sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev 根据博客1这里有两个包的版本要注意：protobuf版本要3.0或以上版本libboost版本要1.55或以上版本下面介绍这两个包的具体配置 protobuf安装博客博客1提到使用apt-get安装的是2.0版本，不可以。因此需要到protobuf的release页面下载两个安装包： protobuf-cpp-3.0.0-beta-2.zip 或以上版本； protobuf-python-3.0.0-beta-2.zip 或以上版本。注意cpp和python的版本应该保持一致。 这里由于我在实际安装Caffe环境的时候发现protoc已经安装了，应该是之前用apt-get的时候安装的版本是可以的，并且使用protoc --version发现版本为3.0.0:所以应该是cpp这个包已经安装好了，我就只按照[^1]的步骤到release页面下载并安装了对于的3.0.0版本的python包，安装步骤如下： 1&#35299;&#21387;&#23433;&#35013;&#21253;&#65292;&#36827;&#20837;&#35299;&#21387;&#30340;&#30446;&#24405;&#10;$ cd python&#10;$ python setup.py build&#10;$ python setup.py test&#10;$ python setup.py install 这样protobuf python runtime就编译和安装好了。注意protobuf python runtime是作为pip的包安装的。但是你可以从conda里面看到他： 1$ conda list | grep protobuf 我这里貌似安装了两个版本的，不过有3.0.0版本的就可以了。 libboost安装按照博客1的解释，libboost安装完之后会产生两个版本的libboost_python: libboost_python-py33.so.XXX libboost_python-py34.so.XXX 而这里必须选择py34的动态链接库，否则在实际运行Caffe的时候可能会在得不到任何错误提示的情况下python kernel直接崩溃。 具体安装步骤可以参考博客1的步骤，这里有一个关键步骤必须要执行： 1sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py34.so.1.55.0 /usr/local/lib/libboost_python3.so 就是在/usr/local/lib目录下建立一个libboost_python3.so的软链接，而且到这里，需要配置一下.bashrc或者.zshrc的环境变量： 这里主要是在LD_LIBRARY_PATH环境变量中添加了Anaconda，Caffe的链接库路径以及/usr/local/lib目录，这样在编译的时候才能找到比如上面libboost_python3.so这样的动态链接库文件。 关于LD_LIBRARY_PATH环境变量以及ld.so.conf文件和ldconfig命令的使用，可以参考Linux 共享库 LD_LIBRARY_PATH 与ld.so.conf的使用ldconfig Anaconda3以及Caffe的编译和安装Anaconda3安装Anaconda3的安装比较简单，在Anaconda官网下载对于的Linux安装包（.sh文件）即可，安装命令为： 1bash Anaconda3-4.0.0-Linux-x86_64.sh 安装完Anaconda3之后可以参考博客4的建议，安装一下OpenCV包： 1conda install -c menpo opencv3 Caffe的编译和安装到这里就可以正式进行Caffe的编译和安装了，首先下载并解压，这一步大家都会，到github官网下载即可，解压后进入Caffe目录。 这里的主要步骤是Makefile.config文件的配置,首先运行cp Makefile.config.example Makefile.config创建一个Makefile.config，然后对其中内容进行更改，运行vim Makefile.config打开文件，进行如下修改： 其中有几个地方需要注意： USE_CUDNN:=1 # 取消注释后需要保证，在ld.so.conf文件中（记住ldconfig）或LD_LIBRARY_PATH环境变量中能找到CUDNN的动态链接库 OPENCV_VERSION:=3 # 如果安装了OpenCV3可以启用这一项 BLAS:=atlas # 如果使用别的MKL或者BLAS需要在下面几行配置目录 ANACONDA_HOME和PYTHON_INCLUDE # 按照我上面的修改即可 PYTHON_LIBRARIES # 同意确保boost_python3这个动态链接库在ld.so.conf文件中（记住ldconfig）或LD_LIBRARY_PATH中能找到。可以用locate boost_python命令看看动态链接库文件藏在哪里，然后把相应的目录添加到LD_LIBRARY_PATH环境变量中。 PYTHON_LIB # 需要启用 WITH_PYTHON_LAYER # 如果要使用Caffe的Python接口就需要启用 以上都配置完了之后，就可以编译Caffe以及Caffe的Python接口啦，参考[^2]可以使用多线程提高编译的速度： 1make all -j $(($(nproc) + 1))&#10;make test -j $(($(nproc) + 1))&#10;make runtest -j $(($(nproc) + 1))&#10;make pycaffe -j $(($(nproc) + 1)) 如果一切都顺利的话，到这里Caffe以及Caffe的Python接口已经编译完成并可以使用了。最后把Caffe的Python库的路径添加到PYTHONPATH环境变量中，这样在python或者ipython程序中才能import进来： PS：修改.bashrc或.zshrc之后记得source ~/.bashrc或者source ~/.zshrc一下才生效哦。 运行打开python或ipython已经可以正常使用caffe了。]]></content>
+      <url>http://stevechoris.github.io/2017/01/12/Python3-5-Anaconda3-Caffe%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h2 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h2><blockquote>
+<p>&emsp;&emsp;本文主要介绍在Anaconda3和Python3.5的环境下搭建Caffe深度学习开发环境，主要创建了Caffe的Python接口。<br>&emsp;&emsp;强调Python3.5和Anaconda3是因为，Caffe还没有全面支持Python3，并且默认不使用Anaconda。<br>&emsp;&emsp;Python3.5是目前Python3的最新版本，而且安装过程相对比较复杂。我在安装的过程中前后折腾了很久，但同时也从中学到了许多从源码编译安装程序的知识。本文主要参考了以下博客，在此表示感谢（下文博客1即代表引用了下列的第1篇博客）：</p>
+<ol>
+<li><a href="http://coldmooon.github.io/2016/05/15/use_caffe_with_python3.5/" target="_blank" rel="external">在 python3.5 下使用 Caffe Using Caffe with Python3.5</a></li>
+<li><a href="https://github.com/saiprashanths/dl-setup#caffe" target="_blank" rel="external">Setting up a Deep Learning Machine from Scratch (Software)</a></li>
+<li><a href="http://www.jianshu.com/p/663029044efd" target="_blank" rel="external">Ubuntu16.04+matlab2014a+anaconda2+OpenCV3.1+caffe安装</a></li>
+<li><a href="https://yangcha.github.io/Caffe-Conda/" target="_blank" rel="external">Install Caffe With Anaconda</a></li>
+</ol>
+</blockquote>
+<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><h3 id="ubuntu1404系统"><a href="#ubuntu14-04系统" class="headerlink" title="ubuntu14.04系统"></a>ubuntu14.04系统</h3><p>可以输入<code>cat /etc/issue</code>查看ubuntu的版本</p>
+<p><img src="https://lh3.googleusercontent.com/-Vncx38SBlJE/WHcbuYf-cWI/AAAAAAAAATQ/wmEHr89ss68/I/14841947936350.jpg" alt=""></p>
+<h3 id="显卡驱动与cuda安装"><a href="#显卡驱动与CUDA安装" class="headerlink" title="显卡驱动与CUDA安装"></a>显卡驱动与CUDA安装</h3><p>主要参考博客1上的步骤，Nvidia显卡驱动安装可以参考<a href="https://github.com/saiprashanths/dl-setup#nvidia-drivers" target="_blank" rel="external">Nvidia Drivers安装步骤</a>，CUDA安装可以参考<a href="https://github.com/saiprashanths/dl-setup#cuda" target="_blank" rel="external">CUDA安装步骤</a>，cuDNN安装可以参考<a href="https://github.com/saiprashanths/dl-setup#cudnn" target="_blank" rel="external">cuDNN安装步骤</a></p>
+<h3 id="blas安装与配置"><a href="#BLAS安装与配置" class="headerlink" title="BLAS安装与配置"></a>BLAS安装与配置</h3><p>BLAS（基础线性代数集合）是一个应用程序接口的标准。Caffe官网上推荐了三种实现：ATLAS, MKL, or OpenBLAS。其中atlas可以直接通过命令行安装（本文采用的就是这个），如果要使用intel的MKL库，可以参考博客2的中BLAS安装与配置步骤。</p>
+<h3 id="安装相关依赖包"><a href="#安装相关依赖包" class="headerlink" title="安装相关依赖包"></a>安装相关依赖包</h3><p>Caffe的编译依赖于很多C和C++的动态链接库，因此需要先用apt-get工具安装这些动态链接库。参考博客4主要步骤如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update&#10;&#10;sudo apt-get upgrade&#10;&#10;sudo apt-get install -y build-essential cmake git pkg-config&#10;&#10;sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev protobuf-compiler&#10;&#10;sudo apt-get install -y libatlas-base-dev &#10;&#10;sudo apt-get install -y --no-install-recommends libboost-all-dev&#10;&#10;sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>根据博客1这里有两个包的版本要注意：<br>protobuf版本要3.0或以上版本<br>libboost版本要1.55或以上版本<br>下面介绍这两个包的具体配置</p>
+</blockquote>
+<h3 id="protobuf安装"><a href="#protobuf安装" class="headerlink" title="protobuf安装"></a>protobuf安装</h3><p>博客博客1提到使用apt-get安装的是2.0版本，不可以。因此需要到protobuf的<a href="https://github.com/google/protobuf/releases" target="_blank" rel="external">release页面</a>下载两个安装包：</p>
+<ul>
+<li>protobuf-cpp-3.0.0-beta-2.zip 或以上版本；</li>
+<li>protobuf-python-3.0.0-beta-2.zip 或以上版本。<br>注意<strong>cpp和python的版本应该保持一致</strong>。</li>
+</ul>
+<p>这里由于我在实际安装Caffe环境的时候发现protoc已经安装了，应该是之前用apt-get的时候安装的版本是可以的，并且使用<code>protoc --version</code>发现版本为3.0.0:<br><img src="https://lh3.googleusercontent.com/-OhWgjF1km4g/WHcbu7kdDiI/AAAAAAAAATU/PmQooA_z6fA/I/14841982449906.jpg" alt=""><br>所以应该是cpp这个包已经安装好了，我就只按照[^1]的步骤到<a href="https://github.com/google/protobuf/releases" target="_blank" rel="external">release页面</a>下载并安装了对于的3.0.0版本的python包，安装步骤如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#35299;&#21387;&#23433;&#35013;&#21253;&#65292;&#36827;&#20837;&#35299;&#21387;&#30340;&#30446;&#24405;&#10;$ cd python&#10;$ python setup.py build&#10;$ python setup.py test&#10;$ python setup.py install</span><br></pre></td></tr></table></figure>
+<p>这样protobuf python runtime就编译和安装好了。注意protobuf python runtime是作为pip的包安装的。但是你可以从conda里面看到他：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda list | grep protobuf</span><br></pre></td></tr></table></figure>
+<p><img src="https://lh3.googleusercontent.com/-I1_TDKgfPFw/WHcbvBGCXLI/AAAAAAAAATY/wgxyPm_C7Mc/I/14841986461841.jpg" alt=""></p>
+<p>我这里貌似安装了两个版本的，不过有3.0.0版本的就可以了。</p>
+<h3 id="libboost安装"><a href="#libboost安装" class="headerlink" title="libboost安装"></a>libboost安装</h3><p>按照博客1的解释，libboost安装完之后会产生两个版本的libboost_python:</p>
+<ul>
+<li>libboost_python-py33.so.XXX</li>
+<li>libboost_python-py34.so.XXX</li>
+</ul>
+<p>而这里必须选择py34的动态链接库，否则在实际运行Caffe的时候可能会在得不到任何错误提示的情况下python kernel直接崩溃。</p>
+<p>具体安装步骤可以参考博客1的步骤，这里有一个关键步骤必须要执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py34.so.1.55.0 /usr/local/lib/libboost_python3.so</span><br></pre></td></tr></table></figure>
+<p>就是在/usr/local/lib目录下建立一个libboost_python3.so的软链接，而且到这里，需要配置一下.bashrc或者.zshrc的环境变量：<br><img src="https://lh3.googleusercontent.com/-l0dP6gA8yd8/WHcbvVmbmcI/AAAAAAAAATc/bKgrmZBVMTc/I/14841990222795.jpg" alt=""></p>
+<p>这里主要是在LD_LIBRARY_PATH环境变量中添加了Anaconda，Caffe的链接库路径以及/usr/local/lib目录，这样在编译的时候才能找到比如上面libboost_python3.so这样的动态链接库文件。</p>
+<blockquote>
+<p>关于LD_LIBRARY_PATH环境变量以及ld.so.conf文件和ldconfig命令的使用，可以参考<a href="http://yiranwuqing.iteye.com/blog/974246" target="_blank" rel="external">Linux 共享库 LD_LIBRARY_PATH 与ld.so.conf的使用ldconfig</a></p>
+</blockquote>
+<h2 id="anaconda3以及caffe的编译和安装"><a href="#Anaconda3以及Caffe的编译和安装" class="headerlink" title="Anaconda3以及Caffe的编译和安装"></a>Anaconda3以及Caffe的编译和安装</h2><h3 id="anaconda3安装"><a href="#Anaconda3安装" class="headerlink" title="Anaconda3安装"></a>Anaconda3安装</h3><p>Anaconda3的安装比较简单，在<a href="https://www.continuum.io/" target="_blank" rel="external">Anaconda官网</a>下载对于的Linux安装包（.sh文件）即可，安装命令为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda3-4.0.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+<p>安装完Anaconda3之后可以参考博客4的建议，安装一下OpenCV包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c menpo opencv3</span><br></pre></td></tr></table></figure>
+<h3 id="caffe的编译和安装"><a href="#Caffe的编译和安装" class="headerlink" title="Caffe的编译和安装"></a>Caffe的编译和安装</h3><p>到这里就可以正式进行Caffe的编译和安装了，首先下载并解压，这一步大家都会，到github官网下载即可，解压后进入Caffe目录。</p>
+<p>这里的主要步骤是Makefile.config文件的配置,首先运行<code>cp Makefile.config.example Makefile.config</code>创建一个Makefile.config，然后对其中内容进行更改，运行<code>vim Makefile.config</code>打开文件，进行如下修改：</p>
+<p><img src="https://lh3.googleusercontent.com/-2RWbsaYISiU/WHcbv45RSuI/AAAAAAAAATg/MlIsKmbBCkc/I/14841999824009.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-FYMfZOZcp7w/WHcbxdcn-UI/AAAAAAAAATk/oaLzYNMGyAo/I/14842000459165.jpg" alt=""><br><img src="https://lh3.googleusercontent.com/-h8acahv-hqU/WHcb0jz0EpI/AAAAAAAAATo/zOInspf24BE/I/14842000687384.jpg" alt=""><br>其中有几个地方需要注意：</p>
+<ul>
+<li>USE_CUDNN:=1 # 取消注释后需要保证，在ld.so.conf文件中（记住ldconfig）或LD_LIBRARY_PATH环境变量中能找到CUDNN的动态链接库</li>
+<li>OPENCV_VERSION:=3 # 如果安装了OpenCV3可以启用这一项</li>
+<li>BLAS:=atlas # 如果使用别的MKL或者BLAS需要在下面几行配置目录</li>
+<li>ANACONDA_HOME和PYTHON_INCLUDE # 按照我上面的修改即可</li>
+<li>PYTHON_LIBRARIES # 同意确保boost_python3这个动态链接库在ld.so.conf文件中（记住ldconfig）或LD_LIBRARY_PATH中能找到。可以用<code>locate boost_python</code>命令看看动态链接库文件藏在哪里，然后把相应的目录添加到LD_LIBRARY_PATH环境变量中。</li>
+<li>PYTHON_LIB # 需要启用</li>
+<li>WITH_PYTHON_LAYER # 如果要使用Caffe的Python接口就需要启用</li>
+</ul>
+<p>以上都配置完了之后，就可以编译Caffe以及Caffe的Python接口啦，参考[^2]可以使用多线程提高编译的速度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make all -j $(($(nproc) + 1))&#10;make test -j $(($(nproc) + 1))&#10;make runtest -j $(($(nproc) + 1))&#10;make pycaffe -j $(($(nproc) + 1))</span><br></pre></td></tr></table></figure>
+<p>如果一切都顺利的话，到这里Caffe以及Caffe的Python接口已经编译完成并可以使用了。最后把Caffe的Python库的路径添加到PYTHONPATH环境变量中，这样在python或者ipython程序中才能import进来：</p>
+<p><img src="https://lh3.googleusercontent.com/-mLTFnG2YcJM/WHcb0zYhohI/AAAAAAAAATs/d8bvG7mUVu0/I/14842006899958.jpg" alt=""></p>
+<p>PS：修改.bashrc或.zshrc之后记得<code>source ~/.bashrc</code>或者<code>source  ~/.zshrc</code>一下才生效哦。</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>打开python或ipython已经可以正常使用caffe了。</p>
+<p><img src="https://lh3.googleusercontent.com/-HceH23w4JFs/WHcb1efNFtI/AAAAAAAAATw/IH_MJ3fu-5c/I/14842008115134.jpg" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发环境和操作系统 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Anaconda </tag>
+            
+            <tag> Caffe </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[Linux常用命令整理]]></title>
-      <url>%2F2016%2F12%2F28%2FLinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%2F</url>
-      <content type="text"><![CDATA[&emsp; 磁盘信息查看磁盘空间命令格式：df -h 以磁盘分区为单位查看文件系统 查看进程查看占用特定端口的进程 命令格式：lsof -i:6006 其中6006为想要查看的端口 根据进程号KILL特定进程 命令格式：kill -KILL 738 其中738为想要kill的进程的进程号]]></content>
+      <url>http://stevechoris.github.io/2016/12/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h2 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h2><h3 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h3><h4 id="命令格式df-h"><a href="#命令格式：df-h" class="headerlink" title="命令格式：df -h"></a>命令格式：<code>df -h</code></h4><blockquote>
+<p>以磁盘分区为单位查看文件系统</p>
+</blockquote>
+<p><img src="../../../../images/14829116578841.jpg" alt=""></p>
+<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><h3 id="查看占用特定端口的进程"><a href="#查看占用特定端口的进程" class="headerlink" title="查看占用特定端口的进程"></a>查看占用特定端口的进程</h3><blockquote>
+<p>命令格式：<code>lsof -i:6006</code></p>
+<p>其中6006为想要查看的端口</p>
+</blockquote>
+<p><img src="../../../../images/14829118493300.jpg" alt=""></p>
+<h3 id="根据进程号kill特定进程"><a href="#根据进程号KILL特定进程" class="headerlink" title="根据进程号KILL特定进程"></a>根据进程号KILL特定进程</h3><blockquote>
+<p>命令格式：<code>kill -KILL 738</code></p>
+<p>其中738为想要kill的进程的进程号</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux命令 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux命令 </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[用Anaconda安装配置Jupyter Notebook和TensorFlow开发环境]]></title>
-      <url>%2F2016%2F09%2F15%2F%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%2F</url>
-      <content type="text"><![CDATA[&emsp; Anaconda安装在Anaconda官网下载并按照指令安装。 建议安装Python3版本，我在ubuntu14上测试发现安装Python2版本一直有IPython console can’t locate “backports.shutil_get_terminal_size” and won’t load的错误，按照stackoverflow上面的方法尝试也无法解决。之后看到有人评论说Python2目前已经过时了，于是重新安装了Python3版本的Anaconda后解决。 TensorFlow安装包管理在Anaconda中可以使用conda或者pip进行包管理，可以查看conda常用命令和pip常用命令。conda可以看做是pip和virtualenv的集成，三者的常见命令对比可以查看conda vs. pip vs. virtualenv)。 安装包命令网速慢解决方法使用pip安装离线下载的whl格式安装包&emsp;&emsp;可以从PyPI Python安装包中心搜索并下载相应的按照包之后在本地离线安装。&emsp;&emsp;例如，在下载名为kivy.deps.gstreamer的包kivy.deps.gstreamer-0.1.9-cp27-cp27m-win_amd64.whl，则安装命令为： 1pip install kivy.deps.gstreamer-0.1.9-cp27-cp27m-win_amd64.whl 使用shadowsocks)+privoxy+proxychains-ng搭建局域网翻墙代理 &emsp;&emsp;这适用于服务器不适合直接搭建shadowsocks翻墙的情况，如果可以直接用shadowsocks翻墙，自然不需要这样做了。&emsp;&emsp;我的情况是自己的Mac笔记本可以使用shadowsocks[以下简称SS]或者鱼摆摆进行翻墙，而ubuntu服务器无法翻墙。因此，我在Mac上用SS或者鱼摆摆翻墙，然后用privoxy与之相连，在本地建立一个局域网http翻墙代理，最后在ubuntu服务器上使用proxychains-ng代理到Mac上实现翻墙来安装包。 具体的配置可以参看下面两篇博客： &emsp;&emsp;实际上我在配置的过程中，用privoxy代理到鱼摆摆的本地http代理端口可以正常使用，但是代理到socks5端口就不行，具体原因不太清楚。 privoxy配置 proxycahins-ng配置 安装TensorFlow&emsp;&emsp;直接参考TensorFlow官网的安装教程即可， 注意显卡驱动，Cuda Toolkit以及cuDNN需要正确的配置。具体可以参考官网或者github上的深度学习框架搭建博客，其中包含了各种深度学习框架的搭建方法。]]></content>
+      <url>http://stevechoris.github.io/2016/09/15/%E7%94%A8Anaconda%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter-Notebook%E5%92%8CTensorFlow%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h1 id="anaconda安装"><a href="#Anaconda安装" class="headerlink" title="Anaconda安装"></a>Anaconda安装</h1><p>在<a href="https://www.continuum.io/downloads" target="_blank" rel="external">Anaconda官网</a>下载并按照指令安装。</p>
+<blockquote>
+<p>建议安装Python3版本，我在ubuntu14上测试发现安装Python2版本一直有<a href="http://stackoverflow.com/questions/37232446/ipython-console-cant-locate-backports-shutil-get-terminal-size-and-wont-load" target="_blank" rel="external">IPython console can’t locate “backports.shutil_get_terminal_size” and won’t load</a>的错误，按照stackoverflow上面的方法尝试也无法解决。之后看到有人评论说Python2目前已经过时了，于是重新安装了Python3版本的Anaconda后解决。</p>
+</blockquote>
+<h1 id="tensorflow安装"><a href="#TensorFlow安装" class="headerlink" title="TensorFlow安装"></a>TensorFlow安装</h1><h2 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h2><p>在Anaconda中可以使用<a href="http://conda.pydata.org/docs/" target="_blank" rel="external">conda</a>或者<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">pip</a>进行包管理，可以查看<a href="http://conda.pydata.org/docs/_downloads/conda-cheatsheet.pdf" target="_blank" rel="external">conda常用命令</a>和<a href="http://dcjtech.info/wp-content/uploads/2015/10/Pip-Cheatsheet.pdf" target="_blank" rel="external">pip常用命令</a>。conda可以看做是pip和virtualenv的集成，三者的常见命令对比可以查看<a href="[conda vs. pip vs. virtualenv](">conda vs. pip vs. virtualenv</a>)。</p>
+<h2 id="安装包命令网速慢解决方法"><a href="#安装包命令网速慢解决方法" class="headerlink" title="安装包命令网速慢解决方法"></a>安装包命令网速慢解决方法</h2><h3 id="使用pip安装离线下载的whl格式安装包"><a href="#使用pip安装离线下载的whl格式安装包" class="headerlink" title="使用pip安装离线下载的whl格式安装包"></a>使用pip安装离线下载的whl格式安装包</h3><p>&emsp;&emsp;可以从<a href="https://pypi.python.org/pypi" target="_blank" rel="external">PyPI Python安装包中心</a>搜索并下载相应的按照包之后在本地离线安装。<br>&emsp;&emsp;例如，在下载名为<a href="https://pypi.python.org/pypi/kivy.deps.gstreamer/0.1.9" target="_blank" rel="external">kivy.deps.gstreamer</a>的包kivy.deps.gstreamer-0.1.9-cp27-cp27m-win_amd64.whl，则安装命令为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install kivy.deps.gstreamer-0.1.9-cp27-cp27m-win_amd64.whl</span><br></pre></td></tr></table></figure>
+<h3 id="使用shadowsocksprivoxyproxychains-ng搭建局域网翻墙代理"><a href="#使用shadowsocks-privoxy-proxychains-ng搭建局域网翻墙代理" class="headerlink" title="使用shadowsocks)+privoxy+proxychains-ng搭建局域网翻墙代理"></a>使用<strong><a href="[shadowsocks](">shadowsocks</a>)</strong>+<strong><a href="https://www.privoxy.org/" target="_blank" rel="external">privoxy</a></strong>+<strong><a href="https://github.com/rofl0r/proxychains-ng" target="_blank" rel="external">proxychains-ng</a></strong>搭建局域网翻墙代理</h3><blockquote>
+<p>&emsp;&emsp;这适用于服务器不适合直接搭建shadowsocks翻墙的情况，如果可以直接用shadowsocks翻墙，自然不需要这样做了。<br>&emsp;&emsp;我的情况是自己的Mac笔记本可以使用<a href="https://greenss.org/" target="_blank" rel="external">shadowsocks</a>[以下简称SS]或者<a href="https://ybb1024.com/" target="_blank" rel="external">鱼摆摆</a>进行翻墙，而ubuntu服务器无法翻墙。因此，我在Mac上用SS或者鱼摆摆翻墙，然后用privoxy与之相连，在本地建立一个局域网http翻墙代理，最后在ubuntu服务器上使用proxychains-ng代理到Mac上实现翻墙来安装包。</p>
+</blockquote>
+<p>具体的配置可以参看下面两篇博客：</p>
+<blockquote>
+<p>&emsp;&emsp;实际上我在配置的过程中，用privoxy代理到鱼摆摆的本地http代理端口可以正常使用，但是代理到socks5端口就不行，具体原因不太清楚。</p>
+</blockquote>
+<ol>
+<li><a href="http://inorz.net/2015/05/24/init-privoxy-to-centos/" target="_blank" rel="external">privoxy配置</a></li>
+<li><a href="http://www.nenew.net/ubuntu-linux-proxychains.html" target="_blank" rel="external">proxycahins-ng配置</a></li>
+</ol>
+<h2 id="安装tensorflow"><a href="#安装TensorFlow" class="headerlink" title="安装TensorFlow"></a>安装TensorFlow</h2><p>&emsp;&emsp;直接参考<a href="https://www.tensorflow.org/get_started/os_setup" target="_blank" rel="external">TensorFlow官网的安装教程即可</a>， 注意显卡驱动，Cuda Toolkit以及cuDNN需要正确的配置。具体可以参考官网或者<a href="https://github.com/saiprashanths/dl-setup" target="_blank" rel="external">github上的深度学习框架搭建</a>博客，其中包含了各种深度学习框架的搭建方法。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发环境和操作系统 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Anaconda </tag>
+            
+            <tag> Conda </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> TensorFlow </tag>
+            
+        </tags>
+        
     </entry>
-
     
     <entry>
       <title><![CDATA[Jupyter Notebook 安装扩展插件]]></title>
-      <url>%2F2016%2F05%2F29%2FJupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6%2F</url>
-      <content type="text"><![CDATA[&emsp; 更新pip 最简单的安装方法是使用pip，首先将pip更新到最新版1pip install --upgrade pip 安装Jupyter Notebook 扩展 安装方法可以参考GitHub Jupyter Notebook主页上的README.md文档，最简单的方法是pip install 1pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip --user 注意事项 网络不好的时候可以选择离线安装 需要将anaconda目录添加读写权限]]></content>
+      <url>http://stevechoris.github.io/2016/05/29/Jupyter-Notebook-%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<h2 id="更新pip"><a href="#更新pip" class="headerlink" title="更新pip"></a>更新pip</h2><blockquote>
+<p>最简单的安装方法是使用pip，首先将pip更新到最新版<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="安装jupyter-notebook-扩展"><a href="#安装Jupyter-Notebook-扩展" class="headerlink" title="安装Jupyter Notebook 扩展"></a>安装Jupyter Notebook 扩展</h2><blockquote>
+<p>安装方法可以参考GitHub Jupyter Notebook主页上的<a href="https://github.com/ipython-contrib/IPython-notebook-extensions" target="_blank" rel="external">README.md</a>文档，最简单的方法是pip install</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip --user</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>网络不好的时候可以选择离线安装</li>
+<li>需要将anaconda目录添加读写权限</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发环境配置 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
-
     
   
   
