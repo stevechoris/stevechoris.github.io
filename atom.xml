@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-11-02T06:30:00.000Z</updated>
+  <updated>2017-11-16T13:18:12.308Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -16,11 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>理解gan的原理</title>
+    <link href="http://stevechoris.github.io/2017/11/16/%E7%90%86%E8%A7%A3gan%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+    <id>http://stevechoris.github.io/2017/11/16/理解gan的原理/</id>
+    <published>2017-11-16T13:05:30.000Z</published>
+    <updated>2017-11-16T13:18:12.308Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
+<blockquote>
+<p>生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.<br>最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度理解gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解gan,也欢迎大家指正交流.<br>注:本文主要参考了<a href="https://www.bilibili.com/video/av9770302/" target="_blank" rel="external">李宏毅老师的深度学习教学视频</a>,李老师的讲解非常清晰、生动,在此表示感谢🙏.</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://stevechoris.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="gan" scheme="http://stevechoris.github.io/tags/gan/"/>
+    
+      <category term="深度学习" scheme="http://stevechoris.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vim插件You Complete Me配置</title>
     <link href="http://stevechoris.github.io/2017/11/02/Vim%E6%8F%92%E4%BB%B6You-Complete-Me%E9%85%8D%E7%BD%AE/"/>
     <id>http://stevechoris.github.io/2017/11/02/Vim插件You-Complete-Me配置/</id>
     <published>2017-11-02T06:06:48.000Z</published>
-    <updated>2017-11-02T06:30:00.000Z</updated>
+    <updated>2017-11-16T13:02:39.753Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <blockquote>
@@ -55,7 +83,7 @@
     <link href="http://stevechoris.github.io/2017/10/27/tensorflow%E5%8F%82%E6%95%B0%E5%85%B1%E4%BA%AB/"/>
     <id>http://stevechoris.github.io/2017/10/27/tensorflow参数共享/</id>
     <published>2017-10-27T07:54:23.000Z</published>
-    <updated>2017-10-28T07:17:19.000Z</updated>
+    <updated>2017-11-16T11:15:48.360Z</updated>
     
     <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
 <h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2>]]></content>

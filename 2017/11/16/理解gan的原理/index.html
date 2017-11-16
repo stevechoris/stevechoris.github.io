@@ -15,15 +15,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="影书时光">
-<meta property="og:url" content="http://stevechoris.github.io/archives/2017/index.html">
+<meta name="description" content="&amp;emsp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解gan的原理">
+<meta property="og:url" content="http://stevechoris.github.io/2017/11/16/理解gan的原理/index.html">
 <meta property="og:site_name" content="影书时光">
-<meta property="og:description">
+<meta property="og:description" content="&amp;emsp;">
+<meta property="og:updated_time" content="2017-11-16T13:18:12.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="影书时光">
-<meta name="twitter:description">
+<meta name="twitter:title" content="理解gan的原理">
+<meta name="twitter:description" content="&amp;emsp;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -53,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017 | 影书时光</title>
+<title>理解gan的原理 | 影书时光</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -63,8 +64,8 @@
         fancybox: true,
         animate: false,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -268,237 +269,178 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-理解gan的原理" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/16/理解gan的原理/" class="archive-article-date">
-      <time datetime="2017-11-16T13:05:30.000Z" itemprop="datePublished">11-16</time>
+    <div class="article-meta">
+      <a href="/2017/11/16/理解gan的原理/" class="article-date">
+      <time datetime="2017-11-16T13:05:30.000Z" itemprop="datePublished">2017-11-16</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/理解gan的原理/">理解gan的原理</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      理解gan的原理
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gan/">gan</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>&emsp;<a id="more"></a></p>
+<blockquote>
+<p>生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.<br>最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度理解gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解gan,也欢迎大家指正交流.<br>注:本文主要参考了<a href="https://www.bilibili.com/video/av9770302/" target="_blank" rel="external">李宏毅老师的深度学习教学视频</a>,李老师的讲解非常清晰、生动,在此表示感谢🙏.</p>
+</blockquote>
+
+      
+    </div>
+    
   </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/02/Vim插件You-Complete-Me配置/">
+                    Vim插件You Complete Me配置
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/02/Vim插件You-Complete-Me配置/" class="archive-article-date">
-      <time datetime="2017-11-02T06:06:48.000Z" itemprop="datePublished">11-02</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/02/Vim插件You-Complete-Me配置/">Vim插件You Complete Me配置</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"理解gan的原理　| 影书时光　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/开发环境/">开发环境</a>
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://stevechoris.github.io/2017/11/16/理解gan的原理/';
+            this.page.identifier = '2017/11/16/理解gan的原理/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//http-stevechoris-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/11/02/Vim插件You-Complete-Me配置/" title="下一篇: Vim插件You Complete Me配置">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/10/27/tensorflow参数共享/" class="archive-article-date">
-      <time datetime="2017-10-27T07:54:23.000Z" itemprop="datePublished">10-27</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/理解gan的原理/">理解gan的原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/02/Vim插件You-Complete-Me配置/">Vim插件You Complete Me配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/27/tensorflow参数共享/">tensorflow参数共享</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/27/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/">如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/">Python3.5 Anaconda3 Caffe深度学习框架搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/28/Linux常用命令整理/">Linux常用命令整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/15/用Anaconda安装配置Jupyter-Notebook和TensorFlow开发环境/">用Anaconda安装配置Jupyter Notebook和TensorFlow开发环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/Jupyter-Notebook-安装扩展插件/">Jupyter Notebook 安装扩展插件</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/27/tensorflow参数共享/">tensorflow参数共享</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow/">tensorflow</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/10/27/hello-world/" class="archive-article-date">
-      <time datetime="2017-10-27T01:21:47.000Z" itemprop="datePublished">10-27</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/" class="archive-article-date">
-      <time datetime="2017-02-21T06:40:42.000Z" itemprop="datePublished">02-21</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/21/如何从零构建一个卷积神经网络分类器-TensorFlow学习整理/">如何从零构建一个卷积神经网络分类器 - TensorFlow学习整理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TensorFlow/">TensorFlow</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/" class="archive-article-date">
-      <time datetime="2017-01-12T03:59:22.000Z" itemprop="datePublished">01-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/12/Python3-5-Anaconda3-Caffe深度学习框架搭建/">Python3.5 Anaconda3 Caffe深度学习框架搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/开发环境和操作系统/">开发环境和操作系统</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
