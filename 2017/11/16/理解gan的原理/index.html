@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://stevechoris.github.io/2017/11/16/理解gan的原理/index.html">
 <meta property="og:site_name" content="影书时光">
 <meta property="og:description" content="&amp;emsp;">
-<meta property="og:updated_time" content="2017-11-16T14:16:53.986Z">
+<meta property="og:updated_time" content="2017-11-17T02:46:18.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解gan的原理">
 <meta name="twitter:description" content="&amp;emsp;">
@@ -323,7 +323,10 @@
 </blockquote>
 <p>那如何衡量接近的程度呢?<br>一种常见的做法就是计算最大似然概率,如果某一个生成器产生的似然概率最大,那这个生成器更接近真实的数据分布.具体的做法如下:</p>
 <ol>
-<li>从真实数据集中采样m个样本点,${x^1,x^2,…,x^m}$,对于每个样本点,可以得出当前生成器G下的概率$P<em>G{(x^i;\theta)}$,那整体上,从当前生成器中也采样出上述样本的概率是$L=\prod</em>{i=1}^{m}{p_G(x^i;\theta)}$</li>
+<li>从真实数据集中采样m个样本点,${x^1,x^2,…,x^m}$,对于每个样本点,可以得出当前生成器G下的概率$P_G{(x^i;\theta)}$</li>
+<li>那整体上,从当前生成器中也采样出上述样本的概率是$L=\prod_{i=1}^{m}{p_G(x^i;\theta)}$.这个$L$越大,表示两个分布越接近.</li>
+<li>那如果有某个$\theta$可以使得$L$最大,这个$\theta$对应的生成器G(概率密度函数)就是最接近真实数据分布的.</li>
+<li>上述的理论公式可以写成:<br>$$\theta^*=arg$$</li>
 </ol>
 
       
