@@ -19,7 +19,7 @@
 <li>从真实数据集中采样m个样本点,${x^1,x^2,…,x^m}$,对于每个样本点,可以得出当前生成器G下的概率${P}_{G}{(x^i;\theta)}$</li>
 <li>那整体上,从当前生成器中也采样出上述样本的概率是$L=\prod_{i=1}^{m}{p_G(x^i;\theta)}$.这个$L$越大,表示两个分布越接近.</li>
 <li>那如果有某个$\theta$可以使得$L$最大,这个$\theta$对应的生成器G(概率密度函数)就是最接近真实数据分布的.</li>
-<li>上述的理论公式可以写成:<br>$$\theta^*=arg$$</li>
+<li>上述的理论公式可以写成:<br>$$\theta^*=argmax<em>{\theta}{\prod</em>{i=1}^{m}{P<em>G{(x^i;\theta)}}}$$<br>对右边的式子取$log$不影响$\theta$的取之,连乘变成求和:<br>$$=argmax</em>{\theta}log{\prod_{i=1}^{m}{P<em>G{(x^i;\theta)}}}$$<br>$$=argmax</em>{\theta}\sum_{i=1}^{m}{P<em>G{(x^i;\theta)}}$$<br>由于${x^1,x^2,…,x^m}$都采样自$P</em>{data}{x}$.因此,上述式子约等于:<br>$$\approx argmax<em>{\theta}{E</em>{x\sim P_{data}}{[log{P_G{(x;\theta)}}]}}$$</li>
 </ol>
 ]]></content>
       
