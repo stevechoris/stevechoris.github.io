@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://stevechoris.github.io/"/>
-  <updated>2017-11-17T03:13:13.640Z</updated>
+  <updated>2017-11-17T03:40:26.775Z</updated>
   <id>http://stevechoris.github.io/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://stevechoris.github.io/2017/11/16/%E7%90%86%E8%A7%A3gan%E7%9A%84%E5%8E%9F%E7%90%86/"/>
     <id>http://stevechoris.github.io/2017/11/16/理解gan的原理/</id>
     <published>2017-11-16T13:05:30.000Z</published>
-    <updated>2017-11-17T03:13:13.640Z</updated>
+    <updated>2017-11-17T03:40:26.775Z</updated>
     
-    <content type="html"><![CDATA[<p>&emsp;<a id="more"></a></p>
-<blockquote>
+    <content type="html"><![CDATA[<blockquote>
 <p>生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.<br>最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度讲gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解,也欢迎大家指正交流.<br>注:本文主要参考了<a href="https://www.bilibili.com/video/av9770302/" target="_blank" rel="external">李宏毅老师的深度学习教学视频</a>,李老师的讲解非常清晰、生动,在此表示感谢🙏.</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h2><p>gan是一种生成模型,提到生成模型,不得不提最大似然估计. 生成模型的一个最典型的训练方式就是拟合数据的极大似然概率.通常的做法是我们先有一堆真实数据,比如一堆图片,如果把图片拉成一条向量,就可以当成高维空间中的一个点,自然就有了概率分布${P}<em>{data}{(x)}$. 那生成模型是要去学得这个概率分布是怎么样的,以便于生成以假乱真的数据,那它的做法是也去模拟一个概率分布${P}</em>{G}{(x;\theta)}$.这个生成器叫G,可以把它看作一个函数,$\theta$就是它的参数,输入一个数据点(比如一张图片)它可以输出一个概率密度.生成模型的最终目标是希望通过学习之后,得到的某个G可以产生与真实概率分布${P}<em>{data}{(x)}$尽可能接近的概率分布${P}</em>{G}{(x;\theta)}$.</p>
 <blockquote>
 <p>一句话总结: 生成模型的目的是学得某一个生成器G(概率密度函数)产生与真实数据分布${P}<em>{data}{(x)}$接近的概率分布${P}</em>{G}{(x;\theta)}$.</p>
@@ -41,7 +41,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;
+      &lt;blockquote&gt;
+&lt;p&gt;生成对抗网络(Generative Adversial Network,简称gan)是最近比较热门的一个深度学习模型.它可以让机器具有“学习并创作”的神奇能力,比如让机器看很多动漫的图片,就可以生成很逼真的动漫图片;让机器读很多唐诗,就可以生成同样富有诗意的新诗.&lt;br&gt;最近,由于研究的需要,也在接触和学习gan.本文想从理论的角度讲gan,尽量以浅显易懂的语言说清楚gan,帮助自己理解,也欢迎大家指正交流.&lt;br&gt;注:本文主要参考了&lt;a href=&quot;https://www.bilibili.com/video/av9770302/&quot;&gt;李宏毅老师的深度学习教学视频&lt;/a&gt;,李老师的讲解非常清晰、生动,在此表示感谢🙏.&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
